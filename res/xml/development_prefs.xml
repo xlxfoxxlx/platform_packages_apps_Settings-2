@@ -66,6 +66,9 @@
         android:summary="@string/picture_color_mode_desc"
         android:persistent="false" />
 
+    <Preference android:key="restart_systemui"
+        android:title="@string/restart_systemui" />
+
     <PreferenceCategory android:key="debug_debugging_category"
             android:title="@string/debug_debugging_category">
 
