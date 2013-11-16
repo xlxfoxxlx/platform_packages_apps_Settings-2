@@ -20,4 +20,8 @@
         Setting to false will disable Volume Rocker Wake support -->
     <bool name="config_show_volumeRockerWake">true</bool>
 
+<!-- Display Settings -->
+    <!-- Font size sample text -->
+    <string name="font_size_sample">Font Size</string>
+
 </resources>
