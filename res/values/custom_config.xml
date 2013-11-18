@@ -20,4 +20,8 @@
     <item name="config_flingMinLongSwipeThreshold" format="float" type="dimen">0.20</item>
     <item name="config_flingMaxLongSwipeThreshold" format="float" type="dimen">0.50</item>
 
+   <!-- Volume Rocker Wake Support. Some devices do not support (PMU) this.
+        Setting to false will disable Volume Rocker Wake support -->
+    <bool name="config_show_volumeRockerWake">true</bool>
+
 </resources>
