@@ -33,7 +33,7 @@
     <integer name="dashboard_num_columns">1</integer>
 
     <!-- Carrier_enabled editable -->
-    <bool name="config_allow_edit_carrier_enabled" translatable="false">false</bool>
+    <bool name="config_allow_edit_carrier_enabled" translatable="false">true</bool>
 
     <!-- When true enable color temperature setting. -->
     <bool name="config_enableColorTemperature">false</bool>
