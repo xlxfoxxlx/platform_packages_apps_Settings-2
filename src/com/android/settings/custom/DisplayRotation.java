@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2012 The CyanogenMod Project
+ * Copyright (C) 2014 SlimRoms Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,6 +25,7 @@ import android.preference.SwitchPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 
 import com.android.internal.view.RotationPolicy;
@@ -74,6 +76,7 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
 
         mAccelerometer = (SwitchPreference) findPreference(KEY_ACCELEROMETER);
         mAccelerometer.setPersistent(false);
+        mAccelerometer.setOnPreferenceChangeListener(this);
 
         mRotation0Pref = (SwitchPreference) prefSet.findPreference(ROTATION_0_PREF);
         mRotation90Pref = (SwitchPreference) prefSet.findPreference(ROTATION_90_PREF);
@@ -88,6 +91,11 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
         mRotation90Pref.setChecked((mode & ROTATION_90_MODE) != 0);
         mRotation180Pref.setChecked((mode & ROTATION_180_MODE) != 0);
         mRotation270Pref.setChecked((mode & ROTATION_270_MODE) != 0);
+
+        mRotation0Pref.setOnPreferenceChangeListener(this);
+        mRotation90Pref.setOnPreferenceChangeListener(this);
+        mRotation180Pref.setOnPreferenceChangeListener(this);
+        mRotation270Pref.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -115,27 +123,32 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
         mAccelerometer.setChecked(!RotationPolicy.isRotationLocked(getActivity()));
     }
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
-    }
-
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mAccelerometer) {
             RotationPolicy.setRotationLockForAccessibility(getActivity(),
-                !mAccelerometer.isChecked());
+                !((Boolean) objValue));
         } else if (preference == mRotation0Pref ||
                 preference == mRotation90Pref ||
                 preference == mRotation180Pref ||
                 preference == mRotation270Pref) {
             int mode = 0;
-            if (mRotation0Pref.isChecked())
+            if (preference == mRotation0Pref && ((Boolean) objValue)
+                    || preference != mRotation0Pref && mRotation0Pref.isChecked()) {
                 mode |= ROTATION_0_MODE;
-            if (mRotation90Pref.isChecked())
+            }
+            if (preference == mRotation90Pref && ((Boolean) objValue)
+                    || preference != mRotation90Pref && mRotation90Pref.isChecked()) {
                 mode |= ROTATION_90_MODE;
-            if (mRotation180Pref.isChecked())
+            }
+            if (preference == mRotation180Pref && ((Boolean) objValue)
+                    || preference != mRotation180Pref && mRotation180Pref.isChecked()) {
                 mode |= ROTATION_180_MODE;
-            if (mRotation270Pref.isChecked())
+            }
+            if (preference == mRotation270Pref && ((Boolean) objValue)
+                    || preference != mRotation270Pref && mRotation270Pref.isChecked()) {
                 mode |= ROTATION_270_MODE;
+            }
             if (mode == 0) {
                 mode |= ROTATION_0_MODE;
                 mRotation0Pref.setChecked(true);
@@ -144,6 +157,6 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
                     Settings.System.ACCELEROMETER_ROTATION_ANGLES, mode);
             return true;
         }
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
+        return false;
     }
 }
