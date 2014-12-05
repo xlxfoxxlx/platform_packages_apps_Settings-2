@@ -52,6 +52,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
 
 import com.android.settings.aosip.lockscreen.WeatherCategory;
+import com.android.settings.aosip.lockscreen.ShortcutCategory;
 import com.android.settings.aosip.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
@@ -107,6 +108,7 @@ public class LockscreenHolder extends SettingsPreferenceFragment {
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new WeatherCategory();
+            frags[1] = new ShortcutCategory();
         }
 
         @Override
@@ -128,7 +130,8 @@ public class LockscreenHolder extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.weather_category)};
+                    getString(R.string.weather_category),
+                    getString(R.string.shortcut_category)};
         return titleString;
     }
 }
