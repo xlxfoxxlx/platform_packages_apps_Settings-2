@@ -158,8 +158,6 @@
     <string name="recents_show_membar_title">Memory bar</string>
     <string name="recents_show_membar_summary">Show a bar with the device\'s available memory</string>
 
- </resources>
-
     <!--Owlsnest lockscreen-->
     <string name="lockscreen_title">Lockscreen</string>
     <string name="lockscreen_summary">Options for weather</string>
