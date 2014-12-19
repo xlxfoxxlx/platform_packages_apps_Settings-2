@@ -107,4 +107,14 @@
    <string name="usb_data_auto_unlock_summary">Allow unlocked data access to your phone\'s storage through USB (MTP, PTP)</string>
    <string name="usb_data_auto_unlock_warning_summary">Your device will establish unprotected connections, everytime you connect it to a PC. Secured lockscreens disable this option automatically.\n\nThis is still an experimental feature, use with caution.</string>
 
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on color below to apply</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Set</string>
+    <string name="color_default">Default</string>
+
 </resources>
