@@ -109,3 +109,4 @@ public class BatteryCategory extends SettingsPreferenceFragment implements
 }
 
 
+

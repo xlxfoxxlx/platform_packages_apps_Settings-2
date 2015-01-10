@@ -83,6 +83,15 @@
     <string name="status_bar_battery_style_dotted_circle">Dotted circle</string>
     <string name="status_bar_battery_style_text">Text</string>
     <string name="status_bar_battery_style_hidden">Hidden</string>
+    <!-- Battery Bar -->
+    <string name="battery_bar_style_title">Style</string>
+    <string name="battery_bar_location">Battery bar location</string>
+    <string name="battery_bar_colors">Color</string>
+    <string name="battery_bar">Battery Bar</string>
+    <string name="battery_bar_thickness_title">Battery bar thickness</string>
+    <string name="battery_bar_animate_title">Charging animation</string>
+    <string name="battery_bar_animate_summary">Enable bar animation while charging</string>
+    <string name="battery_bar_color">Battery bar color</string>
     <!-- clock and date-->
     <string name="status_bar_clock_date_settings_title">Clock &amp; date</string>
     <string name="status_bar_clock_date_settings_summary">Customize the clock &amp; the date</string>
