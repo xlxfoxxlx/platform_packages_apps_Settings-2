@@ -57,3 +57,8 @@ public class BatteryCategory extends SettingsPreferenceFragment implements
     }
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 286b2b4... Settings : Battery bar customizations
