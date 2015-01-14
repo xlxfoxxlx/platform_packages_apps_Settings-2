@@ -907,4 +907,14 @@
     <string name="interruptions_ignore_while_media_title">Prevent audio ducking</string>
     <string name="interruptions_ignore_while_media_summary">Do not reduce media playback volume when a notification arrives</string>
 
+    <!-- GCC version info -->
+    <string name="sm_android">Gcc android</string>
+    <string name="sm_android_default">Unknown</string>
+    <string name="sm_kernel">Gcc kernel</string>
+    <string name="sm_kernel_default">Unknown</string>
+
+    <!-- GCC build flags info -->
+    <string name="sm_flags">Build flags</string>
+    <string name="sm_flags_default">None</string>
+
 </resources>
