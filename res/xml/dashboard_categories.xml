@@ -100,6 +100,17 @@
             android:icon="@drawable/ic_settings_illusion"
             />
 
+        <!-- Layers -->
+        <dashboard-tile
+                android:id="@+id/bitsyko_layers"
+                android:icon="@drawable/ic_bitsyko_layers"
+                android:title="@string/bitsyko_layers">     
+		<intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.lovejoy777.rroandlayersmanager"
+                android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
+        </dashboard-tile>
+
         <!-- Display -->
         <dashboard-tile
                 android:id="@+id/display_settings"
@@ -268,17 +279,6 @@
                 android:fragment="com.android.settings.print.PrintSettingsFragment"
                 android:icon="@drawable/ic_settings_print"
                 />
-
-        <!-- Superuser -->
-        <dashboard-tile
-                android:id="@+id/superuser"
-                android:title="@string/superuser"
-                android:icon="@drawable/ic_settings_superuser">
-                <intent
-                    android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.android.superuser"
-                    android:targetClass="com.koushikdutta.superuser.MainActivity" />
-        </dashboard-tile>
 
         <!-- Development -->
         <dashboard-tile

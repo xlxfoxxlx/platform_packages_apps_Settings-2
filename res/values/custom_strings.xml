@@ -73,6 +73,9 @@
     <string name="status_bar_clock_title">Clock and date style</string>
     <string name="status_bar_misc_title">Miscellaneous</string>
 
+    <!--  BitSyko Layers header name -->
+    <string name="bitsyko_layers">Layers</string>
+
     <!-- Expanded desktop -->
     <string name="expanded_desktop_category">Expanded Desktop</string>
     <string name="expanded_hide_nothing">Hide nothing</string>
