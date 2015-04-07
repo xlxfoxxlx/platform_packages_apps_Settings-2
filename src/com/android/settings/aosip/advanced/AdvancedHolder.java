@@ -51,7 +51,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
 
-import com.android.settings.aosip.advanced.GestureanywhereCategory;
+import com.android.settings.benzo.gestureanywhere.GestureAnywhereSettings;
 import com.android.settings.aosip.advanced.AppsidebarCategory;
 import com.android.settings.aosip.PagerSlidingTabStrip;
 
@@ -107,7 +107,7 @@ public class AdvancedHolder extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new GestureanywhereCategory();
+            frags[0] = new GestureAnywhereSettings();
             frags[1] = new AppsidebarCategory();
         }
 

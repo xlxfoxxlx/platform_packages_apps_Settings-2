@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2015 Android Open Source Illusion Project
-
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -43,6 +42,12 @@
         <attr name="pstsTextAlpha" format="float" />
         <attr name="pstsTextSelectedAlpha" format="float" />
     </declare-styleable>
-</resources>
 
+    <declare-styleable name="IntervalSeekBar">
+        <attr name="min" format="float" />
+        <attr name="max" format="float" />
+        <attr name="defaultValue" format="float" />
+        <attr name="digits" format="integer" />
+    </declare-styleable>
+</resources>
 
