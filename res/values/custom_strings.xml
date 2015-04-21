@@ -17,4 +17,11 @@
     <string name="mem_info">Memory</string>
     <string name="aosip_version">AOSiP Build</string>
     <string name="build_date">Build date</string>
+
+    <!-- Heads up -->
+    <string name="headsup_section_header">Heads up notifications</string>
+    <string name="heads_up_notifications">Heads up</string>
+    <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
+    <string name="summary_heads_up_disabled">Pop-up notifications are disabled</string>
+
 </resources>
