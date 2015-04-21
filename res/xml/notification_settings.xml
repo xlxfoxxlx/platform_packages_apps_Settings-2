@@ -144,6 +144,13 @@
                     android:value="com.android.settings.Settings$NotificationAppListActivity" />
         </PreferenceScreen>
 
+	<!-- Heads up -->
+        <com.android.settings.prefrence.GlobalSettingSwitchPreference
+            android:key="heads_up_notifications_enabled"
+            android:title="@string/heads_up_notifications"
+            android:summaryOn="@string/summary_heads_up_enabled"
+            android:summaryOff="@string/summary_heads_up_disabled" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
