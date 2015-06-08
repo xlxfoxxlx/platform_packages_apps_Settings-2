@@ -26,6 +26,11 @@
         android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
 
     <PreferenceScreen
+    	android:key="pa_pie_control"
+        android:title="@string/pa_pie_control_title"
+        android:fragment="com.android.settings.paranoid.PieControl" />
+
+    <PreferenceScreen
         android:key="gesture_anywhere"
         android:title="@string/gestureanywhere_category"
         android:fragment="com.android.settings.benzo.gestureanywhere.GestureAnywhereSettings" />

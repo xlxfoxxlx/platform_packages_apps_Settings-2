@@ -54,6 +54,7 @@ import com.android.internal.logging.MetricsLogger;
 import com.android.settings.benzo.gestureanywhere.GestureAnywhereSettings;
 import com.android.settings.aosip.advanced.AppsidebarCategory;
 import com.android.settings.applications.ExpandedDesktopPreferenceFragment;
+import com.android.settings.paranoid.PieControl;
 import com.android.settings.widget.SwitchBar;
 import com.android.settings.aosip.advanced.AdvancedSettings;
 import com.android.settings.aosip.PagerSlidingTabStrip;
