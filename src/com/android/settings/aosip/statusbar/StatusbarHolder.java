@@ -54,7 +54,6 @@ import com.android.internal.logging.MetricsLogger;
 import com.android.settings.aosip.statusbar.ClockCategory;
 import com.android.settings.aosip.statusbar.BatteryCategory;
 import com.android.settings.aosip.statusbar.IconsCategory;
-import com.android.settings.aosip.statusbar.ExtrasCategory;
 import com.android.settings.aosip.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
@@ -112,7 +111,6 @@ public class StatusbarHolder extends SettingsPreferenceFragment {
             frags[0] = new ClockCategory();
             frags[1] = new BatteryCategory();
             frags[2] = new IconsCategory();
-            //frags[3] = new ExtrasCategory();
         }
 
         @Override
@@ -136,9 +134,7 @@ public class StatusbarHolder extends SettingsPreferenceFragment {
         titleString = new String[]{
                     getString(R.string.clock_category),
                     getString(R.string.battery_category),
-                    getString(R.string.icon_category),
-                    getString(R.string.extra_category)};;
-                    //getString(R.string.extra_category)};
+                    getString(R.string.icon_category)};
         return titleString;
     }
 }

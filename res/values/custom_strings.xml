@@ -231,6 +231,12 @@
     <string name="shortcut_action_help_main">To add a %1$s, select the Add icon. Once a %1$s is added, selecting the row will change the target%2$s\n\nTo remove a %1$s, swipe the row horizontally left or right. Re-order a %1$s in the list by vertically dragging the anchor on the left.\n\nTo clear or reset to defaults, select the reset option.</string>
     <string name="shortcut_action_help_delete_last_entry">Removing every %1$s in the list will disable the feature entirely.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
+    <!-- Lock screen wallpaper -->
+   <string name="lockscreen_category_title">Lockscreen</string>
+   <string name="lockscreen_wallpaper_title">Lockscreen Wallpaper</string>
+   <string name="lockscreen_wallpaper_set_title">Set new wallpaper</string>
+   <string name="lockscreen_wallpaper_clear_title">Return to default</string>
+   <string name="reset_lockscreen_wallpaper">Lockscreen wallpaper set back to default</string>
 
     <!--Owlsnest advanced-->
     <string name="advanced_title">Overkill options</string>
