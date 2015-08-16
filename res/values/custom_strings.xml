@@ -30,6 +30,10 @@
     <string name="battery_category">Battery</string>
     <string name="icon_category">Icons</string>
     <string name="extra_category">Extras</string>
+    <!-- Contexual statusbar header-->
+    <string name="contexual_header_title">Contexual header</string>
+    <string name="status_bar_custom_header_title">Custom header image</string>
+    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
 
     <!--Owlsnest navigation-->
     <string name="navigation_title">Navigation bar options</string>
