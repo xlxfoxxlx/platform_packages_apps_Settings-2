@@ -144,6 +144,12 @@
                     android:value="com.android.settings.Settings$NotificationAppListActivity" />
         </PreferenceScreen>
 
+        <com.android.settings.preference.GlobalSettingSwitchPreference
+        android:key="zen_disable_ducking_during_media_playback"
+        android:title="@string/interruptions_ignore_while_media_title"
+        android:summary="@string/interruptions_ignore_while_media_summary"
+        android:defaultValue="false" />
+
 	<!-- Heads up -->
         <com.android.settings.preference.GlobalSettingSwitchPreference
             android:key="heads_up_notifications_enabled"
