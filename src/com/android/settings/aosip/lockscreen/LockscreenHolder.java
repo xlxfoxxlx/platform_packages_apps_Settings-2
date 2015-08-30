@@ -54,6 +54,7 @@ import com.android.internal.logging.MetricsLogger;
 import com.android.settings.aosip.lockscreen.WeatherCategory;
 import com.android.settings.aosip.lockscreen.ShortcutCategory;
 import com.android.settings.aosip.lockscreen.LockPaperCategory;
+import com.android.settings.aosip.lockscreen.LockColorsCategory;
 import com.android.settings.aosip.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
@@ -111,6 +112,7 @@ public class LockscreenHolder extends SettingsPreferenceFragment {
             frags[0] = new WeatherCategory();
             frags[1] = new ShortcutCategory();
             frags[2] = new LockPaperCategory();
+            frags[3] = new LockColorsCategory();
         }
 
         @Override
@@ -134,7 +136,8 @@ public class LockscreenHolder extends SettingsPreferenceFragment {
         titleString = new String[]{
                     getString(R.string.weather_category),
                     getString(R.string.shortcut_category),
-                    getString(R.string.lockscreen_wallpaper_title)};
+                    getString(R.string.lockscreen_wallpaper_title),
+                    getString(R.string.lockcolors_category)};
         return titleString;
     }
 }

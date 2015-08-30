@@ -338,6 +338,7 @@
     <string name="lockscreen_summary">Options for weather</string>
     <string name="weather_category">Lockscreen weather</string>
     <string name="shortcut_category">Lockscreen shortcuts</string>
+    <string name="lockcolors_category">Lockscreen colors</string>
     <!-- CM Lockscreen shortcuts -->
     <string name="lockscreen_targets_message">Bottom corner shortcuts</string>
     <string name="lockscreen_corner_summary">Customize the shortcut icons in the corners</string>
@@ -930,5 +931,17 @@
     <string name="enable_multi_window">Multi-window mode</string>
     <string name="enable_multi_window_summary">Multiple activities on screen at the same time.</string>
     <string name="warning_multi_window_text">WARNING: This is a highly experimental feature that allows multiple activities on-screen at the same time through the Recent apps UI. Some apps may crash or not function correctly when used with this feature.</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors">Lockscreen Colors</string>
+    <string name="lockscreen_phone_icon_color">Lockscreen Bottom Left shortcut</string>
+    <string name="lockscreen_lock_icon_color">Lockscreen Lock icon</string>
+    <string name="lockscreen_camera_icon_color">Lockscreen Bottom Right shortcut</string>
+    <string name="lockscreen_indication_text_color">Lockscreen Indication text</string>
+    <string name="lockscreen_clock_color">Lockscreen Clock</string>
+    <string name="lockscreen_clock_date_color">Lockscreen Date</string>
+    <string name="lockscreen_colors_reset_title">Reset lockscreen colors</string>
+    <string name="lockscreen_colors_reset_message">Are you sure you want to reset these colors to default?</string>
+    <string name="yes">YES</string>
 
 </resources>
