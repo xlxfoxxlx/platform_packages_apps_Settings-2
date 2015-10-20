@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2015 The Pure Nexus Project
+<!-- Copyright (C) 2015 DarkKat
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,11 +13,11 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Default value for battery_light_enabled preference -->
-    <bool name="def_battery_light_enabled">true</bool>
-    <!-- Default value for battery light pulse -->
-    <bool name="def_battery_light_pulse">true</bool>
-
+    <!-- Color Picker -->
+    <string name="arrow_right" translatable="false">→</string>
+    <string name="arrow_down" translatable="false">↓</string>
+    <string name="hex" translatable="false">Hex:</string>
+    <string name="hex_hint" translatable="false">#ff000000</string>
 </resources>

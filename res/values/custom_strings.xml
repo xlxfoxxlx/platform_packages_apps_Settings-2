@@ -18,6 +18,15 @@
     <string name="aosip_version">AOSiP Build</string>
     <string name="build_date">Build date</string>
 
+    <!-- Color picker -->
+    <string name="dialog_color_picker_title">Color Picker</string>
+    <string name="press_color_to_apply">Press on color below to apply</string>
+    <string name="palette_darkkat_title">AOSiP</string>
+    <string name="palette_material_title">Material</string>
+    <string name="palette_rgb_title">RGB</string>
+    <string name="reset_android_title">Android default</string>
+    <string name="reset_darkkat_title">AOSiP default</string>
+
     <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
