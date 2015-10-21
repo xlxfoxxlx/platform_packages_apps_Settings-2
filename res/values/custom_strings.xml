@@ -19,6 +19,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- AOSiP device info settings -->
+    <string name="cpu_info">CPU</string>
+    <string name="mem_info">Memory</string>
+    <string name="aosip_version">AOSiP Build</string>
+    <string name="build_date">Build date</string>
+
     <!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
     <string name="bluetooth_accept_all_files">Accept all file types</string>
 
