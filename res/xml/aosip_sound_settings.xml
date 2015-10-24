@@ -19,6 +19,12 @@
     android:title="@string/sound_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+        <com.aosip.owlsnest.preference.SystemSettingSwitchPreference
+        android:key="battery_low_notification"
+        android:title="@string/battery_low_notif_title"
+        android:summary="@string/battery_low_notif_summary"
+        android:defaultValue="true" />
+
 	<!-- Heads up -->
         <com.aosip.owlsnest.preference.GlobalSettingSwitchPreference
         android:key="heads_up_notifications_enabled"
