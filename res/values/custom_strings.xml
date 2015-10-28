@@ -74,4 +74,15 @@
     <!-- Summary text for double twist for camera mode  [CHAR LIMIT=160]-->
     <string name="double_twist_for_camera_mode_summary_pn">To switch in and out of selfie mode in Google Camera, double-twist when you’re in the app</string>
 
+    <!-- Expanded desktop -->
+    <string name="expanded_desktop_category">Expanded Desktop</string>
+    <string name="expanded_hide_nothing">Hide nothing</string>
+    <string name="expanded_hide_status">Hide status bar</string>
+    <string name="expanded_hide_navigation">Hide navigation bar</string>
+    <string name="expanded_hide_both">Hide both</string>
+    <string name="expanded_nothing_to_show">To add a custom per-app configuration for expanded state, set "Enabled for all" to the off position</string>
+    <string name="expanded_desktop_state">Expanded state</string>
+    <string name="expanded_enabled_for_all">Enabled for all</string>
+    <string name="expanded_user_configurable">User configurable</string>
+
 </resources>
