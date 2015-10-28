@@ -33,6 +33,11 @@
                 android:summary="@string/auto_brightness_summary"
                 android:persistent="false" />
 
+        <Preference
+            android:key="expanded_desktop"
+            android:fragment="com.android.settings.custom.ExpandedDesktop"
+            android:title="@string/expanded_desktop_category" />
+
         <!-- Hide night mode for now
         <ListPreference
             android:key="night_mode"
