@@ -25,6 +25,21 @@
     <string name="aosip_version">AOSiP Build</string>
     <string name="build_date">Build date</string>
 
+    <!-- About AOSiP -->
+    <string name="aosip_about_title">About AOSiP</string>
+    <string name="aosip_about_info">ROM</string>
+    <string name="aosip_gplus_title">AOSiP G+</string>
+    <string name="aosip_gplus_summary">Visit AOSiP G+ Community</string>
+    <string name="aosip_about_info_summary">AOSiP stands for Android Open Source illusion Project. We are an AOSP based custom ROM, twisted with the latest features from all over the Android development community. Quality and stability is our first priority as we are dedicated to bringing you the best Android has to offer.</string>
+    <string name="aosip_about_devs">Developer</string>
+    <string name="aosip_about_dev_title">Josh Fox</string>
+    <string name="aosip_about_dev_summary">Otherwise known as XlxFoXxlX.</string>
+    <string name="aosip_about_mentions">Mentions</string>
+    <string name="aosip_about_mention1_title">Mike Williams</string>
+    <string name="aosip_about_mention1_summary">Former dev of AOSiP</string>
+    <string name="aosip_about_mention2_title">Sean Grondin</string>
+    <string name="aosip_about_mention2_summary">AOSiP visionary, the man behind the owl logo/images.</string>
+
     <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
