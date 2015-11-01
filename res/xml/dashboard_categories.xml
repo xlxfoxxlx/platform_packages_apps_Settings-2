@@ -255,6 +255,17 @@
                 android:icon="@drawable/ic_settings_print"
                 />
 
+        <!-- Superuser -->
+        <dashboard-tile
+                android:id="@+id/superuser"
+                android:title="@string/superuser"
+                android:icon="@drawable/ic_settings_superuser">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.koushikdutta.superuser"
+                    android:targetClass="com.koushikdutta.superuser.MainActivity" />
+        </dashboard-tile>
+
         <!-- Development -->
         <dashboard-tile
                 android:id="@+id/development_settings"

@@ -18,6 +18,7 @@
     <string name="smartbar_interface">SmartBar</string>
     <string name="icon_pack_picker_dialog_title">Icon packs</string>
     <string name="status_bar_title">Status bar</string>
+    <string name="superuser">Superuser</string>
 
     <!-- Expanded desktop -->
     <string name="expanded_desktop_category">Expanded Desktop</string>
