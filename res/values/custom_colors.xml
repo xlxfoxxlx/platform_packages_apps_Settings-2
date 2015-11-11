@@ -18,6 +18,8 @@
 <resources>
 
     <color name="white">#FFF</color>
+    <color name="theme_accent">#ff009688</color>
+    <color name="theme_accent">#ff009688</color>
 
     <!-- Expanded desktop -->
     <drawable name="expanded_item_bg_activated">#ffEEEEEE</drawable>
