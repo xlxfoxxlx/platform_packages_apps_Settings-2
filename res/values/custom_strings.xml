@@ -17,7 +17,16 @@
     <string name="mem_info">Memory</string>
     <string name="aosip_version">AOSiP Layers Build</string>
     <string name="build_date">Build date</string>
-    
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="attention">Attention</string>
+    <string name="enabled">Enabled</string>
+    <string name="default_string">Default</string>
+    <string name="add">Add</string>
+    <string name="choose_app">Choose app</string>
+
     <!-- AOSiP custom settings main -->
     <string name="header_category_personalization">UI settings</string>
     <string name="custom_title">OwlsNest</string>
