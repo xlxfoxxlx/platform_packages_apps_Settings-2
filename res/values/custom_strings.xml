@@ -42,6 +42,7 @@
     <string name="profile_reset_title">Reset</string>
     <string name="add">Add</string>
     <string name="choose_app">Choose app</string>
+    <string name="allow_lights_title">Lights in do not disturb mode</string>
 
     <!-- AOSiP custom settings main -->
     <string name="header_category_personalization">UI settings</string>
