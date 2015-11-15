@@ -44,6 +44,9 @@ import com.android.settings.search.Indexable;
 import com.android.settingslib.DeviceInfoUtils;
 import com.android.settingslib.RestrictedLockUtils;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -388,6 +391,21 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         Intent intent = new Intent(Intent.ACTION_BUG_REPORT);
         intent.setPackage(reporterPackage);
         startActivityForResult(intent, 0);
+    }
+
+    /**
+     * Reads a line from the specified file.
+     * @param filename the file to read from
+     * @return the first line, if any.
+     * @throws IOException if the file couldn't be read
+     */
+    private static String readLine(String filename) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(filename), 256);
+        try {
+            return reader.readLine();
+        } finally {
+            reader.close();
+        }
     }
 
     private static class SummaryProvider implements SummaryLoader.SummaryProvider {
