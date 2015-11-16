@@ -18,6 +18,7 @@
 <resources>
 
     <color name="white">#FFF</color>
+    <color name="text_color_black">@android:color/black</color>
     <color name="theme_accent">#ff009688</color>
     <color name="theme_accent">#ff009688</color>
     <color name="action_picker_fab_background">@color/theme_accent</color>
