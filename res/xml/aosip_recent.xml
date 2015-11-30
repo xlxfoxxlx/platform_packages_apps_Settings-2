@@ -21,6 +21,12 @@
     android:title="@string/recent_category" >
 
     <com.android.settings.preference.SystemSettingSwitchPreference
+        android:key="recents_full_screen"
+        android:title="@string/recents_show_fullscreen"
+        android:summary="@string/recents_fullscreen_summary"
+        android:defaultValue="false" />
+
+    <com.android.settings.preference.SystemSettingSwitchPreference
             android:key="recents_search_bar"
             android:title="@string/recents_searchbar_title"
             android:summary="@string/recents_searchbar_summary"
