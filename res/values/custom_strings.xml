@@ -121,6 +121,8 @@
     <string name="recent_title">Recents screen</string>
     <string name="recent_summary">Configure your clear all button and misc recent options</string>
     <string name="recent_category">Recent apps</string>
+    <string name="recents_show_fullscreen">Fullscreen Recents</string>
+    <string name="recents_fullscreen_summary">Enable immersive mode for recents screen</string>
     <!-- Clear all -->
     <string name="recents_panel_category">Recents panel</string>
     <string name="show_clear_all_recents_button_title">Clear all button</string>
