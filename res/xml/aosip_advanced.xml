@@ -39,5 +39,10 @@
         android:key="animation_settings"
         android:title="@string/animation_title"
         android:fragment="com.android.settings.aosip.advanced.AnimationSettings" />
+
+    <PreferenceScreen
+        android:key="app_circle_bar"
+        android:fragment="com.android.settings.benzo.AppCircleBar"
+        android:title="@string/app_circle_bar_title" />
 </PreferenceScreen>
 
