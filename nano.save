@@ -1,0 +1,4 @@
+Move longpress back to kill
+
+This should be in navigation
+also remove the extra java mumbo jumbo and use secure switchpref
