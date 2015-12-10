@@ -50,6 +50,8 @@
     <string name="contexual_header_title">Contexual header</string>
     <string name="status_bar_custom_header_title">Custom header image</string>
     <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
+    <string name="status_bar_icon_blacklist_title">Visible</string>
+    <string name="status_bar_icon_blacklist_summary">Adjust visible icons</string>
 
     <!--Owlsnest navigation-->
     <string name="navigation_title">Navigation bar options</string>
@@ -60,7 +62,10 @@
     <!--Owlsnest Quick settings-->
     <string name="quicksettings_title">Quick settings</string>
     <string name="quicksettings_summary">Manage your quick tiles and expanded statusbar</string>
-    <string name="expanded_category">Statusbar expanded</string>
+    <string name="expanded_category">Statusbar area</string>
+    <string name="tile_category">Tile area</string>
+    <string name="quick_settings_title">Tiles</string>
+    <string name="quick_settings_summary">Add or remove tiles</string>
 
     <!--Owlsnest buttons-->
     <string name="buttons_title">Hardware buttons</string>
