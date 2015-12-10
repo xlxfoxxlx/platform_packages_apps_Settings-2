@@ -52,6 +52,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
 
 import com.android.settings.aosip.qssettings.ExpandedCategory;
+import com.android.settings.aosip.qssettings.TileCategory;
 import com.android.settings.aosip.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
@@ -106,8 +107,8 @@ public class QsSettingsHolder extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new ExpandedCategory();
-            //frags[1] = new BatteryCategory();
+            frags[0] = new TileCategory();
+            frags[1] = new ExpandedCategory();
         }
 
         @Override
@@ -129,7 +130,7 @@ public class QsSettingsHolder extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    //getString(R.string.clock_category),
+                    getString(R.string.tile_category),
                     getString(R.string.expanded_category)};
         return titleString;
     }
