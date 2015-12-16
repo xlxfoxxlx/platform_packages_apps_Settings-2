@@ -20,9 +20,10 @@
     
     <!-- AOSiP custom settings main -->
     <string name="header_category_personalization">UI settings</string>
+    <string name="custom_title">OwlsNest</string>
+    <string name="owlsnest_settings_title">Categories</string>
 
     <!-- Custom menus -->
-    <string name="custom_title">Custom settings</string>
     <string name="custom_settings_title">Tweaks</string>
     <string name="smartbar_interface">SmartBar</string>
     <string name="icon_pack_picker_dialog_title">Icon packs</string>
@@ -260,6 +261,5 @@
    <string name="usb_data_auto_unlock_title">Unlock USB data</string>
    <string name="usb_data_auto_unlock_summary">Allow unlocked data access to your phone\'s storage through USB (MTP, PTP)</string>
    <string name="usb_data_auto_unlock_warning_summary">Your device will establish unprotected connections, everytime you connect it to a PC. Secured lockscreens disable this option automatically.\n\nThis is still an experimental feature, use with caution.</string>
-
 
 </resources>

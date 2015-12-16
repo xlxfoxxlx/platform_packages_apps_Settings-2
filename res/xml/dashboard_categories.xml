@@ -92,6 +92,14 @@
         android:id="@+id/personalization_section"
         android:title="@string/header_category_personalization" >
 
+        <!-- OwlsNest -->
+       <dashboard-tile
+            android:id="@+id/Owlsnest"
+            android:title="@string/custom_title"
+            android:fragment="com.android.settings.aosip.OwlsNestSettings"
+            android:icon="@drawable/ic_settings_illusion"
+            />
+
         <!-- Display -->
         <dashboard-tile
                 android:id="@+id/display_settings"
@@ -107,7 +115,6 @@
                 android:fragment="com.android.settings.notification.NotificationSettings"
                 android:icon="@drawable/ic_settings_notifications"
                 />
-
         </dashboard-category>
 
         <!-- DEVICE -->
