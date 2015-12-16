@@ -92,6 +92,14 @@
                 android:icon="@drawable/ic_settings_notifications"
                 />
 
+        <!-- OwlsNest -->
+       <dashboard-tile
+            android:id="@+id/Owlsnest"
+            android:title="@string/custom_title"
+            android:fragment="com.android.settings.aosip.OwlsNestSettings"
+            android:icon="@drawable/ic_settings_illusion"
+            />
+
         <!-- Themes -->
         <!-- NOTE: Intent.parseIntent looks for "categories" tag and not "category" -->
         <dashboard-tile
