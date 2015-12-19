@@ -42,4 +42,35 @@
     <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
     <string name="summary_heads_up_disabled">Pop-up notifications are disabled</string>
 
+    <!--Owlsnest statusbar-->
+    <string name="statusbar_bar_title">Statusbar options</string>
+    <string name="statusbar_bar_summary">Adjust items like battery,clock,icons,and colors</string>
+    <string name="clock_category">Clock</string>
+    <string name="battery_category">Battery</string>
+    <string name="icon_category">Icons</string>
+    <string name="extra_category">Extras</string>
+
+    <!--Owlsnest navigation-->
+    <string name="navigation_title">Navigation bar options</string>
+    <string name="navigation_summary">Customize Navbar size,buttons,layout,and colors</string>
+    <string name="navigationbuttons_category">Layouts</string>
+    <string name="navigation_dimen_category">Navbar size</string>
+
+    <!--Owlsnest buttons-->
+    <string name="buttons_title">Hardware buttons</string>
+    <string name="buttons_summary">Tweak the actions of your volume and power buttons</string>
+    <string name="powermenu_category">Power button</string>
+    <string name="volume_category">Volume buttons</string>
+
+    <!--Owlsnest lockscreen-->
+    <string name="lockscreen_title">Lockscreen</string>
+    <string name="lockscreen_summary">Options for weather</string>
+    <string name="weather_category">Lockscreen weather</string>
+
+    <!--Owlsnest advanced-->
+    <string name="advanced_title">Advanced UI</string>
+    <string name="advanced_summary">Heavy custom features</string>
+    <string name="gestureanywhere_category">Gesture anywhere</string>
+    <string name="sidebar_category">App sidebar</string>
+
 </resources>
