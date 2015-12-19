@@ -365,7 +365,7 @@ public class SettingsActivity extends Activity
             BatteryBarSettings.class.getName(),
             NavbarSettings.class.getName(),
             FlingSettings.class.getName(),
-            SmartbarSettings.class.getName()
+            SmartbarSettings.class.getName(),
             OwlsNestSettings.class.getName()
     };
 
