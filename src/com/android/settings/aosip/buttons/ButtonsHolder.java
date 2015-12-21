@@ -50,8 +50,7 @@ import android.widget.Toast;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
-
-import com.android.settings.aosip.buttons.PowermenuCategory;
+import com.android.settings.aosip.buttons.PowerMenuFragment;
 import com.android.settings.aosip.buttons.VolumeCategory;
 import com.android.settings.aosip.PagerSlidingTabStrip;
 
@@ -107,7 +106,7 @@ public class ButtonsHolder extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new PowermenuCategory();
+            frags[0] = new PowerMenuFragment();
             frags[1] = new VolumeCategory();
         }
 
