@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2015 Android Open Source Illusion Project
+<!--  Copyright (C) 2014 The Dirty Unicorns Project
+
+  Parts Copyright (C) 2012-2013 The CyanogenMod Project
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -14,15 +16,19 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/powermenu_category" >
-
-    <PreferenceScreen
-        android:key="power_menu"
-        android:title="@string/power_menu_title"
-        android:fragment="com.android.settings.aosip.buttons.PowerMenuFragment" />
-</PreferenceScreen>
-
+    <!-- PowerMenu entries -->
+    <string-array name="power_menu_actions_array" translatable="false">
+        <item>power</item>
+        <item>reboot</item>
+        <item>screenshot</item>
+        <item>airplane</item>
+        <item>users</item>
+        <item>settings</item>
+        <item>lockdown</item>
+        <item>assist</item>
+        <item>voiceassist</item>
+        <item>silent</item>
+    </string-array>
+</resources>

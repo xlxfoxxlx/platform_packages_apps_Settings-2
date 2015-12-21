@@ -52,6 +52,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
 import com.android.settings.aosip.buttons.PowermenuCategory;
+import com.android.settings.aosip.buttons.PowerMenuFragment;
 import com.android.settings.aosip.buttons.VolumeCategory;
 import com.android.settings.aosip.PagerSlidingTabStrip;
 
