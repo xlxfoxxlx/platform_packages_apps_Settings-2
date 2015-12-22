@@ -19,6 +19,9 @@
     <string name="icon_pack_picker_dialog_title">Icon packs</string>
     <string name="status_bar_title">Status bar</string>
     <string name="superuser">Superuser</string>
+    <string name="status_bar_battery_title">Battery</string>
+    <string name="status_bar_clock_title">Clock and date style</string>
+    <string name="status_bar_misc_title">Miscellaneous</string>
 
     <!-- Expanded desktop -->
     <string name="expanded_desktop_category">Expanded Desktop</string>
