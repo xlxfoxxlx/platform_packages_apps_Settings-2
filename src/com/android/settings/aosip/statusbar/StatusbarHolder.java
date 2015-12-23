@@ -52,6 +52,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
 
 import com.android.settings.aosip.statusbar.ClockCategory;
+import com.android.settings.aosip.statusbar.CarrierlabelCategory;
 import com.android.settings.aosip.statusbar.BatteryCategory;
 import com.android.settings.aosip.statusbar.IconsCategory;
 import com.android.settings.aosip.statusbar.ExtrasCategory;
@@ -111,8 +112,10 @@ public class StatusbarHolder extends SettingsPreferenceFragment {
             super(fm);
             frags[0] = new ClockCategory();
             frags[1] = new BatteryCategory();
-            frags[2] = new IconsCategory();
-            frags[3] = new ExtrasCategory();
+            //frags[2] = new IconsCategory();
+            frags[2] = new CarrierlabelCategory();
+            frags[3] = new TrafficCategory();
+            frags[4] = new ExtrasCategory();
         }
 
         @Override
@@ -136,7 +139,9 @@ public class StatusbarHolder extends SettingsPreferenceFragment {
         titleString = new String[]{
                     getString(R.string.clock_category),
                     getString(R.string.battery_category),
-                    getString(R.string.icon_category),
+                    //getString(R.string.icon_category),
+                    getString(R.string.carrier_category),
+                    getString(R.string.traffic_category),
                     getString(R.string.extra_category)};
         return titleString;
     }

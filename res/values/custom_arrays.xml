@@ -174,4 +174,128 @@
         <item>@color/yellow</item>>
         <item>@color/orange</item>
     </array>
+
+    <string-array name="clock_date_position_entries">
+        <item>@string/position_right_title</item>
+        <item>@string/position_centered_title</item>
+        <item>@string/hidden_title</item>
+    </string-array>
+
+    <string-array name="clock_date_position_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="clock_date_am_pm_entries">
+        <item>@string/normal_title</item>
+        <item>@string/clock_date_am_pm_small</item>
+        <item>@string/hidden_title</item>
+    </string-array>
+
+    <string-array name="clock_date_am_pm_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="clock_date_date_style_entries">
+        <item>@string/normal_title</item>
+        <item>@string/clock_date_date_style_lowercase</item>
+        <item>@string/clock_date_date_style_uppercase</item>
+    </string-array>
+
+    <string-array name="clock_date_date_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="clock_date_date_format_entries">
+        <item>dd/MM/yy</item>
+        <item>MM/dd/yy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy-dd-MM</item>
+        <item>dd-MM-yyyy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MMM dd</item>
+        <item>MMM dd, yyyy</item>
+        <item>MMMM dd, yyyy</item>
+        <item>EEE</item>
+        <item>EEE dd</item>
+        <item>EEE dd/MM</item>
+        <item>EEE MM/dd</item>
+        <item>EEE dd MMM</item>
+        <item>EEE MMM dd</item>
+        <item>EEE MMMM dd</item>
+        <item>EEEE dd/MM</item>
+        <item>EEEE MM/dd</item>
+        <item>@string/clock_date_date_custom_java_format</item>
+    </string-array>
+
+    <string-array name="clock_date_date_format_values">
+        <item>dd/MM/yy</item>
+        <item>MM/dd/yy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy-dd-MM</item>
+        <item>dd-MM-yyyy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MMM dd</item>
+        <item>MMM dd, yyyy</item>
+        <item>MMMM dd, yyyy</item>
+        <item>EEE</item>
+        <item>EEE dd</item>
+        <item>EEE dd/MM</item>
+        <item>EEE MM/dd</item>
+        <item>EEE dd MMM</item>
+        <item>EEE MMM dd</item>
+        <item>EEE MMMM dd</item>
+        <item>EEEE dd/MM</item>
+        <item>EEEE MM/dd</item>
+        <item>Custom java format</item>
+    </string-array>
+
+    <string-array name="number_of_notifications_entries">
+        <item>@string/always_title</item>
+        <item>@string/number_of_notifications_two_title</item>
+        <item>@string/number_of_notifications_three_title</item>
+        <item>@string/number_of_notifications_four_title</item>
+        <item>@string/number_of_notifications_five_title</item>
+        <item>@string/number_of_notifications_six_title</item>
+    </string-array>
+
+    <string-array name="number_of_notifications_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="network_traffic_activity_entries" >
+        <item>@string/network_traffic_activity_down</item>
+        <item>@string/network_traffic_activity_up</item>
+        <item>@string/network_traffic_activity_down_up</item>
+        <item>@string/disabled_title</item>
+    </string-array>
+
+    <string-array name="network_traffic_activity_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="network_traffic_type_entries" >
+        <item>@string/text_title</item>
+        <item>@string/icon_title</item>
+        <item>@string/network_traffic_type_text_icon</item>
+    </string-array>
+
+    <string-array name="network_traffic_type_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 </resources>
