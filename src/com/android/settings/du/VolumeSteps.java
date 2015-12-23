@@ -137,7 +137,7 @@ public class VolumeSteps extends SettingsPreferenceFragment implements
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsLogger.DIRTYTWEAKS;
+        return MetricsLogger.OWLSNEST;
     }
 
     private SharedPreferences getDefaultStepsPrefs() {
