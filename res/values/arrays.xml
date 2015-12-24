@@ -637,7 +637,7 @@
     </string-array>
 
     <!-- User display names for app ops codes -->
-    <string-array name="app_ops_summaries">
+    <string-array name="app_ops_summaries" translatable="false">
         <item>coarse location</item>
         <item>fine location</item>
         <item>GPS</item>
