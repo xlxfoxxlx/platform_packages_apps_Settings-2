@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.aosip.statusbar;
+package com.android.settings.aosip.qssettings;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -51,16 +51,13 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
 
-import com.android.settings.aosip.statusbar.ClockCategory;
-import com.android.settings.aosip.statusbar.BatteryCategory;
-import com.android.settings.aosip.statusbar.IconsCategory;
-import com.android.settings.aosip.statusbar.ExtrasCategory;
+import com.android.settings.aosip.qssettings.ExpandedCategory;
 import com.android.settings.aosip.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class StatusbarHolder extends SettingsPreferenceFragment {
+public class QsSettingsHolder extends SettingsPreferenceFragment {
 
     ViewPager mViewPager;
     String titleString[];
@@ -109,10 +106,8 @@ public class StatusbarHolder extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new ClockCategory();
-            frags[1] = new BatteryCategory();
-            frags[2] = new IconsCategory();
-            //frags[3] = new ExtrasCategory();
+            frags[0] = new ExpandedCategory();
+            //frags[1] = new BatteryCategory();
         }
 
         @Override
@@ -134,11 +129,8 @@ public class StatusbarHolder extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.clock_category),
-                    getString(R.string.battery_category),
-                    getString(R.string.icon_category),
-                    getString(R.string.extra_category)};;
-                    //getString(R.string.extra_category)};
+                    //getString(R.string.clock_category),
+                    getString(R.string.expanded_category)};
         return titleString;
     }
 }

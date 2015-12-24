@@ -57,6 +57,11 @@
     <string name="navigationbuttons_category">Layouts</string>
     <string name="navigation_dimen_category">Navbar size</string>
 
+    <!--Owlsnest Quick settings-->
+    <string name="quicksettings_title">Quick settings</string>
+    <string name="quicksettings_summary">Manage your quick tiles and expanded statusbar</string>
+    <string name="expanded_category">Statusbar expanded</string>
+
     <!--Owlsnest buttons-->
     <string name="buttons_title">Hardware buttons</string>
     <string name="buttons_summary">Tweak the actions of your volume and power buttons</string>

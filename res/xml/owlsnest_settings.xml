@@ -26,6 +26,12 @@
        android:summary="@string/statusbar_bar_summary" />
 
     <PreferenceScreen
+       android:key="quicksettings"
+       android:fragment="com.android.settings.aosip.qssettings.QsSettingsHolder"
+       android:title="@string/quicksettings_title" 
+       android:summary="@string/quicksettings_summary" />
+
+    <PreferenceScreen
        android:key="navigation"
        android:fragment="com.android.settings.aosip.navigation.NavigationHolder"
        android:title="@string/navigation_title" 
