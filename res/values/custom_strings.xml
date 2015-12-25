@@ -117,6 +117,11 @@
     <string name="power_menu_sound_title">Sound panel</string>
     <string name="power_menu_bug_report_disabled">Bug reporting is disabled in development settings</string>
 
+    <!--Owlsnest recentscreen-->
+    <string name="recent_title">Recents screen</string>
+    <string name="recent_summary">Configure your clear all button and misc recent options</string>
+    <string name="recent_category">Recent apps</string>
+
     <!--Owlsnest lockscreen-->
     <string name="lockscreen_title">Lockscreen</string>
     <string name="lockscreen_summary">Options for weather</string>

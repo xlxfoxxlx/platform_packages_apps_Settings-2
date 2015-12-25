@@ -44,6 +44,12 @@
        android:summary="@string/buttons_summary" />
 
     <PreferenceScreen
+       android:key="recent"
+       android:fragment="com.android.settings.aosip.recent.RecentHolder"
+       android:title="@string/recent_title" 
+       android:summary="@string/recent_summary" />
+
+    <PreferenceScreen
        android:key="lockscreen"
        android:fragment="com.android.settings.aosip.lockscreen.LockscreenHolder"
        android:title="@string/lockscreen_title" 
