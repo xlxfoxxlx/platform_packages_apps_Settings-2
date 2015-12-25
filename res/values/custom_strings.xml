@@ -66,6 +66,19 @@
     <string name="tile_category">Tile area</string>
     <string name="quick_settings_title">Tiles</string>
     <string name="quick_settings_summary">Add or remove tiles</string>
+    <!-- QuickSettings 4 columns -->
+    <string name="qs_four_columns_title">Show four tiles per row</string>
+    <string name="qs_four_columns_summary">Change default tile count from 3 to 4 columns</string>
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+    <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
+    <!-- QuickSettings main tiles -->
+    <string name="qs_main_tiles_title">Enlarge first row</string>
+    <string name="qs_main_tiles_summary_on">Two main tiles on the first row</string>
+    <string name="qs_main_tiles_summary_off">Three or four tiles on each row</string>
+    <!-- QuickSettings brightness slider -->
+    <string name="qs_brightness_slider_title">Brightness slider</string>
+    <string name="qs_brightness_slider_summary">Show a brightness slider in the quick settings panel</string>
 
     <!--Owlsnest buttons-->
     <string name="buttons_title">Hardware buttons</string>
