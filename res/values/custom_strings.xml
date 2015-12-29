@@ -961,4 +961,12 @@
     <string name="lockscreen_colors_reset_message">Are you sure you want to reset these colors to default?</string>
     <string name="yes">YES</string>
 
+    <!-- Statusbar AOSIP logo -->
+
+    <string name="aosip_logo">AOSIP logo</string>
+    <string name="status_bar_aosip_logo_title">AOSIP logo</string>
+    <string name="status_bar_aosip_logo_summary">Enable to show AOSIP logo on the left side of statusbar</string>
+    <string name="status_bar_aosip_logo_color">AOSIP logo color</string>
+
+
 </resources>
