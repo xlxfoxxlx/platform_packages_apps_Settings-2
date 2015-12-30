@@ -31,7 +31,7 @@ import com.android.internal.logging.MetricsLogger;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class NavigationDimenCategory extends SettingsPreferenceFragment implements
+public class NavigationExtrasCategory extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     @Override
@@ -43,7 +43,7 @@ public class NavigationDimenCategory extends SettingsPreferenceFragment implemen
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.aosip_navigation_dimen);
+        addPreferencesFromResource(R.xml.aosip_navigation_extras);
 
     }
 
