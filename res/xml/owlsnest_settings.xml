@@ -61,5 +61,14 @@
        android:title="@string/advanced_title" 
        android:summary="@string/advanced_summary" />
 
+    <PreferenceScreen
+            android:key="supersu_settings"
+            android:title="@string/supersu_title"
+            android:summary="@string/supersu_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="eu.chainfire.supersu"
+                android:targetClass="eu.chainfire.supersu.MainActivity" />
+    </PreferenceScreen>
 </PreferenceScreen>
 

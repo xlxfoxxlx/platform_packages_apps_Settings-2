@@ -516,4 +516,7 @@
     <string name="select_custom_activity_title">Select custom activity</string>
     <string name="profile_applist_title">Applications</string>
 
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="supersu_summary">Customize root permissions</string>
 </resources>
