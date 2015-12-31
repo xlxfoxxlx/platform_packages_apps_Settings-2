@@ -25,14 +25,21 @@ import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.preference.PreferenceCategory;
 import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.PreferenceFragment;
 import android.preference.SwitchPreference;
 
 import com.android.internal.logging.MetricsLogger;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 public class NavigationExtrasCategory extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
+
+    private static final String NAVIGATION_BAR_TINT = "navigation_bar_tint";
+
+    private ColorPickerPreference mNavbarButtonTint;
 
     @Override
     protected int getMetricsCategory() {
@@ -45,6 +52,13 @@ public class NavigationExtrasCategory extends SettingsPreferenceFragment impleme
 
         addPreferencesFromResource(R.xml.aosip_navigation_extras);
 
+        mNavbarButtonTint = (ColorPickerPreference) findPreference(NAVIGATION_BAR_TINT);
+        mNavbarButtonTint.setOnPreferenceChangeListener(this);
+        int intColor = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.NAVIGATION_BAR_TINT, 0xffffffff);
+        String hexColor = String.format("#%08x", (0xffffffff & intColor));
+        mNavbarButtonTint.setSummary(hexColor);
+        mNavbarButtonTint.setNewPreviewColor(intColor);
     }
 
     @Override
@@ -52,7 +66,16 @@ public class NavigationExtrasCategory extends SettingsPreferenceFragment impleme
         super.onResume();
     }
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mNavbarButtonTint) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(objValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_TINT, intHex);
+            return true;
+         }
         return false;
     }
 }
