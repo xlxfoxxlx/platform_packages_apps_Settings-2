@@ -21,6 +21,8 @@ import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.UserHandle;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
@@ -39,10 +41,11 @@ import net.margaritov.preference.colorpicker.ColorPickerPreference;
 public class AosipLogo extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String TAG = "AosipLogo";
-
     private static final String KEY_AOSIP_LOGO_COLOR = "status_bar_aosip_logo_color";
+    private static final String KEY_AOSIP_LOGO_STYLE = "status_bar_aosip_logo_style";
 
     private ColorPickerPreference mAosipLogoColor;
+    private ListPreference mAosipLogoStyle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,14 @@ public class AosipLogo extends SettingsPreferenceFragment implements OnPreferenc
         addPreferencesFromResource(R.xml.aosip_logo);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+
+            mAosipLogoStyle = (ListPreference) findPreference(KEY_AOSIP_LOGO_STYLE);
+            int aosipLogoStyle = Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_AOSIP_LOGO_STYLE, 0,
+                    UserHandle.USER_CURRENT);
+            mAosipLogoStyle.setValue(String.valueOf(aosipLogoStyle));
+            mAosipLogoStyle.setSummary(mAosipLogoStyle.getEntry());
+            mAosipLogoStyle.setOnPreferenceChangeListener(this);
 
         // AOSIP logo color
         mAosipLogoColor =
@@ -73,6 +84,15 @@ public class AosipLogo extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_AOSIP_LOGO_COLOR, intHex);
             return true;
+            } else if (preference == mAosipLogoStyle) {
+                int aosipLogoStyle = Integer.valueOf((String) newValue);
+                int index = mAosipLogoStyle.findIndexOfValue((String) newValue);
+                Settings.System.putIntForUser(
+                        resolver, Settings.System.STATUS_BAR_AOSIP_LOGO_STYLE, aosipLogoStyle,
+                        UserHandle.USER_CURRENT);
+                mAosipLogoStyle.setSummary(
+                        mAosipLogoStyle.getEntries()[index]);
+                return true;
         }
         return false;
     }

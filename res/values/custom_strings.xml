@@ -967,6 +967,9 @@
     <string name="status_bar_aosip_logo_title">AOSIP logo</string>
     <string name="status_bar_aosip_logo_summary">Enable to show AOSIP logo on the left side of statusbar</string>
     <string name="status_bar_aosip_logo_color">AOSIP logo color</string>
-
+    <string name="status_bar_aosip_logo_position">Logo location</string>
+    <string name="status_bar_aosip_logo_position_summary">Choose which side to display the logo on, left or right</string>
+    <string name="status_bar_logo_position_right">Right</string>
+    <string name="status_bar_logo_position_left">Left</string>
 
 </resources>
