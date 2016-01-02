@@ -145,8 +145,16 @@
     <string name="text_title">Text</string>
     <string name="status_bar_network_traffic_settings_title">Network traffic</string>
     <string name="status_bar_network_traffic_settings_summary">Customize the network traffic</string>
-    <string name="status_bar_icon_blacklist_title">Visible</string>
+    <string name="status_bar_icon_blacklist_title">Icon visibility</string>
     <string name="status_bar_icon_blacklist_summary">Adjust visible icons</string>
+    <string name="status_bar_network_icons_settings_title">Network icons</string>
+    <string name="status_bar_network_icons_settings_summary">Customize the Network icons</string>
+    <!-- Status bar network icons settings -->
+    <string name="network_icons_cat_signal_colors_title">Signal colors</string>
+    <string name="network_icons_cat_no_sim_colors_title">No sim card colors</string>
+    <string name="network_icons_cat_airplane_mode_colors_title">Airplane mode colors</string>
+    <string name="status_bar_notification_icons">Notification icons colors</string>
+    <string name="network_status_icons_cat_status_colors_title">Statusbar icons color</string>
 
     <!--Owlsnest navigation-->
     <string name="navigation_title">Navigation bar options</string>

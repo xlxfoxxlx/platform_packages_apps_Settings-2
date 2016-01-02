@@ -27,5 +27,60 @@
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.TunerActivity" />
     </PreferenceScreen>
+
+    <PreferenceCategory
+        android:key="notification_icons_colors"
+        android:title="@string/status_bar_notification_icons">
+
+         <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="notification_icons_color"
+            android:title="@string/color_title"
+            android:defaultValue="#ffffffff" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="network_status_icons_cat_status_colors"
+        android:title="@string/network_status_icons_cat_status_colors_title">
+
+         <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="network_status_icons_status_color"
+            android:title="@string/color_title"
+            android:defaultValue="#ffffffff" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="network_icons_cat_signal_colors"
+        android:title="@string/network_icons_cat_signal_colors_title">
+
+         <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="network_icons_signal_color"
+            android:title="@string/color_title"
+            android:defaultValue="#ffffffff" />
+
+	</PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="network_icons_cat_no_sim_colors"
+        android:title="@string/network_icons_cat_no_sim_colors_title">
+
+         <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="network_icons_no_sim_color"
+            android:title="@string/color_title"
+            android:defaultValue="#ffffffff" />
+
+	</PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="network_icons_cat_airplane_mode_colors"
+        android:title="@string/network_icons_cat_airplane_mode_colors_title">
+
+         <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="network_icons_airplane_mode_color"
+            android:title="@string/color_title"
+            android:defaultValue="#ffffffff" />
+
+	</PreferenceCategory>
 </PreferenceScreen>
 
