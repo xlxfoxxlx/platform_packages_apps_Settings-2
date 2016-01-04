@@ -30,4 +30,10 @@
     <color name="expanded_button_color_normal">#4CAF50</color>
     <color name="expanded_button_color_close">#F44336</color>
 
+    <!-- Owlsnest tab -->
+    <color name="owlsnest_tab_text_color">@color/text_color_white</color>
+    <color name="owlsnest_indicator_color">@color/owlsnest_tab_text_color</color>
+    <color name="owlsnest_underline_color">@color/theme_accent</color>
+    <color name="owlsnest_divider_color">@color/owlsnest_underline_color</color>
+
 </resources>
