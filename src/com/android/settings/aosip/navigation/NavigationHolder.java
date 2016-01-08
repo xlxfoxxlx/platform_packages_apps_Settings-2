@@ -53,7 +53,8 @@ import com.android.internal.logging.MetricsLogger;
 
 import com.android.settings.aosip.navigation.NavigationButtonsCategory;
 import com.android.settings.aosip.navigation.NavigationDimenCategory;
-import com.android.settings.aosip.navigation.NavigationExtrasCategory;
+import com.android.settings.aosip.navigation.NavigationSlimDimCategory;
+
 import com.android.settings.aosip.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
@@ -110,7 +111,8 @@ public class NavigationHolder extends SettingsPreferenceFragment {
             super(fm);
             frags[0] = new NavigationButtonsCategory();
             frags[1] = new NavigationDimenCategory();
-            frags[2] = new NavigationExtrasCategory();
+            frags[2] = new NavigationSlimDimCategory();
+            frags[3] = new NavigationExtrasCategory();
         }
 
         @Override
@@ -134,6 +136,7 @@ public class NavigationHolder extends SettingsPreferenceFragment {
         titleString = new String[]{
                     getString(R.string.navigationbuttons_category),
                     getString(R.string.navbar_dimen_title),
+                    getString(R.string.dim_nav_buttons_category),
                     getString(R.string.navigation_extras_category)};
         return titleString;
     }
