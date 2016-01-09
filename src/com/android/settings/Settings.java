@@ -118,5 +118,5 @@ public class Settings extends SettingsActivity {
     public static class WriteSettingsActivity extends SettingsActivity { /* empty */ }
     public static class AppDrawOverlaySettingsActivity extends SettingsActivity { /* empty */ }
     public static class AppWriteSettingsActivity extends SettingsActivity { /* empty */ }
-    public static class OwlsNestSettings extends SettingsActivity { /* empty */ }
+    public static class OwlsNestSettingsActivity extends SettingsActivity { /* empty */ }
 }

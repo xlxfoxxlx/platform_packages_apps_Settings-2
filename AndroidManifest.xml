@@ -2581,5 +2581,19 @@
                 android:value="com.android.settings.applications.WriteSettingsDetails" />
         </activity>
 
+        <!-- Owlsnest Settings -->
+      	<activity android:name="Settings$OwlsNestSettingsActivity"
+                android:label="@string/custom_title"
+                android:taskAffinity="">
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter>
+          <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                     android:value="com.android.settings.aosip.OwlsNestSettings" />
+          <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                     android:resource="@id/owlsnest_settings" />
+      	</activity>
+
     </application>
 </manifest>
