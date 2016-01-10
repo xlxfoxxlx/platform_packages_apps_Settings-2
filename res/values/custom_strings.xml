@@ -249,7 +249,7 @@
    <string name="reset_lockscreen_wallpaper">Lockscreen wallpaper set back to default</string>
 
     <!--Owlsnest advanced-->
-    <string name="advanced_title">Overkill options</string>
+    <string name="advanced_title">Advanced options</string>
     <string name="advanced_summary">Extra features</string>
     <string name="gestureanywhere_category">Gesture anywhere</string>
     <string name="sidebar_category">App sidebar</string>
