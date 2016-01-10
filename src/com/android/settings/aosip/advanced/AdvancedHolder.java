@@ -53,6 +53,9 @@ import com.android.internal.logging.MetricsLogger;
 
 import com.android.settings.benzo.gestureanywhere.GestureAnywhereSettings;
 import com.android.settings.aosip.advanced.AppsidebarCategory;
+import com.android.settings.applications.ExpandedDesktopPreferenceFragment;
+import com.android.settings.widget.SwitchBar;
+import com.android.settings.aosip.advanced.AdvancedSettings;
 import com.android.settings.aosip.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
@@ -107,8 +110,8 @@ public class AdvancedHolder extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new GestureAnywhereSettings();
-            //frags[1] = new AppsidebarCategory();
+            frags[0] = new AdvancedSettings();
+            //frags[1] = new ExpandedDesktopPreferenceFragment();
         }
 
         @Override
@@ -130,8 +133,8 @@ public class AdvancedHolder extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.gestureanywhere_category)};
-                    //getString(R.string.sidebar_category)};
+                    //getString(R.string.gestureanywhere_category),
+                    getString(R.string.advanced_title)};
         return titleString;
     }
 }
