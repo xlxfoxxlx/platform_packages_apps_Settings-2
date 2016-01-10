@@ -28,7 +28,7 @@
     <PreferenceScreen
         android:key="gesture_anywhere"
         android:title="@string/gestureanywhere_category"
-        android:fragment="com.android.settings.aosip.GestureAnywhereSettings" />
+        android:fragment="com.android.settings.benzo.gestureanywhere.GestureAnywhereSettings" />
 
 </PreferenceScreen>
 
