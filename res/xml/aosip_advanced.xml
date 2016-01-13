@@ -30,5 +30,9 @@
         android:title="@string/gestureanywhere_category"
         android:fragment="com.android.settings.benzo.gestureanywhere.GestureAnywhereSettings" />
 
+    <PreferenceScreen
+        android:key="animation_settings"
+        android:title="@string/animation_title"
+        android:fragment="com.android.settings.aosip.advanced.AnimationSettings" />
 </PreferenceScreen>
 
