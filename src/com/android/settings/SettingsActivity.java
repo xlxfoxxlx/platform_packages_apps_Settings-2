@@ -80,6 +80,7 @@ import com.android.settings.applications.UsageAccessDetails;
 import com.android.settings.applications.WriteSettingsDetails;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.custom.BatteryBarSettings;
+import com.android.settings.custom.nav.NavbarSettings;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;
 import com.android.settings.dashboard.DashboardTile;
@@ -356,6 +357,7 @@ public class SettingsActivity extends Activity
             DrawOverlayDetails.class.getName(),
             WriteSettingsDetails.class.getName(),
             BatteryBarSettings.class.getName(),
+            NavbarSettings.class.getName()
     };
 
 
