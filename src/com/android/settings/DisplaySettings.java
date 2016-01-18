@@ -87,6 +87,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             = "camera_double_tap_power_gesture";
     private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
+    private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
+
+    private SwitchPreference mKillAppLongPressBack;
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
@@ -136,6 +139,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.display_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        mKillAppLongPressBack = (SwitchPreference) findPreference(KILL_APP_LONGPRESS_BACK);
+        mKillAppLongPressBack.setOnPreferenceChangeListener(this);
+        int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
+                KILL_APP_LONGPRESS_BACK, 0);
+        mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
 
         mScreenSaverPreference = findPreference(KEY_SCREEN_SAVER);
         if (mScreenSaverPreference != null
@@ -546,6 +555,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             Settings.Secure.putInt(getContentResolver(), CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED,
                     value ? 0 : 1 /* Backwards because setting is for disabling */);
+        }
+        if (preference == mKillAppLongPressBack) {
+            boolean value = (Boolean) objValue;
+            Settings.Secure.putInt(getContentResolver(), KILL_APP_LONGPRESS_BACK,
+                    value ? 1 : 0);
         }
         if (preference == mNightModePreference) {
             try {

@@ -118,6 +118,18 @@
                 android:title="@string/wifi_display_settings_title"
                 settings:keywords="@string/keywords_display_cast_screen"
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
+
+         <com.android.settings.preference.SystemSettingSwitchPreference
+                android:key="toast_icon"
+                android:title="@string/toast_icon_title"
+                android:summary="@string/toast_icon_summary"
+                android:defaultValue="false" />
+
+         <SwitchPreference
+                android:key="kill_app_longpress_back"
+                android:title="@string/kill_app_longpress_back"
+                android:summary="@string/kill_app_longpress_back_summary"/>
+
          <PreferenceCategory
              android:key="category_wakeup_options"
              android:title="@string/display_category_wakeup_options_title" >
@@ -128,13 +140,6 @@
                 android:summary="@string/wakeup_when_plugged_unplugged_summary"
                 android:defaultValue="true"
                 android:persistent="false" />
-
-         <com.android.settings.preference.SystemSettingSwitchPreference
-                android:key="toast_icon"
-                android:title="@string/toast_icon_title"
-                android:summary="@string/toast_icon_summary"
-                android:defaultValue="false" />
-
 
          </PreferenceCategory>
 
