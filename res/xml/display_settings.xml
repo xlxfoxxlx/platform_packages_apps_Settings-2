@@ -98,15 +98,9 @@
                 android:title="@string/tap_to_wake"
                 android:summary="@string/tap_to_wake_summary"
                 android:persistent="false" />
-
-        <com.android.settings.WarnedListPreference
-                android:key="font_size"
-                android:title="@string/title_font_size"
-                settings:keywords="@string/keywords_display_font_size"
-                android:summary="@string/summary_font_size"
-                android:entries="@array/entries_font_size"
-                android:entryValues="@array/entryvalues_font_size"
-                android:dialogTitle="@string/dialog_title_font_size" />
+        <PreferenceCategory
+            android:key="dashboard_category"
+            android:title="@string/dashboard_category">
 
         <ListPreference
                 android:key="dashboard_columns"
@@ -116,6 +110,24 @@
                 android:entryValues="@array/dashboard_columns_values"
                 android:summary="@string/dashboard_columns_summary"
                 android:persistent="false" />
+
+        <com.android.settings.preference.SystemSettingSwitchPreference
+                android:key="dashboard_tileview_double_lines"
+                android:title="@string/dashboard_tileview_double_lines_title"
+                android:summaryOn="@string/dashboard_tileview_double_lines_summary_on"
+                android:summaryOff="@string/dashboard_tileview_double_lines_summary_off"
+                android:defaultValue="false" />
+
+        </PreferenceCategory>
+
+        <com.android.settings.WarnedListPreference
+                android:key="font_size"
+                android:title="@string/title_font_size"
+                settings:keywords="@string/keywords_display_font_size"
+                android:summary="@string/summary_font_size"
+                android:entries="@array/entries_font_size"
+                android:entryValues="@array/entryvalues_font_size"
+                android:dialogTitle="@string/dialog_title_font_size" />
 
         <PreferenceScreen
                 android:key="display_rotation"
