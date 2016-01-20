@@ -26,7 +26,8 @@
     <string name="palette_rgb_title">RGB</string>
     <string name="reset_android_title">Android default</string>
     <string name="reset_darkkat_title">AOSiP default</string>
-    <string name="link_volume_option_title">Link ringtone &amp; notification volumes</string>
+    <string name="reset_paranoid">Paranoid</string>
+    <string name="reset_android">Android</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
