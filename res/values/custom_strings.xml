@@ -28,7 +28,6 @@
     <string name="reset_darkkat_title">AOSiP default</string>
     <string name="reset_paranoid">Paranoid</string>
     <string name="reset_android">Android</string>
-    <string name="link_volume_option_title">Link ringtone &amp; notification volumes</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
