@@ -43,6 +43,7 @@ import android.view.IWindowManager;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.android.settings.aosip.seekbar.SeekBarPreference;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
@@ -54,9 +55,11 @@ public class VolumeCategory extends SettingsPreferenceFragment implements
 
     private static final String KEY_VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
     private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
+    private static final String PREF_TRANSPARENT_VOLUME_DIALOG = "transparent_volume_dialog";
 
     private ListPreference mVolumeKeyCursorControl;
     private SwitchPreference mVolumeRockerWake;
+    private SeekBarPreference mVolumeDialogAlpha;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -75,6 +78,14 @@ public class VolumeCategory extends SettingsPreferenceFragment implements
         int volumeRockerWake = Settings.System.getInt(getContentResolver(),
                 VOLUME_ROCKER_WAKE, 0);
         mVolumeRockerWake.setChecked(volumeRockerWake != 0);
+
+       // Volume dialog alpha
+       mVolumeDialogAlpha =
+               (SeekBarPreference) prefSet.findPreference(PREF_TRANSPARENT_VOLUME_DIALOG);
+       int volumeDialogAlpha = Settings.System.getInt(resolver,
+               Settings.System.TRANSPARENT_VOLUME_DIALOG, 255);
+       mVolumeDialogAlpha.setValue(volumeDialogAlpha / 1);
+       mVolumeDialogAlpha.setOnPreferenceChangeListener(this);
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -111,6 +122,11 @@ public class VolumeCategory extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(), VOLUME_ROCKER_WAKE,
                     value ? 1 : 0);
          return true;
+        } else if (preference == mVolumeDialogAlpha) {
+            int alpha = (Integer) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.TRANSPARENT_VOLUME_DIALOG, alpha * 1);
+            return true;
         }
         return false;
     }

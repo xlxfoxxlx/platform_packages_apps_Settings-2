@@ -253,7 +253,7 @@
 
     <!--Owlsnest buttons-->
     <string name="buttons_title">Hardware buttons</string>
-    <string name="buttons_summary">Tweak the actions of your volume and power buttons</string>
+    <string name="buttons_summary">Tweak the actions of your volume/power buttons and dialogs</string>
     <string name="powermenu_category">Power button</string>
     <string name="volume_category">Volume buttons</string>
     <!--Volume rocker cursor control -->
@@ -857,4 +857,6 @@
     <string name="qs_transparent_header">QS header transparency</string>
     <!-- Power menu and dialogs transparency -->
     <string name="power_menu_transparency">Power/reboot menu transparency</string>
+    <!-- Volume dialog transparency -->
+    <string name="volume_dialog_transparency">Volume dialog transparency</string>
 </resources>

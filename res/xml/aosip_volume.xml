@@ -20,6 +20,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/volume_category" >
 
+    <com.android.settings.aosip.seekbar.SeekBarPreference
+            android:key="transparent_volume_dialog"
+            android:title="@string/volume_dialog_transparency"
+            android:max="255"
+            settings:minimum="0"
+            android:persistent="false" />
+
     <SwitchPreference
         android:key="volume_rocker_wake"
         android:summary="@string/volume_rocker_wake_summary"
