@@ -42,6 +42,7 @@ import java.util.Locale;
 import android.text.TextUtils;
 import android.view.View;
 
+import com.android.settings.aosip.seekbar.SeekBarPreference;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
@@ -51,8 +52,10 @@ public class ExpandedCategory extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "StatusBar";
     private static final String PRE_QUICK_PULLDOWN = "quick_pulldown";
+    private static final String PREF_QS_TRANSPARENT_SHADE = "qs_transparent_shade";
 
     private ListPreference mQuickPulldown;
+    private SeekBarPreference mQSShadeAlpha;
 
     private final Configuration mCurConfig = new Configuration();
 
@@ -72,6 +75,14 @@ public class ExpandedCategory extends SettingsPreferenceFragment implements
                 Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 1);
         mQuickPulldown.setValue(String.valueOf(statusQuickPulldown));
         updateQuickPulldownSummary(statusQuickPulldown);
+
+        // QS shade alpha
+        mQSShadeAlpha =
+                (SeekBarPreference) prefSet.findPreference(PREF_QS_TRANSPARENT_SHADE);
+        int qSShadeAlpha = Settings.System.getInt(resolver,
+                Settings.System.QS_TRANSPARENT_SHADE, 255);
+        mQSShadeAlpha.setValue(qSShadeAlpha / 1);
+        mQSShadeAlpha.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -94,15 +105,20 @@ public class ExpandedCategory extends SettingsPreferenceFragment implements
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
         final String key = preference.getKey();
         if (preference == mQuickPulldown) {
-            int statusQuickPulldown = Integer.valueOf((String) objValue);
+            int statusQuickPulldown = Integer.valueOf((String) newValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     statusQuickPulldown);
             updateQuickPulldownSummary(statusQuickPulldown);
             return true;
+        } else if (preference == mQSShadeAlpha) {
+                int alpha = (Integer) newValue;
+                Settings.System.putInt(getActivity().getContentResolver(),
+                        Settings.System.QS_TRANSPARENT_SHADE, alpha * 1);
+                return true;
         }
          return false;
     }
