@@ -40,8 +40,8 @@
         android:persistent="false" />
 
     <com.android.settings.aosip.seekbar.SeekBarPreference
-            android:key="qs_transparent_shade"
-            android:title="@string/qs_transparent_shade"
+            android:key="qs_transparent_header"
+            android:title="@string/qs_transparent_header"
             android:max="255"
             settings:minimum="0"
             android:persistent="false" />

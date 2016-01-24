@@ -16,8 +16,16 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/power_menu_title">
 
+    <com.android.settings.aosip.seekbar.SeekBarPreference
+            android:key="transparent_power_menu"
+            android:title="@string/power_menu_transparency"
+            android:max="100"
+            settings:minimum="1"
+            android:persistent="false" />
+    
     <SwitchPreference
         android:key="reboot"
         android:title="@string/power_menu_reboot_title"

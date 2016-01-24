@@ -52,10 +52,10 @@ public class ExpandedCategory extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "StatusBar";
     private static final String PRE_QUICK_PULLDOWN = "quick_pulldown";
-    private static final String PREF_QS_TRANSPARENT_SHADE = "qs_transparent_shade";
+    private static final String PREF_QS_TRANSPARENT_HEADER = "qs_transparent_header";
 
     private ListPreference mQuickPulldown;
-    private SeekBarPreference mQSShadeAlpha;
+    private SeekBarPreference mQSHeaderAlpha; 
 
     private final Configuration mCurConfig = new Configuration();
 
@@ -76,13 +76,13 @@ public class ExpandedCategory extends SettingsPreferenceFragment implements
         mQuickPulldown.setValue(String.valueOf(statusQuickPulldown));
         updateQuickPulldownSummary(statusQuickPulldown);
 
-        // QS shade alpha
-        mQSShadeAlpha =
-                (SeekBarPreference) prefSet.findPreference(PREF_QS_TRANSPARENT_SHADE);
-        int qSShadeAlpha = Settings.System.getInt(resolver,
-                Settings.System.QS_TRANSPARENT_SHADE, 255);
-        mQSShadeAlpha.setValue(qSShadeAlpha / 1);
-        mQSShadeAlpha.setOnPreferenceChangeListener(this);
+        // QS header alpha
+        mQSHeaderAlpha =
+                (SeekBarPreference) prefSet.findPreference(PREF_QS_TRANSPARENT_HEADER);
+        int qSHeaderAlpha = Settings.System.getInt(resolver,
+                Settings.System.QS_TRANSPARENT_HEADER, 255);
+        mQSHeaderAlpha.setValue(qSHeaderAlpha / 1);
+        mQSHeaderAlpha.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -114,10 +114,10 @@ public class ExpandedCategory extends SettingsPreferenceFragment implements
                     statusQuickPulldown);
             updateQuickPulldownSummary(statusQuickPulldown);
             return true;
-        } else if (preference == mQSShadeAlpha) {
+        } else if (preference == mQSHeaderAlpha) {
                 int alpha = (Integer) newValue;
                 Settings.System.putInt(getActivity().getContentResolver(),
-                        Settings.System.QS_TRANSPARENT_SHADE, alpha * 1);
+                        Settings.System.QS_TRANSPARENT_HEADER, alpha * 1);
                 return true;
         }
          return false;
