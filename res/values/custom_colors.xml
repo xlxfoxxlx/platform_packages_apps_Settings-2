@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- DSLV colors -->
+    <color name="dslv_icon_dark">#ff009688</color>
+    <color name="dslv_float_cackground_color">#ff1b1f23</color>
+
+    <!-- Gesture Anywhere -->
+    <color name="ga_gesture_color">@android:color/holo_blue_light</color>
+
+    <!-- Owlsnest tab -->
+    <color name="owlsnest_tab_text_color">@color/text_color_white</color>
+    <color name="owlsnest_indicator_color">@color/owlsnest_tab_text_color</color>
+    <color name="owlsnest_underline_color">@color/theme_accent</color>
+    <color name="owlsnest_divider_color">@color/owlsnest_underline_color</color>
+
+    <!-- Expanded desktop -->
+    <drawable name="expanded_item_bg_activated">#ffEEEEEE</drawable>
+    <drawable name="expanded_item_bg">@android:color/background_light</drawable>
+    <color name="expanded_button_color_normal">#4CAF50</color>
+    <color name="expanded_button_color_close">#F44336</color>
+
+    <!-- BlackList colors -->
+    <color name="blacklist_enabled">#DD2C00</color>
+    <color name="blacklist_disabled">#D7D7D7</color>
+
+</resources>
+
