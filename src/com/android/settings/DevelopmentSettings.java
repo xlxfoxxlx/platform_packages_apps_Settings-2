@@ -323,7 +323,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
         mBugreport = findPreference(BUGREPORT);
         mBugreportInPower = findAndInitSwitchPref(BUGREPORT_IN_POWER_KEY);
-        mRestartSystemUI = findPreference(RESTART_SYSTEMUI);s
+        mRestartSystemUI = findPreference(RESTART_SYSTEMUI);
         mKeepScreenOn = findAndInitSwitchPref(KEEP_SCREEN_ON);
         mBtHciSnoopLog = findAndInitSwitchPref(BT_HCI_SNOOP_LOG);
         mEnableOemUnlock = findAndInitSwitchPref(ENABLE_OEM_UNLOCK);
