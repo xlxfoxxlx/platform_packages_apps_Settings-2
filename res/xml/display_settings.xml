@@ -57,17 +57,31 @@
                 android:entries="@array/screen_timeout_entries"
                 android:entryValues="@array/screen_timeout_values" />
 
+        <com.android.settings.WarnedListPreference
+                android:key="font_size"
+                android:title="@string/title_font_size"
+                settings:keywords="@string/keywords_display_font_size"
+                android:summary="@string/summary_font_size"
+                android:entries="@array/entries_font_size"
+                android:entryValues="@array/entryvalues_font_size"
+                android:dialogTitle="@string/dialog_title_font_size" />
+
         <SwitchPreference
                 android:key="camera_gesture"
                 android:title="@string/camera_gesture_title"
                 android:summary="@string/camera_gesture_desc"
                 android:persistent="false" />
 
-        <SwitchPreference
-                android:key="camera_double_tap_power_gesture"
-                android:title="@string/camera_double_tap_power_gesture_title"
-                android:summary="@string/camera_double_tap_power_gesture_desc"
-                android:persistent="false" />
+        <PreferenceScreen
+                android:key="display_rotation"
+                android:fragment="com.android.settings.slim.DisplayRotation"
+                android:title="@string/display_rotation_title" />
+
+        <PreferenceScreen
+                android:key="wifi_display"
+                android:title="@string/wifi_display_settings_title"
+                settings:keywords="@string/keywords_display_cast_screen"
+                android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
 
         <PreferenceScreen
                 android:key="screensaver"
@@ -75,8 +89,40 @@
                 android:fragment="com.android.settings.DreamSettings" />
 
         <SwitchPreference
+                android:key="camera_double_tap_power_gesture"
+                android:title="@string/camera_double_tap_power_gesture_title"
+                android:summary="@string/camera_double_tap_power_gesture_desc"
+                android:persistent="false" />
+
+        <SwitchPreference
                 android:key="lift_to_wake"
                 android:title="@string/lift_to_wake_title"
+                android:persistent="false" />
+
+        <SwitchPreference
+                android:key="tap_to_wake"
+                android:title="@string/tap_to_wake"
+                android:summary="@string/tap_to_wake_summary"
+                android:persistent="false" />
+
+        <PreferenceCategory
+            android:key="dashboard_category"
+            android:title="@string/aosip_extras">
+
+        <com.android.settings.preference.SystemSettingSwitchPreference
+                android:key="dashboard_tileview_double_lines"
+                android:title="@string/dashboard_tileview_double_lines_title"
+                android:summaryOn="@string/dashboard_tileview_double_lines_summary_on"
+                android:summaryOff="@string/dashboard_tileview_double_lines_summary_off"
+                android:defaultValue="false" />
+
+        <ListPreference
+                android:key="dashboard_columns"
+                android:title="@string/dashboard_columns_title"
+                android:dialogTitle="@string/dashboard_columns_dialog_title"
+                android:entries="@array/dashboard_columns_entries"
+                android:entryValues="@array/dashboard_columns_values"
+                android:summary="@string/dashboard_columns_summary"
                 android:persistent="false" />
 
         <SwitchPreference
@@ -93,58 +139,13 @@
                 android:summaryOff="@string/doze_notification_color_invert_summary_off"
                 android:defaultValue="true" />
 
-        <SwitchPreference
-                android:key="tap_to_wake"
-                android:title="@string/tap_to_wake"
-                android:summary="@string/tap_to_wake_summary"
-                android:persistent="false" />
-        <PreferenceCategory
-            android:key="dashboard_category"
-            android:title="@string/dashboard_category">
-
-        <ListPreference
-                android:key="dashboard_columns"
-                android:title="@string/dashboard_columns_title"
-                android:dialogTitle="@string/dashboard_columns_dialog_title"
-                android:entries="@array/dashboard_columns_entries"
-                android:entryValues="@array/dashboard_columns_values"
-                android:summary="@string/dashboard_columns_summary"
-                android:persistent="false" />
-
-        <com.android.settings.preference.SystemSettingSwitchPreference
-                android:key="dashboard_tileview_double_lines"
-                android:title="@string/dashboard_tileview_double_lines_title"
-                android:summaryOn="@string/dashboard_tileview_double_lines_summary_on"
-                android:summaryOff="@string/dashboard_tileview_double_lines_summary_off"
-                android:defaultValue="false" />
-
-        </PreferenceCategory>
-
-        <com.android.settings.WarnedListPreference
-                android:key="font_size"
-                android:title="@string/title_font_size"
-                settings:keywords="@string/keywords_display_font_size"
-                android:summary="@string/summary_font_size"
-                android:entries="@array/entries_font_size"
-                android:entryValues="@array/entryvalues_font_size"
-                android:dialogTitle="@string/dialog_title_font_size" />
-
-        <PreferenceScreen
-                android:key="display_rotation"
-                android:fragment="com.android.settings.slim.DisplayRotation"
-                android:title="@string/display_rotation_title" />
-
-        <PreferenceScreen
-                android:key="wifi_display"
-                android:title="@string/wifi_display_settings_title"
-                settings:keywords="@string/keywords_display_cast_screen"
-                android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
-
          <com.android.settings.preference.SystemSettingSwitchPreference
                 android:key="toast_icon"
                 android:title="@string/toast_icon_title"
                 android:summary="@string/toast_icon_summary"
                 android:defaultValue="false" />
+
+        </PreferenceCategory>
 
          <PreferenceCategory
              android:key="category_wakeup_options"
