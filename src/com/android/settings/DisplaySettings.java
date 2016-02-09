@@ -86,7 +86,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_CAMERA_GESTURE = "camera_gesture";
     private static final String KEY_CAMERA_DOUBLE_TAP_POWER_GESTURE
             = "camera_double_tap_power_gesture";
-1    private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
+    private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
 
     private static final String DASHBOARD_COLUMNS = "dashboard_columns";
