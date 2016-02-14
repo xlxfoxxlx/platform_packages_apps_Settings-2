@@ -21,21 +21,6 @@
     android:title="@string/advanced_title" >
 
     <PreferenceScreen
-        android:key="expanded_desktop"
-        android:title="@string/power_menu_expanded_desktop"
-        android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
-
-    <PreferenceScreen
-    	android:key="pa_pie_control"
-        android:title="@string/pa_pie_control_title"
-        android:fragment="com.android.settings.paranoid.PieControl" />
-
-    <PreferenceScreen
-        android:key="gesture_anywhere"
-        android:title="@string/gestureanywhere_category"
-        android:fragment="com.android.settings.benzo.gestureanywhere.GestureAnywhereSettings" />
-
-    <PreferenceScreen
         android:key="animation_settings"
         android:title="@string/animation_title"
         android:fragment="com.android.settings.aosip.advanced.AnimationSettings" />
@@ -44,5 +29,27 @@
         android:key="app_circle_bar"
         android:fragment="com.android.settings.benzo.AppCircleBar"
         android:title="@string/app_circle_bar_title" />
+
+    <Preferencescreen
+        android:title="@string/app_ops_settings"
+        android:summary="@string/app_ops_settings_summary"
+        android:persistent="false"
+                android:fragment="com.android.settings.applications.AppOpsSummary"/>
+
+    <PreferenceScreen
+        android:key="expanded_desktop"
+        android:title="@string/power_menu_expanded_desktop"
+        android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
+
+    <PreferenceScreen
+        android:key="gesture_anywhere"
+        android:title="@string/gestureanywhere_category"
+        android:fragment="com.android.settings.benzo.gestureanywhere.GestureAnywhereSettings" />
+
+    <PreferenceScreen
+    	android:key="pa_pie_control"
+        android:title="@string/pa_pie_control_title"
+        android:fragment="com.android.settings.paranoid.PieControl" />
+
 </PreferenceScreen>
 
