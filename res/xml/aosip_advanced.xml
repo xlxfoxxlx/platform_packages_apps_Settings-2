@@ -30,7 +30,7 @@
         android:fragment="com.android.settings.benzo.AppCircleBar"
         android:title="@string/app_circle_bar_title" />
 
-    <Preferencescreen
+    <Preference
         android:title="@string/app_ops_settings"
         android:summary="@string/app_ops_settings_summary"
         android:persistent="false"
