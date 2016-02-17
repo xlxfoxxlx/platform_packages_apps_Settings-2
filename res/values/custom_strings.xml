@@ -885,9 +885,10 @@
     <string name="dashboard_columns_three">Three</string>
 
     <!-- Dashboard tileview double lines -->
-    <string name="dashboard_tileview_double_lines_title">Dashboard tile view title</string>
-    <string name="dashboard_tileview_double_lines_summary_on">Show dashboard tile titles in 1 line</string>
-    <string name="dashboard_tileview_double_lines_summary_off">Show dashboard tile titles in 2 lines</string>
+    <string name="dashboard_tileview_double_lines_title">Title view</string>
+    <string name="dashboard_tileview_double_lines_summary">Show dashboard tile titles in 2 lines</string>
+    <string name="dashboard_tileview_dividers_title">Divider lines</string>
+    <string name="dashboard_tileview_dividers_summary">Hide the dashboard tile dividers</string>
 
     <!-- Heads up -->
     <string name="headsup_section_header">Heads up notifications</string>
