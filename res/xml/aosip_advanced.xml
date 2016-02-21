@@ -46,6 +46,13 @@
         android:title="@string/gestureanywhere_category"
         android:fragment="com.android.settings.benzo.gestureanywhere.GestureAnywhereSettings" />
 
+         <PreferenceScreen
+            android:key="multitwindow"
+            android:fragment="com.android.settings.aosip.advanced.MultiWindow"
+            android:layout="@layout/aosip_multiwindow"
+            android:title="@string/multiwindow_settings_title" 
+            />
+
     <PreferenceScreen
     	android:key="pa_pie_control"
         android:title="@string/pa_pie_control_title"

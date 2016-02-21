@@ -838,18 +838,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         return !SystemProperties.get(PERSISTENT_DATA_BLOCK_PROP).equals("");
     }
 
-<<<<<<< HEAD
-    private static boolean showEnableMultiWindowPreference() {
-        return !"user".equals(Build.TYPE);
-    }
-
-    private void setEnableMultiWindow(boolean value) {
-        SystemProperties.set(MULTI_WINDOW_SYSTEM_PROPERTY, String.valueOf(value));
-        pokeSystemProperties();
-    }
-
-=======
->>>>>>> 62d3f79... Move multiwindow out of developer options
     private void updateBugreportOptions() {
         final ComponentName bugreportStorageProviderComponentName =
                 new ComponentName("com.android.shell",
