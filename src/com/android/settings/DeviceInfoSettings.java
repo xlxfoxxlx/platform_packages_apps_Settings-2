@@ -92,9 +92,9 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_SM_AND = "sm_android";
     private static final String KEY_SM_KERNEL = "sm_kernel";
     private static final String KEY_SM_FLAGS = "sm_flags";
-    private static final String PROPERTY_SM_AND = "ro.sm.android";
-    private static final String PROPERTY_SM_KERNEL = "ro.sm.kernel";
-    private static final String PROPERTY_SM_FLAGS = "ro.sm.flags";
+    private static final String PROPERTY_SM_AND = "ro.uber.android";
+    private static final String PROPERTY_SM_KERNEL = "ro.uber.kernel";
+    private static final String PROPERTY_SM_FLAGS = "ro.uber.flags";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
