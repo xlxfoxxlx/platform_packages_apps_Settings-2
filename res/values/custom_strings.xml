@@ -972,4 +972,15 @@
     <string name="status_bar_logo_position_right">Right</string>
     <string name="status_bar_logo_position_left">Left</string>
 
+    <!--Custom logos-->
+    <string name="sb_custom_logos">Custom Logos</string>
+    <string name="custom_logo_style"> Logos</string>
+    <string name="custom_logos">Take your Pick</string>
+    <string name="show_custom_logo_title">Show Custom Logo</string>
+    <string name="show_custom_logo_summary">Show Logos in Statusbar from a wide range of icons available in System</string>
+    <string name="custom_logo_color">Color</string>
+    <string name="logo0">Kronic Eyes</string>
+    <string name="logo1">Kronic Head</string>	
+    <string name="logo2">TBD</string>	
+
 </resources>

@@ -39,5 +39,9 @@
            android:entries="@array/status_bar_logo_position_entries"
            android:entryValues="@array/status_bar_logo_position_values"
            android:dependency="status_bar_aosip_logo" />
-</PreferenceScreen>
 
+     <PreferenceScreen
+            android:key="custom_logo"
+            android:fragment="com.android.settings.aosip.statusbar.CustomLogo"
+            android:title="@string/sb_custom_logos" />
+</PreferenceScreen>
