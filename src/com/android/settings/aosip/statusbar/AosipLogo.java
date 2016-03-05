@@ -55,6 +55,7 @@ public class AosipLogo extends SettingsPreferenceFragment implements OnPreferenc
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
+            ContentResolver resolver = mContext.getContentResolver();
             mAosipLogoStyle = (ListPreference) findPreference(KEY_AOSIP_LOGO_STYLE);
             int aosipLogoStyle = Settings.System.getIntForUser(resolver,
                     Settings.System.STATUS_BAR_AOSIP_LOGO_STYLE, 0,
@@ -76,6 +77,7 @@ public class AosipLogo extends SettingsPreferenceFragment implements OnPreferenc
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+            ContentResolver resolver = mContext.getContentResolver();
         if (preference == mAosipLogoColor) {
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
