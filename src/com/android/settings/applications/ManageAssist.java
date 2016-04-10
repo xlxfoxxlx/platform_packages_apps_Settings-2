@@ -20,6 +20,7 @@ import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.Preference;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
@@ -45,6 +46,7 @@ public class ManageAssist extends SettingsPreferenceFragment
     private SwitchPreference mContextPref;
     private SwitchPreference mScreenshotPref;
     private VoiceInputListPreference mVoiceInputPref;
+    private Handler mHandler = new Handler();
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -78,6 +80,7 @@ public class ManageAssist extends SettingsPreferenceFragment
         if (preference == mContextPref) {
             Settings.Secure.putInt(getContentResolver(), Settings.Secure.ASSIST_STRUCTURE_ENABLED,
                     (boolean) newValue ? 1 : 0);
+            postUpdateUi();
             return true;
         }
         if (preference == mScreenshotPref) {
@@ -102,19 +105,47 @@ public class ManageAssist extends SettingsPreferenceFragment
         return false;
     }
 
+    private void postUpdateUi() {
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                updateUi();
+            }
+        });
+    }
+
     private void updateUi() {
         mDefaultAssitPref.refreshAssistApps();
+        mVoiceInputPref.refreshVoiceInputs();
 
         final ComponentName currentAssist = mDefaultAssitPref.getCurrentAssist();
         final boolean hasAssistant = currentAssist != null;
         if (hasAssistant) {
             getPreferenceScreen().addPreference(mContextPref);
+            getPreferenceScreen().addPreference(mScreenshotPref);
         } else {
             getPreferenceScreen().removePreference(mContextPref);
+            getPreferenceScreen().removePreference(mScreenshotPref);
         }
 
-        mVoiceInputPref.setAssistRestrict(currentAssist);
-        mVoiceInputPref.refreshVoiceInputs();
+        if (isCurrentAssistVoiceService()) {
+            getPreferenceScreen().removePreference(mVoiceInputPref);
+        } else {
+            getPreferenceScreen().addPreference(mVoiceInputPref);
+            mVoiceInputPref.setAssistRestrict(currentAssist);
+        }
+
+        mScreenshotPref.setEnabled(mContextPref.isChecked());
+        if (!mContextPref.isChecked()) {
+            mScreenshotPref.setChecked(false);
+        }
+    }
+
+    private boolean isCurrentAssistVoiceService() {
+        ComponentName currentAssist = mDefaultAssitPref.getCurrentAssist();
+        ComponentName activeService = mVoiceInputPref.getCurrentService();
+        return currentAssist == null && activeService == null ||
+                currentAssist != null && currentAssist.equals(activeService);
     }
 
     private void confirmNewAssist(final String newAssitPackage) {

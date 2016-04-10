@@ -20,6 +20,7 @@ import android.content.Intent;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
 
+import com.android.internal.logging.MetricsLogger;
 import com.android.settings.ChooseLockSettingsHelper;
 import com.android.settings.R;
 
@@ -30,15 +31,19 @@ public class FingerprintEnrollFindSensor extends FingerprintEnrollBase {
 
     private static final int CONFIRM_REQUEST = 1;
     private static final int ENROLLING = 2;
+    public static final String EXTRA_KEY_LAUNCHED_CONFIRM = "launched_confirm_lock";
 
     private FingerprintLocationAnimationView mAnimation;
+    private boolean mLaunchedConfirmLock;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fingerprint_enroll_find_sensor);
         setHeaderText(R.string.security_settings_fingerprint_enroll_find_sensor_title);
-        if (mToken == null) {
+        mLaunchedConfirmLock = savedInstanceState != null && savedInstanceState.getBoolean(
+                EXTRA_KEY_LAUNCHED_CONFIRM);
+        if (mToken == null && !mLaunchedConfirmLock) {
             launchConfirmLock();
         }
         mAnimation = (FingerprintLocationAnimationView) findViewById(
@@ -55,6 +60,12 @@ public class FingerprintEnrollFindSensor extends FingerprintEnrollBase {
     protected void onStop() {
         super.onStop();
         mAnimation.stopAnimation();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(EXTRA_KEY_LAUNCHED_CONFIRM, mLaunchedConfirmLock);
     }
 
     @Override
@@ -75,6 +86,20 @@ public class FingerprintEnrollFindSensor extends FingerprintEnrollBase {
             if (resultCode == RESULT_FINISHED) {
                 setResult(RESULT_FINISHED);
                 finish();
+            } else if (resultCode == RESULT_SKIP) {
+                setResult(RESULT_SKIP);
+                finish();
+            } else if (resultCode == RESULT_TIMEOUT) {
+                setResult(RESULT_TIMEOUT);
+                finish();
+            } else {
+                FingerprintManager fpm = getSystemService(FingerprintManager.class);
+                int enrolled = fpm.getEnrolledFingerprints().size();
+                int max = getResources().getInteger(
+                        com.android.internal.R.integer.config_fingerprintMaxTemplatesPerUser);
+                if (enrolled >= max) {
+                    finish();
+                }
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
@@ -91,6 +116,13 @@ public class FingerprintEnrollFindSensor extends FingerprintEnrollBase {
             // This shouldn't happen, as we should only end up at this step if a lock thingy is
             // already set.
             finish();
+        } else {
+            mLaunchedConfirmLock = true;
         }
+    }
+
+    @Override
+    protected int getMetricsCategory() {
+        return MetricsLogger.FINGERPRINT_FIND_SENSOR;
     }
 }

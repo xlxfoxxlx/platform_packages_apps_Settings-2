@@ -38,7 +38,10 @@ import android.hardware.fingerprint.FingerprintManager;
 import android.hardware.fingerprint.FingerprintManager.RemovalCallback;
 import android.util.EventLog;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.accessibility.AccessibilityManager;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.android.internal.logging.MetricsLogger;
@@ -97,6 +100,7 @@ public class ChooseLockGeneric extends SettingsActivity {
         private int mEncryptionRequestQuality;
         private boolean mEncryptionRequestDisabled;
         private boolean mRequirePassword;
+        private boolean mForFingerprint = false;
         private String mUserPassword;
         private LockPatternUtils mLockPatternUtils;
         private FingerprintManager mFingerprintManager;
@@ -105,11 +109,18 @@ public class ChooseLockGeneric extends SettingsActivity {
             @Override
             public void onRemovalSucceeded(Fingerprint fingerprint) {
                 Log.v(TAG, "Fingerprint removed: " + fingerprint.getFingerId());
+                if (mFingerprintManager.getEnrolledFingerprints().size() == 0) {
+                    finish();
+                }
             }
 
             @Override
             public void onRemovalError(Fingerprint fp, int errMsgId, CharSequence errString) {
-                Toast.makeText(getActivity(), errString, Toast.LENGTH_SHORT);
+                Activity activity = getActivity();
+                if (activity != null) {
+                    Toast.makeText(getActivity(), errString, Toast.LENGTH_SHORT);
+                }
+                finish();
             }
         };
 
@@ -140,6 +151,8 @@ public class ChooseLockGeneric extends SettingsActivity {
                     ChooseLockSettingsHelper.EXTRA_KEY_HAS_CHALLENGE, false);
             mChallenge = getActivity().getIntent().getLongExtra(
                     ChooseLockSettingsHelper.EXTRA_KEY_CHALLENGE, 0);
+            mForFingerprint = getActivity().getIntent().getBooleanExtra(
+                    ChooseLockSettingsHelper.EXTRA_KEY_FOR_FINGERPRINT, false);
 
             if (savedInstanceState != null) {
                 mPasswordConfirmed = savedInstanceState.getBoolean(PASSWORD_CONFIRMED);
@@ -161,6 +174,18 @@ public class ChooseLockGeneric extends SettingsActivity {
                 } else {
                     mWaitingForConfirmation = true;
                 }
+            }
+        }
+
+        @Override
+        public void onViewCreated(View view, Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+            if (mForFingerprint) {
+                final LayoutInflater inflater = LayoutInflater.from(getContext());
+                final ListView listView = getListView();
+                final View fingerprintHeader = inflater.inflate(
+                        R.layout.choose_lock_generic_fingerprint_header, listView, false);
+                listView.addHeaderView(fingerprintHeader, null, false);
             }
         }
 
@@ -201,6 +226,8 @@ public class ChooseLockGeneric extends SettingsActivity {
                 final boolean accEn = AccessibilityManager.getInstance(context).isEnabled();
                 final boolean required = mLockPatternUtils.isCredentialRequiredToDecrypt(!accEn);
                 Intent intent = getEncryptionInterstitialIntent(context, quality, required);
+                intent.putExtra(ChooseLockSettingsHelper.EXTRA_KEY_FOR_FINGERPRINT,
+                        mForFingerprint);
                 startActivityForResult(intent, ENABLE_ENCRYPTION_REQUEST);
             } else {
                 mRequirePassword = false; // device encryption not enabled or not device owner.
@@ -334,6 +361,10 @@ public class ChooseLockGeneric extends SettingsActivity {
                     boolean visible = true;
                     if (KEY_UNLOCK_SET_OFF.equals(key)) {
                         enabled = quality <= DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED;
+                        if (getResources().getBoolean(R.bool.config_hide_none_security_option)) {
+                            enabled = false;
+                            visible = false;
+                        }
                     } else if (KEY_UNLOCK_SET_NONE.equals(key)) {
                         enabled = quality <= DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED;
                     } else if (KEY_UNLOCK_SET_PATTERN.equals(key)) {
@@ -470,18 +501,19 @@ public class ChooseLockGeneric extends SettingsActivity {
                 mChooseLockSettingsHelper.utils().clearLock(UserHandle.myUserId());
                 mChooseLockSettingsHelper.utils().setLockScreenDisabled(disabled,
                         UserHandle.myUserId());
-                removeAllFingerprintTemplates();
+                removeAllFingerprintTemplatesAndFinish();
                 getActivity().setResult(Activity.RESULT_OK);
-                finish();
             } else {
-                removeAllFingerprintTemplates();
-                finish();
+                removeAllFingerprintTemplatesAndFinish();
             }
         }
 
-        private void removeAllFingerprintTemplates() {
-            if (mFingerprintManager != null && mFingerprintManager.isHardwareDetected()) {
+        private void removeAllFingerprintTemplatesAndFinish() {
+            if (mFingerprintManager != null && mFingerprintManager.isHardwareDetected()
+                    && mFingerprintManager.getEnrolledFingerprints().size() > 0) {
                 mFingerprintManager.remove(new Fingerprint(null, 0, 0, 0), mRemovalCallback);
+            } else {
+                finish();
             }
         }
 
@@ -495,19 +527,28 @@ public class ChooseLockGeneric extends SettingsActivity {
             return R.string.help_url_choose_lockscreen;
         }
 
-        private int getResIdForFactoryResetProtectionWarningTitle() {
+        private int getResIdForFactoryResetProtectionWarningMessage() {
+            boolean hasFingerprints = mFingerprintManager.hasEnrolledFingerprints();
             switch (mLockPatternUtils.getKeyguardStoredPasswordQuality(UserHandle.myUserId())) {
                 case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
-                    return R.string.unlock_disable_lock_pattern_summary;
+                    return hasFingerprints
+                            ? R.string.unlock_disable_frp_warning_content_pattern_fingerprint
+                            : R.string.unlock_disable_frp_warning_content_pattern;
                 case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC:
                 case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX:
-                    return R.string.unlock_disable_lock_pin_summary;
+                    return hasFingerprints
+                            ? R.string.unlock_disable_frp_warning_content_pin_fingerprint
+                            : R.string.unlock_disable_frp_warning_content_pin;
                 case DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC:
                 case DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC:
                 case DevicePolicyManager.PASSWORD_QUALITY_COMPLEX:
-                    return R.string.unlock_disable_lock_password_summary;
+                    return hasFingerprints
+                            ? R.string.unlock_disable_frp_warning_content_password_fingerprint
+                            : R.string.unlock_disable_frp_warning_content_password;
                 default:
-                    return R.string.unlock_disable_lock_unknown_summary;
+                    return hasFingerprints
+                            ? R.string.unlock_disable_frp_warning_content_unknown_fingerprint
+                            : R.string.unlock_disable_frp_warning_content_unknown;
             }
         }
 
@@ -542,23 +583,23 @@ public class ChooseLockGeneric extends SettingsActivity {
         }
 
         private void showFactoryResetProtectionWarningDialog(String unlockMethodToSet) {
-            int title = getResIdForFactoryResetProtectionWarningTitle();
+            int message = getResIdForFactoryResetProtectionWarningMessage();
             FactoryResetProtectionWarningDialog dialog =
-                    FactoryResetProtectionWarningDialog.newInstance(title, unlockMethodToSet);
+                    FactoryResetProtectionWarningDialog.newInstance(message, unlockMethodToSet);
             dialog.show(getChildFragmentManager(), TAG_FRP_WARNING_DIALOG);
         }
 
         public static class FactoryResetProtectionWarningDialog extends DialogFragment {
 
-            private static final String ARG_TITLE_RES = "titleRes";
+            private static final String ARG_MESSAGE_RES = "messageRes";
             private static final String ARG_UNLOCK_METHOD_TO_SET = "unlockMethodToSet";
 
-            public static FactoryResetProtectionWarningDialog newInstance(int title,
+            public static FactoryResetProtectionWarningDialog newInstance(int messageRes,
                     String unlockMethodToSet) {
                 FactoryResetProtectionWarningDialog frag =
                         new FactoryResetProtectionWarningDialog();
                 Bundle args = new Bundle();
-                args.putInt(ARG_TITLE_RES, title);
+                args.putInt(ARG_MESSAGE_RES, messageRes);
                 args.putString(ARG_UNLOCK_METHOD_TO_SET, unlockMethodToSet);
                 frag.setArguments(args);
                 return frag;
@@ -577,9 +618,9 @@ public class ChooseLockGeneric extends SettingsActivity {
                 final Bundle args = getArguments();
 
                 return new AlertDialog.Builder(getActivity())
-                        .setTitle(args.getInt(ARG_TITLE_RES))
-                        .setMessage(R.string.unlock_disable_frp_warning_content)
-                        .setPositiveButton(R.string.okay,
+                        .setTitle(R.string.unlock_disable_frp_warning_title)
+                        .setMessage(args.getInt(ARG_MESSAGE_RES))
+                        .setPositiveButton(R.string.unlock_disable_frp_warning_ok,
                                 new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int whichButton) {

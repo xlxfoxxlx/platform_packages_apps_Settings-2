@@ -66,15 +66,15 @@
     <item msgid="7786168277516233536">"Très grande"</item>
   </string-array>
   <string-array name="tts_rate_entries">
-    <item msgid="6041212618892492920">"Très lente"</item>
-    <item msgid="2361722960903353554">"Lente"</item>
-    <item msgid="1145554631248513562">"Normale"</item>
-    <item msgid="7553665153391107454">"Rapide"</item>
-    <item msgid="1370673569131070146">"Plus rapide"</item>
-    <item msgid="4648206845228970803">"Très rapide"</item>
-    <item msgid="4977949754169483251">"Rapide"</item>
-    <item msgid="6106302964845503577">"Très rapide"</item>
-    <item msgid="6800277205640837264">"Le plus rapide"</item>
+    <item msgid="6041212618892492920">"1 - Très lente"</item>
+    <item msgid="2361722960903353554">"2 - Lente"</item>
+    <item msgid="1145554631248513562">"3 - Normale"</item>
+    <item msgid="7553665153391107454">"4 - Élevée"</item>
+    <item msgid="1370673569131070146">"5 - Plus élevée"</item>
+    <item msgid="4648206845228970803">"6 - Très élevée"</item>
+    <item msgid="4977949754169483251">"7 - Rapide"</item>
+    <item msgid="6106302964845503577">"8 - Très rapide"</item>
+    <item msgid="6800277205640837264">"9 - Le plus rapide"</item>
   </string-array>
   <string-array name="tts_pitch_entries">
     <item msgid="7526050907652687351">"Très grave"</item>
@@ -140,8 +140,8 @@
     <!-- no translation found for wifi_ap_band_config_2G_only:0 (7006771583217001015) -->
   <string-array name="wifi_p2p_wps_setup">
     <item msgid="5085064298144493867">"Appuyer sur le bouton"</item>
-    <item msgid="1624323946324499595">"Code PIN de l\'appareil associé"</item>
-    <item msgid="5366790421523328066">"Code PIN de l\'appareil"</item>
+    <item msgid="1624323946324499595">"Code de l\'appareil associé"</item>
+    <item msgid="5366790421523328066">"Code de l\'appareil"</item>
   </string-array>
   <string-array name="wifi_p2p_status">
     <item msgid="1701505390737218306">"Connecté"</item>
@@ -440,30 +440,30 @@
   </string-array>
   <string-array name="window_animation_scale_entries">
     <item msgid="8134156599370824081">"Animation désactivée"</item>
-    <item msgid="6624864048416710414">"Échelle d\'animation : x 0,5"</item>
-    <item msgid="2219332261255416635">"Échelle d\'animation : x 1"</item>
-    <item msgid="3544428804137048509">"Échelle d\'animation : x 1,5"</item>
-    <item msgid="3110710404225974514">"Échelle d\'animation : x 2"</item>
-    <item msgid="4402738611528318731">"Échelle d\'animation : x 5"</item>
-    <item msgid="6189539267968330656">"Échelle d\'animation : x 10"</item>
+    <item msgid="6624864048416710414">"Échelle d\'animation x 0,5"</item>
+    <item msgid="2219332261255416635">"Échelle d\'animation x 1"</item>
+    <item msgid="3544428804137048509">"Échelle d\'animation x 1,5"</item>
+    <item msgid="3110710404225974514">"Échelle d\'animation x 2"</item>
+    <item msgid="4402738611528318731">"Échelle d\'animation x 5"</item>
+    <item msgid="6189539267968330656">"Échelle d\'animation x 10"</item>
   </string-array>
   <string-array name="transition_animation_scale_entries">
     <item msgid="8464255836173039442">"Animation désactivée"</item>
-    <item msgid="3375781541913316411">"Échelle d\'animation : x 0,5"</item>
-    <item msgid="1991041427801869945">"Échelle d\'animation : x 1"</item>
-    <item msgid="4012689927622382874">"Échelle d\'animation : x 1,5"</item>
-    <item msgid="3289156759925947169">"Échelle d\'animation : 2 x"</item>
-    <item msgid="7705857441213621835">"Échelle d\'animation : x 0,5"</item>
-    <item msgid="6660750935954853365">"Échelle d\'animation : x 10"</item>
+    <item msgid="3375781541913316411">"Échelle d\'animation x 0,5"</item>
+    <item msgid="1991041427801869945">"Échelle d\'animation x 1"</item>
+    <item msgid="4012689927622382874">"Échelle d\'animation x 1,5"</item>
+    <item msgid="3289156759925947169">"Échelle d\'animation x 2"</item>
+    <item msgid="7705857441213621835">"Échelle d\'animation x 0,5"</item>
+    <item msgid="6660750935954853365">"Échelle d\'animation x 10"</item>
   </string-array>
   <string-array name="animator_duration_scale_entries">
     <item msgid="6039901060648228241">"Animation désactivée"</item>
-    <item msgid="1138649021950863198">"Échelle d\'animation : x 0,5"</item>
-    <item msgid="4394388961370833040">"Échelle d\'animation : x 1"</item>
+    <item msgid="1138649021950863198">"Échelle d\'animation x 0,5"</item>
+    <item msgid="4394388961370833040">"Échelle d\'animation x 1"</item>
     <item msgid="8125427921655194973">"Échelle d\'animation x 1,5"</item>
-    <item msgid="3334024790739189573">"Échelle d\'animation : x 2"</item>
-    <item msgid="3170120558236848008">"Échelle d\'animation : x 5"</item>
-    <item msgid="1069584980746680398">"Échelle d\'animation : x 10"</item>
+    <item msgid="3334024790739189573">"Échelle d\'animation x 2"</item>
+    <item msgid="3170120558236848008">"Échelle d\'animation x 5"</item>
+    <item msgid="1069584980746680398">"Échelle d\'animation x 10"</item>
   </string-array>
   <string-array name="overlay_display_devices_entries">
     <item msgid="1606809880904982133">"Aucun"</item>
@@ -567,8 +567,4 @@
     <item msgid="6131821495505931173">"Rouge"</item>
   </string-array>
     <!-- no translation found for usb_configuration_titles:0 (292902998500371970) -->
-    <!-- no translation found for usb_available_functions:0 (1052890583379911173) -->
-    <!-- no translation found for usb_available_functions:1 (5179287634369331675) -->
-    <!-- no translation found for usb_available_functions:2 (7367227752916579970) -->
-    <!-- no translation found for usb_available_functions:3 (3121694448025579443) -->
 </resources>

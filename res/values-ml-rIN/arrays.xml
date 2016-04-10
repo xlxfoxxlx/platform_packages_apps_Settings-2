@@ -39,7 +39,7 @@
     <item msgid="6864027152847611413">"30 മിനിറ്റ്"</item>
   </string-array>
   <string-array name="dream_timeout_entries">
-    <item msgid="3149294732238283185">"ഒരിക്കലുമില്ല"</item>
+    <item msgid="3149294732238283185">"ഒരിക്കലും"</item>
     <item msgid="2194151041885903260">"15 സെക്കൻഡ്"</item>
     <item msgid="5892295237131074341">"30 സെക്കൻഡ്"</item>
     <item msgid="3538441365970038213">"ഒരു മിനിറ്റ്"</item>
@@ -164,13 +164,13 @@
   </string-array>
   <string-array name="wifi_sleep_policy_entries">
     <item msgid="3269131034472904310">"എല്ലായ്പ്പോഴും"</item>
-    <item msgid="844721238536786870">"പ്ലഗ്ഗുചെയ്‌തിരിക്കുമ്പോൾ"</item>
-    <item msgid="1986753720941888596">"ഒരിക്കലുമില്ല"</item>
+    <item msgid="844721238536786870">"പ്ലഗ്ഗുചെയ്‌തിരിക്കവേ"</item>
+    <item msgid="1986753720941888596">"ഒരിക്കലും"</item>
   </string-array>
   <string-array name="wifi_sleep_policy_entries_wifi_only">
     <item msgid="2124319326282651391">"എല്ലായ്പ്പോഴും"</item>
-    <item msgid="7433294150916905997">"പ്ലഗ്ഗുചെയ്‌തിരിക്കുമ്പോൾ"</item>
-    <item msgid="1390404486722375028">"ഒരിക്കലുമില്ല"</item>
+    <item msgid="7433294150916905997">"പ്ലഗ്ഗുചെയ്‌തിരിക്കവേ"</item>
+    <item msgid="1390404486722375028">"ഒരിക്കലും"</item>
   </string-array>
   <string-array name="data_usage_data_range">
     <item msgid="5013973108901348144">"കഴിഞ്ഞ 30 ദിവസം"</item>
@@ -211,7 +211,7 @@
   <string-array name="wifi_proxy_settings">
     <item msgid="4473276491748503377">"ഒന്നുമില്ല"</item>
     <item msgid="8673874894887358090">"സ്വമേധയാലുള്ളത്"</item>
-    <item msgid="168893341855953140">"പ്രോക്‌സി യാന്ത്രിക കോൺഫിഗറേഷൻ"</item>
+    <item msgid="168893341855953140">"പ്രോക്‌സി ഓട്ടോകോൺഫിഗറേഷൻ"</item>
   </string-array>
   <string-array name="apn_auth_entries">
     <item msgid="3856896061242872146">"ഒന്നുമില്ല"</item>
@@ -249,7 +249,7 @@
     <item msgid="2681427309183221543">"GID"</item>
   </string-array>
   <string-array name="app_install_location_entries">
-    <item msgid="8151497958991952759">"ആന്തരിക ഉപകരണ സംഭരണം"</item>
+    <item msgid="8151497958991952759">"ആന്തരിക ഉപകരണ സ്റ്റോറേജ്"</item>
     <item msgid="3738430123799803530">"നീക്കംചെയ്യാനാകുന്ന SD കാർഡ്"</item>
     <item msgid="4498124044785815005">"സി‌സ്റ്റത്തിനെ തീരുമാനമെടുക്കാൻ അനുവദിക്കുക"</item>
   </string-array>
@@ -526,7 +526,7 @@
   </string-array>
   <string-array name="security_settings_premium_sms_values">
     <item msgid="7389829271787670252">"ചോദിക്കുക"</item>
-    <item msgid="5077768429488260031">"ഒരിക്കലും അനുവദിക്കരുത്"</item>
+    <item msgid="5077768429488260031">"ഒരിക്കലുമനുവദിക്കരുത്"</item>
     <item msgid="1417929597727989746">"എല്ലായ്‌പ്പോഴും അനുവദിക്കുക"</item>
   </string-array>
   <string-array name="ram_states">
@@ -567,8 +567,4 @@
     <item msgid="6131821495505931173">"ചുവപ്പ്"</item>
   </string-array>
     <!-- no translation found for usb_configuration_titles:0 (292902998500371970) -->
-    <!-- no translation found for usb_available_functions:0 (1052890583379911173) -->
-    <!-- no translation found for usb_available_functions:1 (5179287634369331675) -->
-    <!-- no translation found for usb_available_functions:2 (7367227752916579970) -->
-    <!-- no translation found for usb_available_functions:3 (3121694448025579443) -->
 </resources>

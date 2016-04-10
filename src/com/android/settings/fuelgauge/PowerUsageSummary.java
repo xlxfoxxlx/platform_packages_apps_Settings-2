@@ -76,7 +76,7 @@ public class PowerUsageSummary extends PowerUsageBase {
     private int mStatsType = BatteryStats.STATS_SINCE_CHARGED;
 
     private static final int MIN_POWER_THRESHOLD_MILLI_AMP = 5;
-    private static final int MAX_ITEMS_TO_LIST = 10;
+    private static final int MAX_ITEMS_TO_LIST = USE_FAKE_DATA ? 30 : 10;
     private static final int MIN_AVERAGE_POWER_THRESHOLD_MILLI_AMP = 10;
     private static final int SECONDS_IN_HOUR = 60 * 60;
 
@@ -129,7 +129,6 @@ public class PowerUsageSummary extends PowerUsageBase {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
         if (DEBUG) {
             menu.add(0, MENU_STATS_TYPE, 0, R.string.menu_stats_total)
                     .setIcon(com.android.internal.R.drawable.ic_menu_info_details)
@@ -140,12 +139,12 @@ public class PowerUsageSummary extends PowerUsageBase {
         batterySaver.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
         menu.add(0, MENU_HIGH_POWER_APPS, 0, R.string.high_power_apps);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
 
-        String helpUrl;
-        if (!TextUtils.isEmpty(helpUrl = getResources().getString(R.string.help_url_battery))) {
-            final MenuItem help = menu.add(0, MENU_HELP, 0, R.string.help_label);
-            HelpUtils.prepareHelpMenuItem(getActivity(), help, helpUrl, getClass().getName());
-        }
+    @Override
+    protected int getHelpResource() {
+        return R.string.help_url_battery;
     }
 
     @Override
@@ -182,11 +181,19 @@ public class PowerUsageSummary extends PowerUsageBase {
         mAppListGroup.addPreference(notAvailable);
     }
 
+    private static boolean isSharedGid(int uid) {
+        return UserHandle.getAppIdFromSharedAppGid(uid) > 0;
+    }
+
+    private static boolean isSystemUid(int uid) {
+        return uid >= Process.SYSTEM_UID && uid < Process.FIRST_APPLICATION_UID;
+    }
+
     /**
      * We want to coalesce some UIDs. For example, dex2oat runs under a shared gid that
      * exists for all users of the same app. We detect this case and merge the power use
      * for dex2oat to the device OWNER's use of the app.
-     * @return A sorted list of app's using power.
+     * @return A sorted list of apps using power.
      */
     private static List<BatterySipper> getCoalescedUsageList(final List<BatterySipper> sippers) {
         final SparseArray<BatterySipper> uidList = new SparseArray<>();
@@ -194,30 +201,62 @@ public class PowerUsageSummary extends PowerUsageBase {
         final ArrayList<BatterySipper> results = new ArrayList<>();
         final int numSippers = sippers.size();
         for (int i = 0; i < numSippers; i++) {
-            final BatterySipper sipper = sippers.get(i);
+            BatterySipper sipper = sippers.get(i);
             if (sipper.getUid() > 0) {
                 int realUid = sipper.getUid();
-                if (sipper.getUid() >= Process.FIRST_SHARED_APPLICATION_GID &&
-                        sipper.getUid() <= Process.LAST_SHARED_APPLICATION_GID) {
-                    // This is a shared gid being used to do work on behalf of an app across all
-                    // users. But we'll blame the power on the device OWNER.
+
+                // Check if this UID is a shared GID. If so, we combine it with the OWNER's
+                // actual app UID.
+                if (isSharedGid(sipper.getUid())) {
                     realUid = UserHandle.getUid(UserHandle.USER_OWNER,
                             UserHandle.getAppIdFromSharedAppGid(sipper.getUid()));
                 }
 
+                // Check if this UID is a system UID (mediaserver, logd, nfc, drm, etc).
+                if (isSystemUid(realUid)
+                        && !"mediaserver".equals(sipper.packageWithHighestDrain)) {
+                    // Use the system UID for all UIDs running in their own sandbox that
+                    // are not apps. We exclude mediaserver because we already are expected to
+                    // report that as a separate item.
+                    realUid = Process.SYSTEM_UID;
+                }
+
+                if (realUid != sipper.getUid()) {
+                    // Replace the BatterySipper with a new one with the real UID set.
+                    BatterySipper newSipper = new BatterySipper(sipper.drainType,
+                            new FakeUid(realUid), 0.0);
+                    newSipper.add(sipper);
+                    newSipper.packageWithHighestDrain = sipper.packageWithHighestDrain;
+                    newSipper.mPackages = sipper.mPackages;
+                    sipper = newSipper;
+                }
+
                 int index = uidList.indexOfKey(realUid);
                 if (index < 0) {
+                    // New entry.
                     uidList.put(realUid, sipper);
                 } else {
-                    BatterySipper existingSipper = uidList.valueAt(index);
-                    if (existingSipper.getUid() >= Process.FIRST_SHARED_APPLICATION_GID &&
-                            existingSipper.getUid() <= Process.FIRST_SHARED_APPLICATION_GID) {
-                        // If the app already under this uid is a dex2oat run, then combine and
-                        // substitute it with the actual app.
-                        sipper.add(existingSipper);
-                        uidList.setValueAt(index, sipper);
-                    } else {
-                        existingSipper.add(sipper);
+                    // Combine BatterySippers if we already have one with this UID.
+                    final BatterySipper existingSipper = uidList.valueAt(index);
+                    existingSipper.add(sipper);
+                    if (existingSipper.packageWithHighestDrain == null
+                            && sipper.packageWithHighestDrain != null) {
+                        existingSipper.packageWithHighestDrain = sipper.packageWithHighestDrain;
+                    }
+
+                    final int existingPackageLen = existingSipper.mPackages != null ?
+                            existingSipper.mPackages.length : 0;
+                    final int newPackageLen = sipper.mPackages != null ?
+                            sipper.mPackages.length : 0;
+                    if (newPackageLen > 0) {
+                        String[] newPackages = new String[existingPackageLen + newPackageLen];
+                        if (existingPackageLen > 0) {
+                            System.arraycopy(existingSipper.mPackages, 0, newPackages, 0,
+                                    existingPackageLen);
+                        }
+                        System.arraycopy(sipper.mPackages, 0, newPackages, existingPackageLen,
+                                newPackageLen);
+                        existingSipper.mPackages = newPackages;
                     }
                 }
             } else {
@@ -317,7 +356,8 @@ public class PowerUsageSummary extends PowerUsageBase {
                 if (sipper.uidObj != null) {
                     pref.setKey(Integer.toString(sipper.uidObj.getUid()));
                 }
-                if (sipper.drainType != DrainType.APP && sipper.drainType != DrainType.USER) {
+                if ((sipper.drainType != DrainType.APP || sipper.uidObj.getUid() == 0)
+                         && sipper.drainType != DrainType.USER) {
                     pref.setTint(colorControl);
                 }
                 addedSome = true;
@@ -346,11 +386,22 @@ public class PowerUsageSummary extends PowerUsageBase {
         }
         stats.add(new BatterySipper(DrainType.APP,
                 new FakeUid(Process.FIRST_APPLICATION_UID), use));
+        stats.add(new BatterySipper(DrainType.APP,
+                new FakeUid(0), use));
 
         // Simulate dex2oat process.
         BatterySipper sipper = new BatterySipper(DrainType.APP,
                 new FakeUid(UserHandle.getSharedAppGid(Process.FIRST_APPLICATION_UID)), 10.0f);
         sipper.packageWithHighestDrain = "dex2oat";
+        stats.add(sipper);
+
+        sipper = new BatterySipper(DrainType.APP,
+                new FakeUid(UserHandle.getSharedAppGid(Process.FIRST_APPLICATION_UID + 1)), 10.0f);
+        sipper.packageWithHighestDrain = "dex2oat";
+        stats.add(sipper);
+
+        sipper = new BatterySipper(DrainType.APP,
+                new FakeUid(UserHandle.getSharedAppGid(Process.LOG_UID)), 9.0f);
         stats.add(sipper);
 
         return stats;

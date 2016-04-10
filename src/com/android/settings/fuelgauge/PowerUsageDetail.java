@@ -163,7 +163,9 @@ public class PowerUsageDetail extends PowerUsageBase implements Button.OnClickLi
                     printWriter.flush();
                     args.putString(PowerUsageDetail.EXTRA_REPORT_CHECKIN_DETAILS,
                             result.toString());
-                    userId = UserHandle.getUserId(uid.getUid());
+                    if (uid.getUid() != 0) {
+                        userId = UserHandle.getUserId(uid.getUid());
+                    }
                 }
             }
             break;
@@ -428,7 +430,8 @@ public class PowerUsageDetail extends PowerUsageBase implements Button.OnClickLi
             } else {
                 removePreference(KEY_TWO_BUTTONS);
             }
-            if (mApp != null) {
+            if (mApp != null
+                    && PowerWhitelistBackend.getInstance().isWhitelisted(mApp.packageName)) {
                 mHighPower = findPreference(KEY_HIGH_POWER);
                 mHighPower.setOnPreferenceClickListener(new OnPreferenceClickListener() {
                     @Override
@@ -438,11 +441,11 @@ public class PowerUsageDetail extends PowerUsageBase implements Button.OnClickLi
                     }
                 });
             } else {
-                removePreference(KEY_HIGH_POWER);
+                mControlsParent.removePreference(findPreference(KEY_HIGH_POWER));
             }
         } else {
             removePreference(KEY_TWO_BUTTONS);
-            removePreference(KEY_HIGH_POWER);
+            mControlsParent.removePreference(findPreference(KEY_HIGH_POWER));
         }
 
         refreshStats();
@@ -643,6 +646,7 @@ public class PowerUsageDetail extends PowerUsageBase implements Button.OnClickLi
     private void addControl(int pageSummary, int actionTitle, final int action) {
         Preference pref = new Preference(getActivity());
         pref.setTitle(actionTitle);
+        pref.setLayoutResource(R.layout.horizontal_preference);
         pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {

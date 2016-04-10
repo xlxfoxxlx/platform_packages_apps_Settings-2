@@ -150,7 +150,9 @@ public abstract class StorageWizardBase extends Activity {
     }
 
     protected void setHeaderText(int resId, String... args) {
-        getSetupWizardLayout().setHeaderText(TextUtils.expandTemplate(getText(resId), args));
+        final CharSequence headerText = TextUtils.expandTemplate(getText(resId), args);
+        getSetupWizardLayout().setHeaderText(headerText);
+        setTitle(headerText);
     }
 
     protected void setBodyText(int resId, String... args) {
@@ -172,6 +174,10 @@ public abstract class StorageWizardBase extends Activity {
             getSetupWizardLayout().setIllustration(R.drawable.bg_portable_storage_header,
                     R.drawable.bg_header_horizontal_tile);
         }
+    }
+
+    protected void setKeepScreenOn(boolean keepScreenOn) {
+        getSetupWizardLayout().setKeepScreenOn(keepScreenOn);
     }
 
     public void onNavigateNext() {

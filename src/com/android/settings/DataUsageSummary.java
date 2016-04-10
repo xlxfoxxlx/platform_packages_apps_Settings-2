@@ -485,7 +485,7 @@ public class DataUsageSummary extends HighlightingFragment implements Indexable 
             // a header at the top.
             FrameLayout pinnedHeader = (FrameLayout) rootView.findViewById(R.id.pinned_header);
             AppHeader.createAppHeader(getActivity(), detail.icon, detail.label, null, pinnedHeader);
-            AppDetailsFragment.show(DataUsageSummary.this, app, detail.label, false);
+            AppDetailsFragment.show(DataUsageSummary.this, app, detail.label, true);
         } catch (NameNotFoundException e) {
             Log.w(TAG, "Could not find " + mShowAppImmediatePkg, e);
             Toast.makeText(getActivity(), getString(R.string.unknown_app), Toast.LENGTH_LONG)
@@ -936,9 +936,11 @@ public class DataUsageSummary extends HighlightingFragment implements Indexable 
         if (isAppDetailMode()) {
             mAppDetail.setVisibility(View.VISIBLE);
             mCycleAdapter.setChangeVisible(false);
+            mChart.setVisibility(View.GONE);
         } else {
             mAppDetail.setVisibility(View.GONE);
             mCycleAdapter.setChangeVisible(true);
+            mChart.setVisibility(View.VISIBLE);
 
             // hide detail stats when not in detail mode
             mChart.bindDetailNetworkStats(null);
@@ -1164,6 +1166,7 @@ public class DataUsageSummary extends HighlightingFragment implements Indexable 
         mCycleAdapter.clear();
 
         final Context context = mCycleSpinner.getContext();
+        NetworkStatsHistory.Entry entry = null;
 
         long historyStart = Long.MAX_VALUE;
         long historyEnd = Long.MIN_VALUE;
@@ -1186,9 +1189,20 @@ public class DataUsageSummary extends HighlightingFragment implements Indexable 
                 final long cycleStart = computeLastCycleBoundary(cycleEnd, policy);
                 Log.d(TAG, "generating cs=" + cycleStart + " to ce=" + cycleEnd + " waiting for hs="
                         + historyStart);
-                mCycleAdapter.add(new CycleItem(context, cycleStart, cycleEnd));
+
+                final boolean includeCycle;
+                if (mChartData != null) {
+                    entry = mChartData.network.getValues(cycleStart, cycleEnd, entry);
+                    includeCycle = (entry.rxBytes + entry.txBytes) > 0;
+                } else {
+                    includeCycle = true;
+                }
+
+                if (includeCycle) {
+                    mCycleAdapter.add(new CycleItem(context, cycleStart, cycleEnd));
+                    hasCycles = true;
+                }
                 cycleEnd = cycleStart;
-                hasCycles = true;
             }
 
             // one last cycle entry to modify policy cycle day
@@ -1200,7 +1214,18 @@ public class DataUsageSummary extends HighlightingFragment implements Indexable 
             long cycleEnd = historyEnd;
             while (cycleEnd > historyStart) {
                 final long cycleStart = cycleEnd - (DateUtils.WEEK_IN_MILLIS * 4);
-                mCycleAdapter.add(new CycleItem(context, cycleStart, cycleEnd));
+
+                final boolean includeCycle;
+                if (mChartData != null) {
+                    entry = mChartData.network.getValues(cycleStart, cycleEnd, entry);
+                    includeCycle = (entry.rxBytes + entry.txBytes) > 0;
+                } else {
+                    includeCycle = true;
+                }
+
+                if (includeCycle) {
+                    mCycleAdapter.add(new CycleItem(context, cycleStart, cycleEnd));
+                }
                 cycleEnd = cycleStart;
             }
 
@@ -1997,6 +2022,16 @@ public class DataUsageSummary extends HighlightingFragment implements Indexable 
             final DataUsageSummary target = (DataUsageSummary) getTargetFragment();
             target.mCurrentApp = null;
             target.updateBody();
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            switch (item.getItemId()) {
+            case android.R.id.home:
+                getFragmentManager().popBackStack();
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
         }
     }
 

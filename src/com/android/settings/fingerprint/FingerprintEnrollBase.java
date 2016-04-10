@@ -20,7 +20,6 @@ import android.annotation.Nullable;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -29,6 +28,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.settings.ChooseLockSettingsHelper;
+import com.android.settings.InstrumentedActivity;
 import com.android.settings.R;
 import com.android.setupwizardlib.SetupWizardLayout;
 import com.android.setupwizardlib.view.NavigationBar;
@@ -36,18 +36,11 @@ import com.android.setupwizardlib.view.NavigationBar;
 /**
  * Base activity for all fingerprint enrollment steps.
  */
-public class FingerprintEnrollBase extends Activity implements View.OnClickListener {
-
-    /**
-     * Used by the choose fingerprint wizard to indicate the wizard is
-     * finished, and each activity in the wizard should finish.
-     * <p>
-     * Previously, each activity in the wizard would finish itself after
-     * starting the next activity. However, this leads to broken 'Back'
-     * behavior. So, now an activity does not finish itself until it gets this
-     * result.
-     */
-    protected static final int RESULT_FINISHED = RESULT_FIRST_USER;
+public abstract class FingerprintEnrollBase extends InstrumentedActivity
+        implements View.OnClickListener {
+    static final int RESULT_FINISHED = FingerprintSettings.RESULT_FINISHED;
+    static final int RESULT_SKIP = FingerprintSettings.RESULT_SKIP;
+    static final int RESULT_TIMEOUT = FingerprintSettings.RESULT_TIMEOUT;
 
     protected byte[] mToken;
 
@@ -72,6 +65,10 @@ public class FingerprintEnrollBase extends Activity implements View.OnClickListe
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
+        initViews();
+    }
+
+    protected void initViews() {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS |
                 WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN |
                 WindowManager.LayoutParams.FLAG_LAYOUT_INSET_DECOR);

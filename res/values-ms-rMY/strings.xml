@@ -322,12 +322,13 @@
       <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> cap jari disediakan</item>
       <item quantity="one"><xliff:g id="COUNT_0">%1$d</xliff:g> cap jari disediakan</item>
     </plurals>
+    <string name="security_settings_fingerprint_preference_summary_none" msgid="1507739327565151923"></string>
     <string name="security_settings_fingerprint_enroll_onboard_title" msgid="4735546436672054254">"Persediaan cap jari"</string>
     <string name="security_settings_fingerprint_enroll_onboard_message" msgid="2655449737443418341">"Untuk menggunakan cap jari anda untuk membuka kunci skrin anda atau mengesahkan pembelian, anda perlu:"</string>
     <string name="security_settings_fingerprint_enroll_onboard_message_1" msgid="2799884038398627882">"Sediakan kaedah kunci skrin sandaran anda"</string>
     <string name="security_settings_fingerprint_enroll_onboard_message_2" msgid="4158160658182631304">"Tambahkan cap jari anda"</string>
     <string name="security_settings_fingerprint_enroll_introduction_title" msgid="3201556857492526098">"Buka kunci dengan cap jari"</string>
-    <string name="security_settings_fingerprint_enroll_introduction_message" msgid="5061093614328964700">"Hanya sentuh sensor cap jari untuk membuka kunci telefon anda, membenarkan pembelian atau log masuk ke apl. Sebarang cap jari yang ditambahkan pada telefon akan dapat melakukan perkara ini, jadi berhati-hatilah berhubung orang yang anda tambahkan."</string>
+    <string name="security_settings_fingerprint_enroll_introduction_message" msgid="9193978734907066950">"Sentuh sahaja penderia cap jari untuk membuka kunci telefon anda, membenarkan pembelian atau log masuk ke apl. Berhati-hati tentang cap jari yang anda tambahkan - sebarang cap jari yang ditambahkan akan dapat melakukan perkara ini."</string>
     <string name="security_settings_fingerprint_enroll_introduction_message_warning" msgid="7173290350577831813">"Nota: Cap jari anda mungkin kurang selamat berbanding corak atau PIN yang kukuh."</string>
     <string name="security_settings_fingerprint_enroll_introduction_risk_link_text" msgid="9129531466157620977">"Ketahui lebih lanjut"</string>
     <string name="security_settings_fingerprint_enroll_introduction_cancel" msgid="3199351118385606526">"Batal"</string>
@@ -339,21 +340,31 @@
     <string name="security_settings_fingerprint_enroll_dialog_ok" msgid="4150384963879569750">"OK"</string>
     <string name="security_settings_fingerprint_enroll_dialog_delete" msgid="4114615413240707936">"Padam"</string>
     <string name="security_settings_fingerprint_enroll_start_title" msgid="9192567284554495805">"Mari mulakan!"</string>
-    <string name="security_settings_fingerprint_enroll_start_message" msgid="6294541599045187369">"Letakkan jari anda pada penderia cap jari. Angkat jari selepas merasa getaran."</string>
-    <string name="security_settings_fingerprint_enroll_repeat_title" msgid="3732060789409510229">"Bagus! Sekarang ulang."</string>
-    <string name="security_settings_fingerprint_enroll_repeat_message" msgid="8846866512704467036">"Letakkan jari yang sama pada penderia cap jari dan angkat jari anda selepas merasa getaran."</string>
+    <string name="security_settings_fingerprint_enroll_start_message" msgid="3909929328942564524">"Letakkan jari anda pada penderia, kemudian angkat jari itu selepas anda merasa getaran"</string>
+    <string name="security_settings_fingerprint_enroll_repeat_title" msgid="4327640138658832625">"Bagus! Sekarang, ulang"</string>
+    <string name="security_settings_fingerprint_enroll_repeat_message" msgid="4232813847507193627">"Gerakkan jari anda sedikit untuk menambahkan bahagian lain cap jari anda"</string>
     <string name="security_settings_fingerprint_enroll_finish_title" msgid="4798692662828257300">"Cap jari ditambahkan!"</string>
     <string name="security_settings_fingerprint_enroll_finish_message" msgid="835496875787664316">"Apabila anda melihat ikon ini, anda boleh menggunakan cap jari untuk pengenalan atau membenarkan pembelian."</string>
+    <string name="setup_fingerprint_enroll_finish_message" msgid="7234264291957984004">"Sentuh sahaja penderia cap jari untuk membangunkan dan membuka kunci peranti anda."</string>
+    <string name="setup_fingerprint_enroll_finish_message_secondary" msgid="7280546429133276374">"Anda boleh menggunakan cap jari setiap kali ikon ini kelihatan."</string>
+    <string name="setup_fingerprint_enroll_enrolling_skip_title" msgid="6808422329107426923">"Langkau persediaan cap jari?"</string>
+    <string name="setup_fingerprint_enroll_enrolling_skip_message" msgid="274849306857859783">"Anda telah memilih untuk menggunakan cap jari sebagai satu cara untuk membuka kunci telefon anda. Jika anda melangkaui sekarang, anda perlu menyediakannya kemudian. Persediaan hanya mengambil sedikit masa."</string>
     <string name="security_settings_fingerprint_enroll_setup_screen_lock" msgid="1195743489835505376">"Sediakan kunci skrin"</string>
     <string name="security_settings_fingerprint_enroll_done" msgid="4014607378328187567">"Selesai"</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_title" msgid="1863561601428695160">"Op, itu bukan penderia"</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_message" msgid="5053971232594165142">"Gunakan penderia cap jari pada peranti anda."</string>
+    <string name="security_settings_fingerprint_enroll_error_dialog_title" msgid="3618021988442639280">"Pendaftaran tidak selesai"</string>
+    <string name="security_settings_fingerprint_enroll_error_timeout_dialog_message" msgid="2942551158278899627">"Had masa pendaftaran cap jari dicapai. Cuba lagi."</string>
+    <string name="security_settings_fingerprint_enroll_error_generic_dialog_message" msgid="3624760637222239293">"Pendaftaran cap jari tidak berjaya. Cuba lagi atau gunakan jari yang lain."</string>
     <string name="fingerprint_enroll_button_add" msgid="6317978977419045463">"Tambah yang lain"</string>
     <string name="fingerprint_enroll_button_next" msgid="6247009337616342759">"Seterusnya"</string>
     <string name="security_settings_fingerprint_enroll_disclaimer" msgid="2624905914239271751">"Selain membuka kunci telefon anda, anda boleh menggunakan cap jari untuk membenarkan pembelian dan akses apl juga. "<annotation id="url">"Ketahui lebih lanjut"</annotation></string>
     <string name="security_settings_fingerprint_enroll_disclaimer_lockscreen_disabled" msgid="4504501581228672208">"Pilihan kunci skrin dilumpuhkan. Anda masih boleh menggunakan cap jari untuk membenarkan pembelian dan akses apl. "<annotation id="url">"Ketahui lebih lanjut"</annotation></string>
     <string name="security_settings_fingerprint_enroll_lift_touch_again" msgid="1888772560642539718">"Angkat jari, kemudian sentuh sensor sekali lagi"</string>
     <string name="fingerprint_add_max" msgid="1020927549936895822">"Anda boleh menambah sehingga <xliff:g id="COUNT">%d</xliff:g> cap jari"</string>
+    <string name="fingerprint_last_delete_title" msgid="6410310101247028988">"Alih keluar semua cap jari?"</string>
+    <string name="fingerprint_last_delete_message" msgid="8318926239554839722">"Anda tidak akan dapat menggunakan cap jari untuk membuka kunci telefon, membenarkan pembelian atau log masuk ke apl."</string>
+    <string name="fingerprint_last_delete_confirm" msgid="2634726361059274289">"Ya, alih keluar"</string>
     <string name="confirm_fingerprint_icon_content_description" msgid="5255544532157079096">"Gunakan cap jari anda untuk meneruskan."</string>
     <string name="crypt_keeper_settings_title" msgid="4219233835490520414">"Penyulitan"</string>
     <string name="crypt_keeper_encrypt_title" product="tablet" msgid="1060273569887301457">"Sulitkan tablet"</string>
@@ -387,6 +398,7 @@
     <string name="crypt_keeper_data_corrupt_summary" product="default" msgid="8843311420059663824">"Kata laluan yang anda masukkan betul, malangnya data anda rosak. \n\nUntuk menyambung semula penggunaan telefon, anda perlu melakukan tetapan semula kilang. Apabila anda menyediakan telefon selepas membuat penetapan semula, anda berpeluang memulihkan sebarang data yang telah disandarkan ke Akaun Google anda."</string>
     <string name="crypt_keeper_switch_input_method" msgid="4168332125223483198">"Tukar kaedah input"</string>
     <string name="lock_settings_picker_title" msgid="1095755849152582712">"Pilih kunci skrin"</string>
+    <string name="lock_settings_picker_fingerprint_message" msgid="4755230324778371292">"Pilih kaedah kunci skrin sandaran anda"</string>
     <string name="unlock_set_unlock_launch_picker_title" msgid="2084576942666016993">"Kunci skrin"</string>
     <string name="unlock_set_unlock_launch_picker_change_title" msgid="5045866882028324941">"Tukar kunci skrin"</string>
     <string name="unlock_set_unlock_launch_picker_change_summary" msgid="2790960639554590668">"Tukar atau lumpuhkan corak, PIN atau keselamatan kata laluan"</string>
@@ -402,7 +414,6 @@
     <string name="unlock_set_unlock_password_title" msgid="8775603825675090937">"Kata laluan"</string>
     <string name="unlock_set_unlock_password_summary" msgid="8856220848940929546">"Keselamatan tinggi"</string>
     <string name="current_screen_lock" msgid="4104091715420072219">"Kunci skrin semasa"</string>
-    <string name="unlock_disable_frp_warning_content" msgid="7070131836291098244">"Ciri perlindungan peranti tidak akan berfungsi lagi."</string>
     <string name="unlock_set_unlock_disabled_summary" msgid="2120729867788851674">"Dlumpuhkn pentadbir, dsr penyulitan/storan klayakn"</string>
     <string name="unlock_set_unlock_mode_off" msgid="5881952274566013651">"Tiada"</string>
     <string name="unlock_set_unlock_mode_none" msgid="8467360084676871617">"Leret"</string>
@@ -411,10 +422,24 @@
     <string name="unlock_set_unlock_mode_password" msgid="1203938057264146610">"Kata laluan"</string>
     <string name="unlock_setup_wizard_fingerprint_details" msgid="7893457665921363009">"Setelah anda menyediakan kunci skrin, anda boleh menyediakan cap jari dalam Tetapan &gt; Keselamatan juga."</string>
     <string name="unlock_disable_lock_title" msgid="1427036227416979120">"Matikan kunci skrin"</string>
-    <string name="unlock_disable_lock_pattern_summary" msgid="6801602880568869201">"Alih keluar corak buka kunci"</string>
-    <string name="unlock_disable_lock_pin_summary" msgid="8856842745366993387">"Alih keluar PIN buka kunci"</string>
-    <string name="unlock_disable_lock_password_summary" msgid="192161194564577025">"Alih keluar kata laluan buka kunci"</string>
-    <string name="unlock_disable_lock_unknown_summary" msgid="8688498722601653961">"Alih keluar kunci skrin"</string>
+    <string name="unlock_disable_frp_warning_title" msgid="264008934468492550">"Alih keluar perlindungan peranti?"</string>
+    <string name="unlock_disable_frp_warning_content_pattern" msgid="8869767290771023461">"Ciri perlindungan peranti tidak akan berfungsi tanpa corak anda."</string>
+    <string name="unlock_disable_frp_warning_content_pattern_fingerprint" msgid="8212242533942400457">"Ciri perlindungan peranti tidak akan berfungsi tanpa corak anda.<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Cap jari anda yang disimpan akan turut dialih keluar daripada peranti ini dan anda tidak akan dapat membuka kunci telefon, membenarkan pembelian atau log masuk ke apl dengan maklumat tersebut.\""</string>
+    <string name="unlock_disable_frp_warning_content_pin" msgid="586996206210265131">"Ciri perlindungan peranti tidak akan berfungsi tanpa PIN anda."</string>
+    <string name="unlock_disable_frp_warning_content_pin_fingerprint" msgid="875669051899437197">"Ciri perlindungan peranti tidak akan berfungsi tanpa PIN anda.<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Cap jari anda yang disimpan akan turut dialih keluar daripada peranti ini dan anda tidak akan dapat membuka kunci telefon, membenarkan pembelian atau log masuk ke apl dengan maklumat tersebut.\""</string>
+    <string name="unlock_disable_frp_warning_content_password" msgid="5420612686852555537">"Ciri perlindungan peranti tidak akan berfungsi tanpa kata laluan anda."</string>
+    <string name="unlock_disable_frp_warning_content_password_fingerprint" msgid="2228159168587170445">"Ciri perlindungan peranti tidak akan berfungsi tanpa kata laluan anda.<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Cap jari anda yang disimpan akan turut dialih keluar daripada peranti ini dan anda tidak akan dapat membuka kunci telefon, membenarkan pembelian atau log masuk ke apl dengan maklumat tersebut.\""</string>
+    <string name="unlock_disable_frp_warning_content_unknown" msgid="1550718040483548220">"Ciri perlindungan peranti tidak akan berfungsi tanpa kunci skrin anda."</string>
+    <string name="unlock_disable_frp_warning_content_unknown_fingerprint" msgid="6363091330281670692">"Ciri perlindungan peranti tidak akan berfungsi tanpa kunci skrin anda.<xliff:g id="EMPTY_LINE">
+
+</xliff:g>Cap jari anda yang disimpan akan turut dialih keluar daripada peranti ini dan anda tidak akan dapat membuka kunci telefon, membenarkan pembelian atau log masuk ke apl dengan maklumat tersebut.\""</string>
+    <string name="unlock_disable_frp_warning_ok" msgid="7075138677177748705">"Ya, alih keluar"</string>
     <string name="unlock_change_lock_pattern_title" msgid="2044092014872741130">"Tukar corak buka kunci"</string>
     <string name="unlock_change_lock_pin_title" msgid="806629901095938484">"Tukar PIN buka kunci"</string>
     <string name="unlock_change_lock_password_title" msgid="5606298470358768865">"Tkr kta lluan bka knci"</string>
@@ -472,9 +497,8 @@
     <string name="bluetooth_settings" msgid="1810521656168174329">"Bluetooth"</string>
     <string name="bluetooth_settings_title" msgid="1908745291161353016">"Bluetooth"</string>
     <string name="bluetooth_settings_summary" msgid="2091062709530570462">"Urus sambungan, tetapkan nama peranti &amp; kebolehan ditemui"</string>
-    <string name="bluetooth_pairing_request" msgid="6385750334766370310">"Permintaan menjadi pasangan Bluetooth"</string>
-    <string name="bluetooth_enter_pin_msg" msgid="4954085254142996877">"Peranti"</string>
-    <string name="bluetooth_pairing_key_msg" msgid="333005542843637754">"Kod berpasangan"</string>
+    <string name="bluetooth_pairing_request" msgid="2605098826364694673">"Berpasangan dengan <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="418124944140102021">"Kod berpasangan Bluetooth"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="6813273136442138444">"Taip kod berpasangan kemudian tekan Kembali atau Enter"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="7222713483058171357">"PIN mengandungi huruf atau simbol"</string>
     <string name="bluetooth_pin_values_hint" msgid="3815897557875873646">"Biasanya 0000 atau 1234"</string>
@@ -484,7 +508,7 @@
     <string name="bluetooth_confirm_passkey_msg" msgid="3708312912841950052">"Untuk menjadi pasangan:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pastikan ia menunjukkan kunci laluan ini:&lt;br&gt;&lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="1615930853859551491">"Dari:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;&lt;br&gt;Jadikan pasangan peranti ini?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="2796550001376088433">"Untuk berpasangan dengan:<xliff:g id="BOLD1_0">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="DEVICE_NAME">%1$s</xliff:g><xliff:g id="END_BOLD1">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>Taip padanya:<xliff:g id="BOLD2_1">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="PASSKEY">%2$s</xliff:g><xliff:g id="END_BOLD2">&lt;/b&gt;</xliff:g>, kemudian tekan Kembali atau Enter."</string>
-    <string name="bluetooth_pairing_shares_phonebook" msgid="1655930908614072491">"Berikan akses kepada kenalan dan sejarah panggilan anda apabila bersambung."</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2277931851483023208">"Benarkan <xliff:g id="DEVICE_NAME">%1$s</xliff:g> mengakses kenalan dan sejarah panggilan anda"</string>
     <string name="bluetooth_error_title" msgid="6850384073923533096"></string>
     <string name="bluetooth_connecting_error_message" msgid="1397388344342081090">"Tidak dapat menyambung ke <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_preference_scan_title" msgid="2277464653118896016">"Imbas untuk mengesan peranti"</string>
@@ -572,6 +596,7 @@
     <string name="wifi_starting" msgid="6732377932749942954">"Menghidupkan Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="8952524572499500804">"Mematikan Wi‑Fi…"</string>
     <string name="wifi_error" msgid="3207971103917128179">"Ralat"</string>
+    <string name="wifi_sap_no_channel_error" msgid="3108445199311817111">"Jalur 5 GHz tidak tersedia di negara ini"</string>
     <string name="wifi_in_airplane_mode" msgid="8652520421778203796">"Dalam mod Pesawat"</string>
     <string name="wifi_notify_open_networks" msgid="3755768188029653293">"Pemberitahuan rangkaian"</string>
     <string name="wifi_notify_open_networks_summary" msgid="3716818008370391253">"Maklumkan apabila rangkaian awam tersedia"</string>
@@ -630,7 +655,7 @@
     <string name="wifi_signal" msgid="5514120261628065287">"Kekuatan isyarat"</string>
     <string name="wifi_status" msgid="4824568012414605414">"Status"</string>
     <string name="wifi_speed" msgid="3526198708812322037">"Kelajuan sambungan"</string>
-    <string name="wifi_frequency" msgid="7791090119577812214">"Kekerapan"</string>
+    <string name="wifi_frequency" msgid="7791090119577812214">"Frekuensi"</string>
     <string name="wifi_ip_address" msgid="1440054061044402918">"Alamat IP"</string>
     <string name="passpoint_label" msgid="6381371313076009926">"Disimpan melalui"</string>
     <string name="passpoint_content" msgid="8447207162397870483">"Bukti kelayakan <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -787,6 +812,10 @@
     <string name="account_settings" msgid="6403589284618783461">"Akaun"</string>
     <string name="category_personal" msgid="1299663247844969448">"Peribadi"</string>
     <string name="category_work" msgid="8699184680584175622">"Tempat Kerja"</string>
+    <string name="accessibility_category_work" msgid="4339262969083355720">"Akaun profil kerja - <xliff:g id="MANAGED_BY">%s</xliff:g>"</string>
+    <string name="accessibility_category_personal" msgid="1263518850905945594">"Akaun profil peribadi"</string>
+    <string name="accessibility_work_account_title" msgid="1231830766637939527">"Akaun kerja - <xliff:g id="MANAGED_BY">%s</xliff:g>"</string>
+    <string name="accessibility_personal_account_title" msgid="2169071663029067826">"Akaun peribadi - <xliff:g id="MANAGED_BY">%s</xliff:g>"</string>
     <string name="search_settings" msgid="1910951467596035063">"Carian"</string>
     <string name="search_settings_summary" msgid="9205656546570654169">"Urus tetapan dan sejarah carian"</string>
     <string name="display_settings" msgid="7965901687241669598">"Paparan"</string>
@@ -866,6 +895,7 @@
     <string name="system_update_settings_list_item_title" msgid="3342887311059985961">"Kemas kini sistem"</string>
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
     <string name="firmware_version" msgid="4801135784886859972">"Versi Android"</string>
+    <string name="security_patch" msgid="8438384045870296634">"Tahap tampung keselamatan Android"</string>
     <string name="model_number" msgid="3765737700545384794">"Nombor model"</string>
     <string name="fcc_equipment_id" msgid="149114368246356737">"ID Peralatan"</string>
     <string name="baseband_version" msgid="1848990160763524801">"Versi jalur asas"</string>
@@ -879,7 +909,7 @@
     <string name="device_status_summary" product="default" msgid="2599162787451519618">"Nombor telefon, isyarat, dll."</string>
     <string name="storage_settings" msgid="4211799979832404953">"Storan"</string>
     <string name="storage_usb_settings" msgid="642612065405691122">"Storan &amp; USB"</string>
-    <string name="storage_settings_title" msgid="8746016738388094064">"Tetapan Storan"</string>
+    <string name="storage_settings_title" msgid="8746016738388094064">"Tetapan storan"</string>
     <string name="storage_settings_summary" product="nosdcard" msgid="3543813623294870759">"Nyahlekap storan USB, lihat storan tersedia"</string>
     <string name="storage_settings_summary" product="default" msgid="9176693537325988610">"Nyahlekap kad SD, lihat storan tersedia"</string>
     <string name="status_number" product="tablet" msgid="1138837891091222272">"MDN"</string>
@@ -1065,7 +1095,7 @@
     <string name="error_name_empty" msgid="5508155943840201232">"Medan Nama tidak boleh kosong."</string>
     <string name="error_apn_empty" msgid="4932211013600863642">"APN tidak boleh kosong."</string>
     <string name="error_mcc_not3" msgid="4560171714156251661">"Medan MCC mestilah 3 digit."</string>
-    <string name="error_mnc_not23" msgid="8418177072458379439">"Medan MNC hendaklah mempunyai 2 atau 3 digit."</string>
+    <string name="error_mnc_not23" msgid="8418177072458379439">"Medan MNC mestilah 2 atau 3 digit."</string>
     <string name="restore_default_apn" msgid="8178010218751639581">"Memulihkan tetapan lalai APN."</string>
     <string name="menu_restore" msgid="8260067415075573273">"Tetapkan semula kepada lalai"</string>
     <string name="restore_default_apn_completed" msgid="2824775307377604897">"Penetapan semula tetapan lalai APN selesai."</string>
@@ -1080,7 +1110,7 @@
     <string name="device_reset_title" msgid="2384019005638768076">"Tetapkan semula peranti"</string>
     <string name="master_clear_title" msgid="5907939616087039756">"Tetapan semula data kilang"</string>
     <string name="master_clear_desc" product="tablet" msgid="9146059417023157222">"Ini akan memadamkan semua data dari "<b>"storan dalaman"</b>" tablet anda, termasuk:\n\n"<li>"Akaun Google anda"</li>\n<li>"Data dan tetapan sistem dan aplikasi"</li>\n<li>"Aplikasi yang dimuat turun"</li></string>
-    <string name="master_clear_desc" product="default" msgid="4800386183314202571">"Ini akan memadamkan semua data dari "<b>"storan dalaman"</b>" telefon anda, termasuk:\n\n"<li>"Akaun Google anda"</li>\n<li>"Data dan tetapan sistem dan aplikasi"</li>\n<li>"Aplikasi yang dimuat turun"</li></string>
+    <string name="master_clear_desc" product="default" msgid="4800386183314202571">"Ini akan memadamkan semua data daripada "<b>"storan dalaman"</b>" telefon anda, termasuk:\n\n"<li>"Akaun Google anda"</li>\n<li>"Data dan tetapan sistem dan aplikasi"</li>\n<li>"Aplikasi yang dimuat turun"</li></string>
     <string name="master_clear_accounts" product="default" msgid="6412857499147999073">\n\n"Anda melog masuk ke dalam akaun berikut buat masa ini:\n"</string>
     <string name="master_clear_other_users_present" product="default" msgid="5161423070702470742">\n\n"Terdapat pengguna lain pada peranti ini.\n"</string>
     <string name="master_clear_desc_also_erases_external" msgid="1903185203791274237"><li>"Muzik"</li>\n<li>"Foto"</li>\n<li>"Data pengguna yang lain"</li></string>
@@ -1099,17 +1129,6 @@
     <string name="master_clear_not_available" msgid="1000370707967468909">"Tetapan semula kilang tidak tersedia untuk pengguna ini"</string>
     <string name="master_clear_progress_title" msgid="5194793778701994634">"Memadam"</string>
     <string name="master_clear_progress_text" msgid="6559096229480527510">"Sila tunggu..."</string>
-    <string name="media_format_title" product="nosdcard" msgid="3999653431422767156">"Padam storan USB"</string>
-    <string name="media_format_title" product="default" msgid="4427528440306787972">"Padam kad SD"</string>
-    <string name="media_format_summary" product="nosdcard" msgid="776603298628082065">"Padam semua data dlm storn USB"</string>
-    <string name="media_format_summary" product="default" msgid="3805714639375830120">"Memadamkan semua data pada kad SD"</string>
-    <string name="media_format_desc" product="nosdcard" msgid="4557243156946319034">"Padamkan semua storan USB? Anda akan kehilangan "<b>"semua"</b>" data yang disimpan!"</string>
-    <string name="media_format_desc" product="default" msgid="8764037252319942415">"Padamkan kad SD? Anda akan kehilangan "<b>"semua"</b>" data pada kad!"</string>
-    <string name="media_format_button_text" product="nosdcard" msgid="6293669371185352810">"Padam storan USB"</string>
-    <string name="media_format_button_text" product="default" msgid="6721544380069373626">"Padam kad SD"</string>
-    <string name="media_format_final_desc" product="nosdcard" msgid="941597815448108794">"Padamkan storan USB, memadamkan semua fail yang disimpan di sana? Anda tidak boleh menterbalikkan tindakan ini!"</string>
-    <string name="media_format_final_desc" product="default" msgid="7220996042092437566">"Padamkan kad SD, turut memadamkan semua fail yang tersimpan padanya? Anda tidak boleh menterbalikkan tindakan ini!"</string>
-    <string name="media_format_final_button_text" msgid="4881713344315923175">"Padamkan semua"</string>
     <string name="call_settings_title" msgid="5188713413939232801">"Tetapan panggilan"</string>
     <string name="call_settings_summary" msgid="7291195704801002886">"Tetapkan mel suara, pemajuan panggilan, panggilan menunggu, ID pemanggil"</string>
     <string name="tether_settings_title_usb" msgid="6688416425801386511">"Penambatan USB"</string>
@@ -1195,6 +1214,7 @@
     <string name="about_settings_summary" msgid="3371517697156165959">"Lihat maklumat undang-undang, status, versi perisian"</string>
     <string name="legal_information" msgid="5769301644270604095">"Maklumat undang-undang"</string>
     <string name="contributors_title" msgid="5917703088825286504">"Penyumbang"</string>
+    <string name="manual" msgid="3025943393642974445">"Manual"</string>
     <string name="regulatory_information" msgid="5695464367088752150">"Maklumat kawal selia"</string>
     <string name="copyright_title" msgid="865906688917260647">"Hak cipta"</string>
     <string name="license_title" msgid="1990487604356037871">"Lesen"</string>
@@ -1202,6 +1222,8 @@
     <string name="webview_license_title" msgid="2813507464175738967">"Lesen WebView Sistem"</string>
     <string name="wallpaper_attributions" msgid="3645880512943433928">"Kertas dinding"</string>
     <string name="wallpaper_attributions_values" msgid="2996183537914690469">"Pembekal imej satelit:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="settings_manual_activity_title" msgid="8133150693616006051">"Manual"</string>
+    <string name="settings_manual_activity_unavailable" msgid="4752403782883814898">"Terdapat masalah memuatkan manual."</string>
     <string name="settings_license_activity_title" msgid="7553683406244228650">"Lesen sumber terbuka"</string>
     <string name="settings_license_activity_unavailable" msgid="4210539215951487627">"Terdapat masalah memuatkan lesen."</string>
     <string name="settings_license_activity_loading" msgid="3337535809093591740">"Memuatkan..."</string>
@@ -1580,7 +1602,7 @@
     <string name="accessibility_screen_magnification_summary" msgid="1178289000423776584">"Apabila ciri ini dihidupkan, anda boleh mengezum masuk dan keluar dengan mengetik skrin tiga kali.\n\nSemasa dizum masuk, anda boleh:\n"<ul><li>"Menyorot: Seret menggunakan dua atau lebih jari merentasi skrin."</li>\n<li>"Melaraskan tahap zum: Rapatkan atau jarakkan dua atau lebih jari."</li></ul>\n\n"Anda juga boleh membesarkan item di bawah jari anda untuk sementara waktu dengan mengetik tiga kali dan menahannya. Dalam keadaan zum besar ini, anda boleh menyeret jari anda untuk meneroka bahagian-bahagian lain pada skrin. Angkat jari anda untuk kembali kepada keadaan sebelumnya.\n\nNota: Ketik tiga kali untuk pembesaran berfungsi di semua tempat kecuali pada papan kekunci dan bar navigasi."</string>
     <string name="accessibility_global_gesture_preference_title" msgid="6752037184140789970">"Pintasan kebolehaksesan"</string>
     <string name="accessibility_global_gesture_preference_summary_on" msgid="6180927399052022181">"Hidupkan"</string>
-    <string name="accessibility_global_gesture_preference_summary_off" msgid="8102103337813609849">"Matikan"</string>
+    <string name="accessibility_global_gesture_preference_summary_off" msgid="8102103337813609849">"Mati"</string>
     <string name="accessibility_global_gesture_preference_description" msgid="750438015254396963">"Apabila ciri ini dihidupkan, anda boleh mendayakan ciri kebolehaksesan dengan cepat dalam dua langkah:\n\nLangkah 1: Tekan dan tahan butang kuasa sehingga anda mendengar bunyi atau merasai getaran.\n\nLangkah 2: Sentuh dan tahan menggunakan dua jari sehingga anda mendengar pengesahan audio.\n\nJika peranti digunakan oleh beberapa orang pengguna, menggunakan pintasan ini pada skrin kunci akan mendayakan kebolehaksesan untuk sementara waktu sehingga peranti dibuka kuncinya."</string>
     <string name="accessibility_toggle_large_text_preference_title" msgid="6307247527580207161">"Teks besar"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="2567402942683463779">"Teks kontras tinggi"</string>
@@ -1654,7 +1676,7 @@
     <string name="print_settings" msgid="4742428530112487843">"Pencetakan"</string>
     <string name="print_settings_title" msgid="3685449667822217816">"Perkhidmatan cetak"</string>
     <string name="print_service_security_warning_title" msgid="2338435517408144841">"Gunakan <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
-    <string name="print_service_security_warning_summary" msgid="7567131958613064363">"Dokumen anda mungkin melalui satu atau lebih pelayan dalam perjalanan ke pencetak."</string>
+    <string name="print_service_security_warning_summary" msgid="7567131958613064363">"Dokumen anda mungkin melalui satu atau beberapa pelayan dalam perjalanan ke pencetak."</string>
     <string name="print_no_services_installed" msgid="8443039625463872294">"Tiada perkhidmatan dipasangkan"</string>
     <string name="print_no_printers_found" msgid="989018646884973683">"Tiada pencetak ditemui"</string>
     <string name="print_menu_item_settings" msgid="6591330373682227082">"Tetapan"</string>
@@ -1903,9 +1925,9 @@
     <string name="vpn_settings_title" msgid="5662579425832406705">"VPN"</string>
     <string name="credentials_title" msgid="4446234003860769883">"Storan bukti kelayakan"</string>
     <string name="credentials_install" product="nosdcard" msgid="466093273825150847">"Pasang daripada storan"</string>
-    <string name="credentials_install" product="default" msgid="953914549998062317">"Pasang dari kad SD"</string>
+    <string name="credentials_install" product="default" msgid="953914549998062317">"Pasang daripada kad SD"</string>
     <string name="credentials_install_summary" product="nosdcard" msgid="4220422806818210676">"Pasang sijil daripada storan"</string>
-    <string name="credentials_install_summary" product="default" msgid="5737658257407822713">"Pasang sijil dari kad SD"</string>
+    <string name="credentials_install_summary" product="default" msgid="5737658257407822713">"Pasang sijil daripada kad SD"</string>
     <string name="credentials_reset" msgid="3239382277144980418">"Padam bersih bukti kelayakan"</string>
     <string name="credentials_reset_summary" msgid="3369361230171260282">"Alih keluar semua sijil"</string>
     <string name="trusted_credentials" msgid="4266945289534242402">"Bukti kelayakan dipercayai"</string>
@@ -1930,8 +1952,8 @@
     <string name="usage_access_title" msgid="332333405495457839">"Apl dengan akses penggunaan"</string>
     <string name="emergency_tone_title" msgid="1055954530111587114">"Nada kecemasan"</string>
     <string name="emergency_tone_summary" msgid="722259232924572153">"Tetapkan tingkah laku semasa membuat panggilan kecemasan"</string>
-    <string name="privacy_settings" msgid="5446972770562918934">"Sandar &amp; tetapan semula"</string>
-    <string name="privacy_settings_title" msgid="4856282165773594890">"Penyandaran &amp; penetapan semula"</string>
+    <string name="privacy_settings" msgid="5446972770562918934">"Sandaran &amp; tetapan semula"</string>
+    <string name="privacy_settings_title" msgid="4856282165773594890">"Sandaran &amp; tetapan semula"</string>
     <string name="backup_section_title" msgid="7952232291452882740">"Sandarkan &amp; pulihkan"</string>
     <string name="personal_data_section_title" msgid="7815209034443782061">"Data peribadi"</string>
     <string name="backup_data_title" msgid="1239105919852668016">"Sandarkan data saya"</string>
@@ -2178,10 +2200,10 @@
     <string name="data_usage_app_restrict_dialog_title" msgid="1613108390242737923">"Hadkan data latar belakang?"</string>
     <string name="data_usage_app_restrict_dialog" msgid="5871168521456832764">"Ciri ini boleh menyebabkan apl yang bergantung pada data latar belakang berhenti berfungsi apabila hanya rangkaian selular yang tersedia.\n\nAnda boleh menemui lebih banyak kawalan penggunaan data dalam tetapan yang tersedia dalam apl."</string>
     <string name="data_usage_restrict_denied_dialog" msgid="1493134803720421674">"Mengehadkan data latar belakang hanya boleh dilakukan apabila anda telah menetapkan had data selular."</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="2438617846762244389">"Hidupkan auto-segerak data?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="2438617846762244389">"Hidupkan auto segerak data?"</string>
     <string name="data_usage_auto_sync_on_dialog" product="tablet" msgid="8581983093524041669">"Sebarang perubahan yang anda buat kepada akaun anda di web akan disalin secara automatik ke tablet anda.\n\nSesetengah akaun juga boleh secara automatik menyalin sebarang perubahan yang anda buat di tablet ke web. Akaun Google juga berfungsi begini."</string>
     <string name="data_usage_auto_sync_on_dialog" product="default" msgid="8651376294887142858">"Sebarang perubahan yang anda buat kepada akaun anda di web akan disalin secara automatik ke telefon anda.\n\nSesetengah akaun juga boleh secara automatik menyalin sebarang perubahan yang anda buat di telefon ke web. Akaun Google juga berfungsi begini."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="9013139130490125793">"Matikan auto-segerak data?"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="9013139130490125793">"Matikan auto segerak data?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="4025938250775413864">"Ini akan menjimatkan penggunaan data dan bateri, tetapi anda perlu menyegerakkan setiap akaun secara manual untuk mengumpul maklumat terkini. Anda turut tidak akan menerima pemberitahuan apabila ada kemas kini."</string>
     <string name="data_usage_cycle_editor_title" msgid="1373797281540188533">"Tarikh tetapan semula kitaran penggunaan"</string>
     <string name="data_usage_cycle_editor_subtitle" msgid="5512903797979928416">"Tarikh setiap bulan:"</string>
@@ -2344,18 +2366,16 @@
     <string name="global_font_change_title" msgid="1887126466191012035">"Tukar saiz fon"</string>
     <string name="nfc_payment_settings_title" msgid="1807298287380821613">"Ketik &amp; bayar"</string>
     <string name="nfc_payment_how_it_works" msgid="3028822263837896720">"Cara ciri ini berfungsi"</string>
-    <string name="nfc_payment_no_apps" msgid="3453656795093776889">"Gunakan Ketik &amp; bayar untuk membuat pembelian dalam kedai"</string>
+    <string name="nfc_payment_no_apps" msgid="5477904979148086424">"Bayar di kedai menggunakan telefon anda"</string>
     <string name="nfc_payment_default" msgid="8648420259219150395">"Apl pembayaran lalai"</string>
     <string name="nfc_payment_default_not_set" msgid="7485060884228447765">"Tidak ditetapkan"</string>
     <string name="nfc_payment_app_and_desc" msgid="7942415346564794258">"<xliff:g id="APP">%1$s</xliff:g> - <xliff:g id="DESCRIPTION">%2$s</xliff:g>"</string>
-    <string name="nfc_payment_open_app" msgid="5550268485421927976">"Jika apl terbuka menyokong Ketik &amp; bayar"</string>
-    <string name="nfc_payment_favor_open" msgid="7513784422533299982">"Gunakan apl itu dan bukannya <xliff:g id="APP">%1$s</xliff:g>"</string>
-    <string name="nfc_payment_favor_open_default_unknown" msgid="1179489206233351756">"Sebaliknya, gunakan apl itu"</string>
-    <string name="nfc_payment_favor_default" msgid="8238320071435721803">"Masih gunakan <xliff:g id="APP">%1$s</xliff:g>"</string>
-    <string name="nfc_payment_favor_default_default_unknown" msgid="7029467023485683077">"Masih gunakan apl lalai"</string>
+    <string name="nfc_payment_use_default" msgid="3234730182120288495">"Gunakan apl lalai"</string>
+    <string name="nfc_payment_favor_default" msgid="5743781166099608372">"Sentiasa"</string>
+    <string name="nfc_payment_favor_open" msgid="1923314062109977944">"Kecuali apabila apl bayaran yang lain dibuka"</string>
     <string name="nfc_payment_pay_with" msgid="7524904024378144072">"Di terminal Ketik &amp; bayar, bayar dengan:"</string>
     <string name="nfc_how_it_works_title" msgid="1984068457698797207">"Membayar di terminal"</string>
-    <string name="nfc_how_it_works_content" msgid="5820288675316257177">"Setelah anda menyediakan apl Ketik &amp; bayar dan telefon anda dihidupkan, ketuk telefon anda pada sebarang terminal yang terdapat logo Ketik &amp; bayar untuk membuat pembelian."</string>
+    <string name="nfc_how_it_works_content" msgid="4749007806393224934">"Sediakan apl bayaran. Kemudian, pegang telefon anda dengan bahagian belakangnya dihadapkan ke sebarang terminal yang terdapat simbol tanpa sentuh."</string>
     <string name="nfc_how_it_works_got_it" msgid="259653300203217402">"Faham"</string>
     <string name="nfc_more_title" msgid="815910943655133280">"Lagi..."</string>
     <string name="nfc_payment_set_default_label" msgid="7315817259485674542">"Jadikan sebagai pilihan anda?"</string>
@@ -2491,6 +2511,7 @@
     <string name="keywords_app_permissions" msgid="8677901415217188314">"keselamatan kebenaran apl"</string>
     <string name="keywords_default_apps" msgid="3581727483175522599">"apl lalai"</string>
     <string name="keywords_ignore_optimizations" msgid="946516741848647905">"abaikan pengoptimuman tidurkan apl tunggu sedia"</string>
+    <string name="keywords_color_mode" msgid="4670570451841540200">"terang rgb srgb warna semula jadi standard"</string>
     <string name="keywords_lockscreen" msgid="4806191868723291541">"luncur kata laluan corak pin"</string>
     <string name="setup_wifi_nfc_tag" msgid="9028353016222911016">"Sediakan Teg NFC Wi-Fi"</string>
     <string name="write_tag" msgid="8571858602896222537">"Tulis"</string>
@@ -2516,12 +2537,13 @@
     <string name="vibrate_when_ringing_title" msgid="3806079144545849032">"Juga bergetar untuk panggilan"</string>
     <string name="notification_section_header" msgid="95661783916799134">"Pemberitahuan"</string>
     <string name="advanced_section_header" msgid="8833934850242546903">"Terperinci"</string>
-    <string name="notification_pulse_title" msgid="1247988024534030629">"Lampu pemberitahuan denyutan"</string>
+    <string name="notification_pulse_title" msgid="1247988024534030629">"Kelip lampu pemberitahuan"</string>
     <string name="lock_screen_notifications_title" msgid="9118805570775519455">"Apabila peranti dikunci"</string>
     <string name="lock_screen_notifications_summary_show" msgid="6407527697810672847">"Tunjukkan semua kandungan pemberitahuan"</string>
     <string name="lock_screen_notifications_summary_hide" msgid="7891552853357258782">"Sembunyikan kandungan pemberitahuan sensitif"</string>
     <string name="lock_screen_notifications_summary_disable" msgid="859628910427886715">"Jangan tunjukkan pemberitahuan sama sekali"</string>
     <string name="lock_screen_notifications_interstitial_message" msgid="6164532459432182244">"Apabila peranti anda dikunci, bagaimanakah pemberitahuan harus dipaparkan?"</string>
+    <string name="lock_screen_notifications_interstitial_title" msgid="1416589393106326972">"Pemberitahuan"</string>
     <string name="app_notifications_title" msgid="5810577805218003760">"Pemberitahuan apl"</string>
     <string name="other_sound_settings" msgid="3151004537006844718">"Bunyi lain"</string>
     <string name="dial_pad_tones_title" msgid="1999293510400911558">"Nada pad dail"</string>
@@ -2644,11 +2666,14 @@
     <string name="display_auto_rotate_stay_in_landscape" msgid="3804752830204062162">"Kekal dalam paparan landskap"</string>
     <string name="display_auto_rotate_stay_in_current" msgid="317932372686498096">"Kekal dalam orientasi semasa"</string>
     <string name="imei_information_title" msgid="8499085421609752290">"Maklumat IMEI"</string>
-    <string name="encryption_interstitial_header" msgid="5790264941172726485">"Penyulitan"</string>
+    <string name="encryption_interstitial_header" msgid="468015813904595613">"Permulaan selamat"</string>
     <string name="encryption_continue_button" msgid="1121880322636992402">"Teruskan"</string>
     <string name="encryption_interstitial_message_pin" msgid="7164072567822375682">"Anda boleh melindungi peranti ini selanjutnya dengan meminta PIN anda sebelum peranti dimulakan. Sehingga peranti dimulakan, peranti tidak boleh menerima panggilan, mesej atau pemberitahuan, termasuk penggera. \n\nIni membantu melindungi data pada peranti yang hilang atau dicuri."</string>
     <string name="encryption_interstitial_message_pattern" msgid="6747091924626566031">"Anda boleh melindungi peranti ini selanjutnya dengan meminta corak anda sebelum peranti dimulakan. Sehingga peranti dimulakan, peranti tidak boleh menerima panggilan, mesej atau pemberitahuan, termasuk penggera. \n\nIni membantu melindungi data pada peranti yang hilang atau dicuri."</string>
     <string name="encryption_interstitial_message_password" msgid="3462225324186045679">"Anda boleh melindungi peranti ini selanjutnya dengan meminta kata laluan anda sebelum peranti dimulakan. Sehingga peranti dimulakan, peranti tidak boleh menerima panggilan, mesej atau pemberitahuan, termasuk penggera. \n\nIni membantu melindungi data pada peranti yang hilang atau dicuri."</string>
+    <string name="encryption_interstitial_message_pin_for_fingerprint" msgid="3775537118799831558">"Selain menggunakan cap jari untuk membuka kunci peranti anda, anda boleh melindungi peranti ini selanjutnya dengan menghendaki PIN anda sebelum peranti itu dimulakan. Peranti tidak boleh menerima panggilan, mesej atau pemberitahuan, termasuk penggera, sehingga dimulakan.\n\nCara ini membantu melindungi data pada peranti yang hilang atau dicuri."</string>
+    <string name="encryption_interstitial_message_pattern_for_fingerprint" msgid="1105290967535237237">"Selain menggunakan cap jari untuk membuka kunci peranti anda, anda boleh melindungi peranti ini selanjutnya dengan menghendaki corak anda sebelum peranti itu dimulakan. Peranti tidak boleh menerima panggilan, mesej atau pemberitahuan, termasuk penggera, sehingga dimulakan.\n\nCara ini membantu melindungi data pada peranti yang hilang atau dicuri."</string>
+    <string name="encryption_interstitial_message_password_for_fingerprint" msgid="3512482682507378424">"Selain menggunakan cap jari untuk membuka kunci peranti anda, anda boleh melindungi peranti ini selanjutnya dengan menghendaki kata laluan anda sebelum peranti itu dimulakan. Peranti tidak boleh menerima panggilan, mesej atau pemberitahuan, termasuk penggera, sehingga dimulakan.\n\nCara ini membantu melindungi data pada peranti yang hilang atau dicuri."</string>
     <string name="encrypt_require_pin" msgid="2063945047845243752">"PIN diperlukan untuk memulakan peranti"</string>
     <string name="encrypt_require_pattern" msgid="6898479411004015810">"Corak diperlukan untuk memulakan peranti"</string>
     <string name="encrypt_require_password" msgid="8770628366276570518">"Kata laluan diperlukan untuk memulakan peranti"</string>
@@ -2679,6 +2704,8 @@
     <string name="app_data_usage" msgid="7942375313697452803">"Penggunaan data apl"</string>
     <string name="data_summary_format" msgid="6213211533341068366">"<xliff:g id="SIZE">%1$s</xliff:g> dgunakn sejak <xliff:g id="DATE">%2$s</xliff:g>"</string>
     <string name="storage_used" msgid="7128074132917008743">"Storan yang digunakan"</string>
+    <string name="change" msgid="6657848623929839991">"Tukar"</string>
+    <string name="change_storage" msgid="600475265207060436">"Tukar storan"</string>
     <string name="notifications_label" msgid="2872668710589600731">"Pemberitahuan"</string>
     <string name="notifications_enabled" msgid="4386196629684749507">"Biasa"</string>
     <string name="notifications_disabled" msgid="4326096527874762629">"Sekat"</string>
@@ -2730,14 +2757,17 @@
       <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> apl dapat membuka pautan sokongannya</item>
       <item quantity="one">Satu apl dapat membuka pautan sokongannya</item>
     </plurals>
+    <string name="app_link_open_always" msgid="2474058700623948148">"Buka dalam apl ini"</string>
+    <string name="app_link_open_ask" msgid="7800878430190575991">"Tanya setiap kali"</string>
+    <string name="app_link_open_never" msgid="3407647600352398543">"Jangan buka dalam apl ini"</string>
     <string name="fingerprint_not_recognized" msgid="1739529686957438119">"Tidak dikenali"</string>
     <string name="default_apps_title" msgid="1854974637597514435">"Apl Lalai"</string>
     <string name="assist_and_voice_input_title" msgid="1733165754793221197">"Input Bantu &amp; suara"</string>
     <string name="default_assist_title" msgid="8868488975409247921">"Apl Bantu"</string>
     <string name="default_assist_none" msgid="3709083569608735487">"Tiada"</string>
-    <string name="choose_assist_title" msgid="554234448228740980">"Pilih Bantu"</string>
+    <string name="choose_assist_title" msgid="2373353478479305516">"Pilih apl Bantu"</string>
     <string name="assistant_security_warning_title" msgid="8673079231955467177">"Jadikan <xliff:g id="ASSISTANT_APP_NAME">%s</xliff:g> pembantu anda?"</string>
-    <string name="assistant_security_warning" msgid="4881965750615394002">"<xliff:g id="ASSISTANT_APP_NAME">%s</xliff:g> akan dapat membaca maklumat tentang apl yang sedang digunakan pada sistem anda, termasuk maklumat yang kelihatan pada skrin anda atau yang boleh diakses dalam apl."</string>
+    <string name="assistant_security_warning" msgid="8498726261327239136">"Pembantu akan dapat membaca maklumat tentang apl yang digunakan pada sistem anda, termasuk maklumat yang kelihatan pada skrin anda atau yang dapat diakses dalam apl."</string>
     <string name="assistant_security_warning_agree" msgid="7710290206928033908">"Setuju"</string>
     <string name="assistant_security_warning_disagree" msgid="877419950830205913">"Tidak bersetuju"</string>
     <string name="choose_voice_input_title" msgid="975471367067718019">"Pilih input suara"</string>
@@ -2761,34 +2791,43 @@
     <string name="memory_avg_desc" msgid="1551240906596518412">"Purata <xliff:g id="MEMORY">%1$s</xliff:g>"</string>
     <string name="memory_use_running_format" msgid="4172488041800743760">"<xliff:g id="MEMORY">%1$s</xliff:g> / <xliff:g id="RUNNING">%2$s</xliff:g>"</string>
     <string name="process_format" msgid="77905604092541454">"<xliff:g id="APP_NAME">%1$s</xliff:g> (<xliff:g id="COUNT">%2$d</xliff:g>)"</string>
-    <string name="high_power_apps" msgid="2116416853043103135">"Abaikan pengoptimuman"</string>
-    <string name="high_power_filter_on" msgid="3862942127137594196">"Dibenarkan"</string>
-    <string name="high_power_on" msgid="148473814103292724">"Mengabaikan pengoptimuman bateri"</string>
-    <string name="high_power_off" msgid="221092098425904010">"Tidak dibenarkan"</string>
-    <string name="high_power_desc" msgid="8412735192889327770">"Jangan gunakan pengoptimuman bateri. Cas bateri anda mungkin susut dengan lebih cepat lagi."</string>
-    <plurals name="high_power_count" formatted="false" msgid="4343190376439806186">
+    <string name="high_power_apps" msgid="3459065925679828230">"Pengoptimuman bateri"</string>
+    <string name="high_power_filter_on" msgid="3222265297576680099">"Tidak dioptimumkan"</string>
+    <string name="high_power_on" msgid="3382367497549906927">"Mengabaikan pengoptimuman bateri"</string>
+    <string name="high_power_off" msgid="3393904131961263278">"Mengoptimumkan penggunaan bateri"</string>
+    <string name="high_power_system" msgid="7362862974428225301">"Pengoptimuman bateri tidak tersedia"</string>
+    <string name="high_power_desc" msgid="6283926163708585760">"Jangan gunakan pengoptimuman bateri. Ciri ini boleh menyusutkan bateri anda dengan lebih cepat."</string>
+    <plurals name="high_power_count" formatted="false" msgid="2464701722383894640">
       <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> apl dibenarkan mengabaikan pengoptimuman bateri</item>
       <item quantity="one">1 apl dibenarkan mengabaikan pengoptimuman bateri</item>
     </plurals>
+    <string name="high_power_prompt_title" msgid="4257734526819699048">"Abaikan pengoptimuman bateri?"</string>
+    <string name="high_power_prompt_body" msgid="4072587909486730876">"Biarkan apl <xliff:g id="APP_NAME">%1$s</xliff:g> terus bersambung di latar belakang? Cara ini mungkin menggunakan lebih banyak kuasa bateri."</string>
     <string name="battery_summary" msgid="101415762036784289">"<xliff:g id="PERCENTAGE">%1$d</xliff:g>%% penggunaan sejak cas penuh terakhir"</string>
     <string name="no_battery_summary" msgid="3528036835462846814">"Tiada penggunaan bateri sejak cas penuh terakhir"</string>
     <string name="app_notification_preferences" msgid="1599319335092722613">"Tetapan apl"</string>
     <string name="system_ui_settings" msgid="579824306467081123">"Tunjukkan Penala SystemUI"</string>
     <string name="additional_permissions" msgid="6463784193877056080">"Kebenaran tambahan"</string>
     <string name="additional_permissions_more" msgid="3538612272673191451">"<xliff:g id="COUNT">%1$d</xliff:g> lagi"</string>
-    <string name="usb_use_charging_only" msgid="2625934955897625321">"Pengecasan sahaja"</string>
-    <string name="usb_use_file_transfers" msgid="479119385461326763">"Pindahkan fail (MTP)"</string>
-    <string name="usb_use_photo_transfers" msgid="7794775645350330454">"Pindahkan foto (PTP)"</string>
+    <string name="usb_use_charging_only" msgid="167707234832117768">"Mengecas"</string>
+    <string name="usb_use_charging_only_desc" msgid="3066256793008540627">"Cas sahaja peranti ini"</string>
+    <string name="usb_use_power_only" msgid="6304554004177083963">"Bekalan kuasa"</string>
+    <string name="usb_use_power_only_desc" msgid="708134382305728112">"Caskan peranti tersambung yang lain"</string>
+    <string name="usb_use_file_transfers" msgid="6978904665877785548">"Pemindahan fail"</string>
+    <string name="usb_use_file_transfers_desc" msgid="1663579896876922124">"Memindahkan fail ke Windows atau Mac (MTP)"</string>
+    <string name="usb_use_photo_transfers" msgid="8276445551694259039">"Pemindahan foto (PTP)"</string>
+    <string name="usb_use_photo_transfers_desc" msgid="2963034811151325996">"Pindahkan foto atau fail jika MTP tidak disokong (PTP)"</string>
     <string name="usb_use_MIDI" msgid="5116404702692483166">"MIDI"</string>
+    <string name="usb_use_MIDI_desc" msgid="6895383550910152384">"Gunakan peranti untuk input MIDI"</string>
     <string name="usb_use" msgid="3372728031108932425">"Gunakan USB untuk"</string>
     <string name="inactive_apps_title" msgid="1317817863508274533">"Apl yang tidak aktif"</string>
     <string name="inactive_app_inactive_summary" msgid="6768756967594202411">"Tidak aktif. Sentuh untuk menogol."</string>
     <string name="inactive_app_active_summary" msgid="4512911571954375968">"Aktif. Sentuh untuk menogol."</string>
-    <string name="assist_access_context_title" msgid="2047105711005856521">"Gunakan konteks semasa"</string>
-    <string name="assist_access_context_summary" msgid="7573538643562533886">"Benarkan apl bantuan mengakses kandungan dan metadata daripada apl yang sedang anda gunakan"</string>
-    <string name="assist_access_screenshot_title" msgid="7994303398517230267">"Gunakan tangkapan skrin"</string>
-    <string name="assist_access_screenshot_summary" msgid="8774637450198111406">"Benarkan apl bantuan menganalisis imej apl yang sedang anda gunakan"</string>
-    <string name="assist_footer" msgid="2283187001990543739">"Apl bantu membantu anda mengenal pasti dan bertindak pada maklumat yang berguna tanpa perlu bertanya. Sesetengah apl menyokong pelancar dan perkhidmatan input suara untuk memberi anda bantuan bersepadu."</string>
+    <string name="assist_access_context_title" msgid="2269032346698890257">"Gunakan teks daripada skrin"</string>
+    <string name="assist_access_context_summary" msgid="1991421283142279560">"Benarkan apl bantu mengakses kandungan skrin sebagai teks"</string>
+    <string name="assist_access_screenshot_title" msgid="4034721336291215819">"Gunakan tangkapan skrin"</string>
+    <string name="assist_access_screenshot_summary" msgid="6761636689013259901">"Benarkan apl bantu mengakses imej skrin"</string>
+    <string name="assist_footer" msgid="1982791172085896864">"Apl bantu dapat membantu anda berdasarkan maklumat daripada skrin yang sedang dilihat. Sesetengah apl menyokong perkhidmatan pelancar dan input suara untuk memberi anda bantuan bersepadu."</string>
     <string name="average_memory_use" msgid="829566450150198512">"Penggunaan memori purata"</string>
     <string name="maximum_memory_use" msgid="7493720799710132496">"Penggunaan memori maksimum"</string>
     <string name="memory_usage" msgid="1781358557214390033">"Penggunaan memori"</string>
@@ -2807,17 +2846,58 @@
       <item quantity="other"><xliff:g id="COUNT">%1$d</xliff:g> apl menggunakan memori dalam <xliff:g id="DURATION_1">%2$s</xliff:g> yang lalu</item>
       <item quantity="one">1 apl menggunakan memori dalam <xliff:g id="DURATION_0">%2$s</xliff:g> yang lalu</item>
     </plurals>
-    <string name="running_frequency" msgid="6622624669948277693">"Kekerapan"</string>
+    <string name="running_frequency" msgid="6622624669948277693">"Frekuensi"</string>
     <string name="memory_maximum_usage" msgid="6513785462055278341">"Penggunaan maksimum"</string>
     <string name="no_data_usage" msgid="9131454024293628063">"Tiada data yang digunakan"</string>
     <string name="zen_access_warning_dialog_title" msgid="1198189958031157142">"Benarkan akses kepada Jangan Ganggu untuk <xliff:g id="APP">%1$s</xliff:g>?"</string>
     <string name="zen_access_warning_dialog_summary" msgid="4015885767653010873">"Apl ini dapat menghidupkan/mematikan Jangan Ganggu dan membuat perubahan pada tetapan yang berkaitan."</string>
-    <string name="ignore_optimizations_on" msgid="2417358456267927315">"Benarkan"</string>
-    <string name="ignore_optimizations_off" msgid="9069942099715006633">"Jangan benarkan"</string>
+    <string name="ignore_optimizations_on" msgid="6915689518016285116">"Jangan optimumkan"</string>
+    <string name="ignore_optimizations_off" msgid="6153196256410296835">"Optimumkan"</string>
     <string name="ignore_optimizations_on_desc" msgid="2321398930330555815">"Cas bateri anda mungkin susut dengan lebih cepat lagi"</string>
     <string name="ignore_optimizations_off_desc" msgid="5255731062045426544">"Disyorkan untuk hayat bateri yang lebih lama"</string>
     <string name="ignore_optimizations_title" msgid="2829637961185027768">"Benarkan <xliff:g id="APP">%s</xliff:g> mengabaikan pengoptimuman bateri?"</string>
     <string name="app_list_preference_none" msgid="108006867520327904">"Tiada"</string>
     <string name="work_profile_usage_access_warning" msgid="8870622842216566692">"Meskipun anda mematikan akses penggunaan bagi apl ini, pentadbir anda masih dapat menjejak penggunaan data apl dalam profil kerja anda."</string>
     <string name="accessibility_lock_screen_progress" msgid="2408292742980383166">"<xliff:g id="COUNT_0">%1$d</xliff:g> daripada <xliff:g id="COUNT_1">%2$d</xliff:g> aksara digunakan"</string>
+    <string name="draw_overlay_title" msgid="4003905926278954971">"Apl yang boleh melukis di atas apl lain"</string>
+    <string name="draw_overlay" msgid="9078696044299199938">"Lukis di atas apl lain"</string>
+    <string name="system_alert_window_settings" msgid="1757821151143694951">"Lukis di atas apl lain"</string>
+    <string name="system_alert_window_apps_title" msgid="7005760279028569491">"Apl"</string>
+    <string name="system_alert_window_access_title" msgid="8811695381437304132">"Lukis di atas apl lain"</string>
+    <string name="permit_draw_overlay" msgid="6606018549732046201">"Bolehkan melukis di atas apl lain"</string>
+    <string name="app_overlay_permission_preference" msgid="8355410276571387439">"Kebenaran melukis di atas apl"</string>
+    <string name="allow_overlay_description" msgid="7895191337585827691">"Kebenaran ini membenarkan apl dipaparkan di sebelah atas apl lain yang sedang digunakan dan boleh mengganggu penggunaan antara muka dalam apl lain atau menukar perkara yang anda fikir anda lihat dalam aplikasi lain."</string>
+    <string name="keywords_system_alert_window" msgid="8579673659566564926">"dialog tetingkap makluman sistem lukis di atas apl lain"</string>
+    <string name="overlay_settings" msgid="222062091489691363">"Lukis di atas apl lain"</string>
+    <string name="system_alert_window_summary" msgid="4268867238063922290">"<xliff:g id="COUNT_0">%d</xliff:g> daripada <xliff:g id="COUNT_1">%d</xliff:g> apl dibenarkan melukis di atas apl lain"</string>
+    <string name="filter_overlay_apps" msgid="6965969283342557573">"Apl dengan kebenaran"</string>
+    <string name="system_alert_window_on" msgid="2939489395109048888">"Ya"</string>
+    <string name="system_alert_window_off" msgid="6189115687233061992">"Tidak"</string>
+    <string name="write_settings" msgid="4797457275727195681">"Ubah suai tetapan sistem"</string>
+    <string name="keywords_write_settings" msgid="6415597272561105138">"tulis mengubah suai tetapan sistem"</string>
+    <string name="write_settings_summary" msgid="4302268998611412696">"<xliff:g id="COUNT_0">%d</xliff:g> daripada <xliff:g id="COUNT_1">%d</xliff:g> apl dibenarkan untuk mengubah suai tetapan sistem"</string>
+    <string name="filter_write_settings_apps" msgid="2914615026197322551">"Boleh mengubah suai tetapan sistem"</string>
+    <string name="write_settings_title" msgid="4232152481902542284">"Boleh mengubah suai tetapan sistem"</string>
+    <string name="write_system_settings" msgid="3482913590601096763">"Ubah suai tetapan sistem"</string>
+    <string name="write_settings_preference" msgid="3407383041273067448">"Kebenaran apl mengubah suai tetapan sistem"</string>
+    <string name="permit_write_settings" msgid="6393779336656870080">"Benarkan pengubahsuaian tetapan sistem"</string>
+    <string name="write_settings_description" msgid="6868293938839954623">"Kebenaran ini membolehkan apl mengubah suai tetapan sistem."</string>
+    <string name="write_settings_on" msgid="8230580416068832239">"Ya"</string>
+    <string name="write_settings_off" msgid="5156104383386336233">"Tidak"</string>
+    <string name="camera_gesture_title" msgid="1075838577642393011">"Pusing dua kali untuk membuka kamera"</string>
+    <string name="camera_gesture_desc" msgid="1831390075255870960">"Buka apl kamera dengan memusingkan pergelangan tangan anda dua kali"</string>
+    <string name="camera_double_tap_power_gesture_title" msgid="1651873760405034645">"Tekan butang kuasa dua kali untuk kamera"</string>
+    <string name="camera_double_tap_power_gesture_desc" msgid="7355664631775680376">"Buka kamera dengan cepat tanpa membuka kunci skrin"</string>
+  <string-array name="color_mode_names">
+    <item msgid="2425514299220523812">"Terang (lalai)"</item>
+    <item msgid="8446070607501413455">"Semula Jadi"</item>
+    <item msgid="6553408765810699025">"Standard"</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item msgid="4979629397075120893">"Warna dipertingkat"</item>
+    <item msgid="8280754435979370728">"Warna semula jadi seperti yang dilihat oleh mata"</item>
+    <item msgid="5363960654009010371">"Warna dioptimumkan untuk kandungan digital"</item>
+  </string-array>
+    <string name="picture_color_mode" msgid="4560755008730283695">"Mod warna gambar"</string>
+    <string name="picture_color_mode_desc" msgid="1141891467675548590">"Gunakan sRGB"</string>
 </resources>

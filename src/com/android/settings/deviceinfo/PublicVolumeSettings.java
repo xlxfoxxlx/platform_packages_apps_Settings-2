@@ -16,6 +16,7 @@
 
 package com.android.settings.deviceinfo;
 
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -56,8 +57,6 @@ public class PublicVolumeSettings extends SettingsPreferenceFragment {
     private VolumeInfo mVolume;
     private DiskInfo mDisk;
 
-    private int mNextOrder = 0;
-
     private StorageSummaryPreference mSummary;
 
     private Preference mMount;
@@ -83,7 +82,8 @@ public class PublicVolumeSettings extends SettingsPreferenceFragment {
 
         final Context context = getActivity();
 
-        mIsPermittedToAdopt = UserManager.get(context).isAdminUser();
+        mIsPermittedToAdopt = UserManager.get(context).isAdminUser()
+                && !ActivityManager.isUserAMonkey();
 
         mStorageManager = context.getSystemService(StorageManager.class);
 
@@ -108,6 +108,7 @@ public class PublicVolumeSettings extends SettingsPreferenceFragment {
         mVolumeId = mVolume.getId();
 
         addPreferencesFromResource(R.xml.device_info_storage_volume);
+        getPreferenceScreen().setOrderingAsAdded(true);
 
         mSummary = new StorageSummaryPreference(context);
 
@@ -133,7 +134,7 @@ public class PublicVolumeSettings extends SettingsPreferenceFragment {
         screen.removeAll();
 
         if (mVolume.isMountedReadable()) {
-            screen.addPreference(mSummary);
+            addPreference(mSummary);
 
             final File file = mVolume.getPath();
             final long totalBytes = file.getTotalSpace();
@@ -149,21 +150,25 @@ public class PublicVolumeSettings extends SettingsPreferenceFragment {
         }
 
         if (mVolume.getState() == VolumeInfo.STATE_UNMOUNTED) {
-            screen.addPreference(mMount);
+            addPreference(mMount);
         }
         if (mVolume.isMountedReadable()) {
-            screen.addPreference(mUnmount);
+            addPreference(mUnmount);
         }
-        screen.addPreference(mFormatPublic);
+        addPreference(mFormatPublic);
         if (mDisk.isAdoptable() && mIsPermittedToAdopt) {
-            screen.addPreference(mFormatPrivate);
+            addPreference(mFormatPrivate);
         }
+    }
+
+    private void addPreference(Preference pref) {
+        pref.setOrder(Preference.DEFAULT_ORDER);
+        getPreferenceScreen().addPreference(pref);
     }
 
     private Preference buildAction(int titleRes) {
         final Preference pref = new Preference(getActivity());
         pref.setTitle(titleRes);
-        pref.setOrder(mNextOrder++);
         return pref;
     }
 

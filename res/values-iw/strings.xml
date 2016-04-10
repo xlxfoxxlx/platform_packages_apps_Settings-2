@@ -326,12 +326,13 @@
       <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> טביעות אצבע הוגדרו</item>
       <item quantity="one">טביעת אצבע <xliff:g id="COUNT_0">%1$d</xliff:g> הוגדרה</item>
     </plurals>
+    <string name="security_settings_fingerprint_preference_summary_none" msgid="1507739327565151923"></string>
     <string name="security_settings_fingerprint_enroll_onboard_title" msgid="4735546436672054254">"הגדרה של טביעת אצבע"</string>
     <string name="security_settings_fingerprint_enroll_onboard_message" msgid="2655449737443418341">"כדי להשתמש בטביעת האצבע לביטול נעילת המסך או אישור רכישות, יש לבצע את הפעולות הבאות:"</string>
     <string name="security_settings_fingerprint_enroll_onboard_message_1" msgid="2799884038398627882">"הגדר את שיטת הגיבוי לנעילת המסך"</string>
     <string name="security_settings_fingerprint_enroll_onboard_message_2" msgid="4158160658182631304">"להוסיף את טביעת האצבע"</string>
     <string name="security_settings_fingerprint_enroll_introduction_title" msgid="3201556857492526098">"פתח עם טביעת אצבע"</string>
-    <string name="security_settings_fingerprint_enroll_introduction_message" msgid="5061093614328964700">"גע בחיישן טביעת האצבע כדי לבטל את נעילת הטלפון, להתיר רכישות או להיכנס אל אפליקציות. טביעות אצבע שיצורפו לטלפון יאפשרו לבצע את הפעולות האלה, אז בחר בקפידה את מי שתוסיף."</string>
+    <string name="security_settings_fingerprint_enroll_introduction_message" msgid="9193978734907066950">"גע בחיישן טביעת האצבע כדי לבטל את נעילת הטלפון, להתיר רכישות או להיכנס אל אפליקציות. היזהר בעת הוספת טביעות אצבע של משתמשים - הבעלים של כל טביעת אצבע שתצורף יוכל לבצע את הפעולות האלה."</string>
     <string name="security_settings_fingerprint_enroll_introduction_message_warning" msgid="7173290350577831813">"‏שים לב: ייתכן ששימוש בטביעת אצבע יעניק פחות אבטחה מקו ביטול נעילה או PIN חזקים."</string>
     <string name="security_settings_fingerprint_enroll_introduction_risk_link_text" msgid="9129531466157620977">"למידע נוסף"</string>
     <string name="security_settings_fingerprint_enroll_introduction_cancel" msgid="3199351118385606526">"בטל"</string>
@@ -343,21 +344,31 @@
     <string name="security_settings_fingerprint_enroll_dialog_ok" msgid="4150384963879569750">"אישור"</string>
     <string name="security_settings_fingerprint_enroll_dialog_delete" msgid="4114615413240707936">"מחק"</string>
     <string name="security_settings_fingerprint_enroll_start_title" msgid="9192567284554495805">"אפשר להתחיל!"</string>
-    <string name="security_settings_fingerprint_enroll_start_message" msgid="6294541599045187369">"הנח את אותה האצבע על חיישן טביעות האצבעות. הרם אותה לאחר שתחוש רטט."</string>
-    <string name="security_settings_fingerprint_enroll_repeat_title" msgid="3732060789409510229">"נהדר! כעת חזור על הפעולה."</string>
-    <string name="security_settings_fingerprint_enroll_repeat_message" msgid="8846866512704467036">"הנח את אותה האצבע על חיישן טביעות האצבעות והרם אותה לאחר שתחוש רטט."</string>
+    <string name="security_settings_fingerprint_enroll_start_message" msgid="3909929328942564524">"הנח את האצבע על החיישן והרם אותה לאחר שתרגיש רטט"</string>
+    <string name="security_settings_fingerprint_enroll_repeat_title" msgid="4327640138658832625">"מצוין. כעת חזור על הפעולה"</string>
+    <string name="security_settings_fingerprint_enroll_repeat_message" msgid="4232813847507193627">"הזז מעט את האצבע כדי להוסיף את כל החלקים של טביעת האצבע"</string>
     <string name="security_settings_fingerprint_enroll_finish_title" msgid="4798692662828257300">"טביעת האצבע נוספה!"</string>
     <string name="security_settings_fingerprint_enroll_finish_message" msgid="835496875787664316">"כשתראה את הסמל הזה, תוכל להשתמש בטביעת האצבע שלך לצורך זיהוי או אישור רכישה."</string>
+    <string name="setup_fingerprint_enroll_finish_message" msgid="7234264291957984004">"גע בחיישן טביעת האצבע כדי להוציא את המכשיר ממצב שינה ולבטל את הנעילה שלו."</string>
+    <string name="setup_fingerprint_enroll_finish_message_secondary" msgid="7280546429133276374">"כשתראה את הסמל הזה, תוכל להשתמש בטביעת האצבע שלך."</string>
+    <string name="setup_fingerprint_enroll_enrolling_skip_title" msgid="6808422329107426923">"האם לדלג על הגדרת טביעת אצבע?"</string>
+    <string name="setup_fingerprint_enroll_enrolling_skip_message" msgid="274849306857859783">"בחרת להשתמש בטביעת האצבע שלך כאחת מהדרכים שבהן תוכל לבטל את הנעילה בטלפון. אם תדלג על שלב זה עכשיו, תצטרך לבצע את ההגדרה בהמשך. ההגדרה לוקחת רק דקה או שתיים."</string>
     <string name="security_settings_fingerprint_enroll_setup_screen_lock" msgid="1195743489835505376">"הגדר נעילת מסך"</string>
     <string name="security_settings_fingerprint_enroll_done" msgid="4014607378328187567">"סיום"</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_title" msgid="1863561601428695160">"אופס. זה לא החיישן הנכון"</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_message" msgid="5053971232594165142">"השתמש בחיישן טביעת האצבע במכשיר."</string>
+    <string name="security_settings_fingerprint_enroll_error_dialog_title" msgid="3618021988442639280">"ההרשמה לא הושלמה"</string>
+    <string name="security_settings_fingerprint_enroll_error_timeout_dialog_message" msgid="2942551158278899627">"חלף הזמן הקצוב להרשמה באמצעות טביעת אצבע. נסה שוב."</string>
+    <string name="security_settings_fingerprint_enroll_error_generic_dialog_message" msgid="3624760637222239293">"ההרשמה באמצעות טביעת אצבע נכשלה. נסה שוב או השתמש באצבע אחרת."</string>
     <string name="fingerprint_enroll_button_add" msgid="6317978977419045463">"הוסף עוד"</string>
     <string name="fingerprint_enroll_button_next" msgid="6247009337616342759">"הבא"</string>
     <string name="security_settings_fingerprint_enroll_disclaimer" msgid="2624905914239271751">"בנוסף לביטול הנעילה של הטלפון, תוכל להשתמש בטביעת האצבע כדי לאשר רכישות וגישה לאפליקציות. "<annotation id="url">"למידע נוסף"</annotation></string>
     <string name="security_settings_fingerprint_enroll_disclaimer_lockscreen_disabled" msgid="4504501581228672208">"האפשרות של נעילת המסך מושבתת. עדיין תוכל להשתמש בטביעת האצבע שלך כדי לאשר רכישות וגישה לאפליקציות. "<annotation id="url">"למידע נוסף"</annotation></string>
     <string name="security_settings_fingerprint_enroll_lift_touch_again" msgid="1888772560642539718">"הרם את האצבע ואז גע שוב בחיישן"</string>
     <string name="fingerprint_add_max" msgid="1020927549936895822">"תוכל להוסיף עד <xliff:g id="COUNT">%d</xliff:g> טביעות אצבע"</string>
+    <string name="fingerprint_last_delete_title" msgid="6410310101247028988">"האם להסיר את כל טביעות האצבע?"</string>
+    <string name="fingerprint_last_delete_message" msgid="8318926239554839722">"לא תוכל להשתמש בטביעות האצבע כדי לבטל את נעילת הטלפון, לאשר רכישות או להיכנס אל אפליקציות."</string>
+    <string name="fingerprint_last_delete_confirm" msgid="2634726361059274289">"כן, הסר"</string>
     <string name="confirm_fingerprint_icon_content_description" msgid="5255544532157079096">"השתמש בטביעת האצבע שלך כדי להמשיך."</string>
     <string name="crypt_keeper_settings_title" msgid="4219233835490520414">"הצפנה"</string>
     <string name="crypt_keeper_encrypt_title" product="tablet" msgid="1060273569887301457">"הצפן טאבלט"</string>
@@ -391,6 +402,7 @@
     <string name="crypt_keeper_data_corrupt_summary" product="default" msgid="8843311420059663824">"‏הסיסמה שהזנת נכונה, אך לצערנו הנתונים שלך פגומים. \n\nכדי לחזור ולהשתמש בטלפון, עליך לבצע איפוס להגדרות היצרן. בזמן הגדרת הטלפון לאחר האיפוס, תהיה לך הזדמנות לשחזר נתונים שגובו בחשבון Google שלך."</string>
     <string name="crypt_keeper_switch_input_method" msgid="4168332125223483198">"החלפת שיטת קלט"</string>
     <string name="lock_settings_picker_title" msgid="1095755849152582712">"נעילת מסך"</string>
+    <string name="lock_settings_picker_fingerprint_message" msgid="4755230324778371292">"בחר את שיטת הגיבוי לנעילת המסך"</string>
     <string name="unlock_set_unlock_launch_picker_title" msgid="2084576942666016993">"נעילת מסך"</string>
     <string name="unlock_set_unlock_launch_picker_change_title" msgid="5045866882028324941">"שינוי נעילת מסך"</string>
     <string name="unlock_set_unlock_launch_picker_change_summary" msgid="2790960639554590668">"‏שנה או השבת אבטחת קו, PIN או סיסמה"</string>
@@ -406,7 +418,6 @@
     <string name="unlock_set_unlock_password_title" msgid="8775603825675090937">"סיסמה"</string>
     <string name="unlock_set_unlock_password_summary" msgid="8856220848940929546">"אבטחה גבוהה"</string>
     <string name="current_screen_lock" msgid="4104091715420072219">"נעילת המסך הנוכחית"</string>
-    <string name="unlock_disable_frp_warning_content" msgid="7070131836291098244">"תכונות להגנת המכשיר יפסיקו לפעול."</string>
     <string name="unlock_set_unlock_disabled_summary" msgid="2120729867788851674">"הושבת על ידי מדיניות ההצפנה של מנהל המערכת, או אחסון האישורים"</string>
     <string name="unlock_set_unlock_mode_off" msgid="5881952274566013651">"ללא"</string>
     <string name="unlock_set_unlock_mode_none" msgid="8467360084676871617">"החלקה"</string>
@@ -415,10 +426,24 @@
     <string name="unlock_set_unlock_mode_password" msgid="1203938057264146610">"סיסמה"</string>
     <string name="unlock_setup_wizard_fingerprint_details" msgid="7893457665921363009">"לאחר הגדרה של נעילת מסך, תוכל גם להגדיר את טביעת האצבע ב\'הגדרות\' &gt; \'אבטחה\'."</string>
     <string name="unlock_disable_lock_title" msgid="1427036227416979120">"כיבוי נעילת מסך"</string>
-    <string name="unlock_disable_lock_pattern_summary" msgid="6801602880568869201">"הסר קו ביטול נעילה"</string>
-    <string name="unlock_disable_lock_pin_summary" msgid="8856842745366993387">"‏הסר PIN של ביטול נעילה"</string>
-    <string name="unlock_disable_lock_password_summary" msgid="192161194564577025">"הסר סיסמה לביטול נעילה"</string>
-    <string name="unlock_disable_lock_unknown_summary" msgid="8688498722601653961">"הסר נעילת מסך"</string>
+    <string name="unlock_disable_frp_warning_title" msgid="264008934468492550">"האם להסיר את הגנת המכשיר?"</string>
+    <string name="unlock_disable_frp_warning_content_pattern" msgid="8869767290771023461">"התכונות להגנת המכשיר לא יפעלו בלי קו ביטול הנעילה."</string>
+    <string name="unlock_disable_frp_warning_content_pattern_fingerprint" msgid="8212242533942400457">"התכונות להגנת המכשיר לא יפעלו בלי קו ביטול הנעילה.<xliff:g id="EMPTY_LINE">
+
+</xliff:g>גם טביעות האצבעות ששמרת יוסרו מהמכשיר הזה ולא תוכל לבטל את נעילת הטלפון, לאשר רכישות או להיכנס לאפליקציות בעזרתן.\""</string>
+    <string name="unlock_disable_frp_warning_content_pin" msgid="586996206210265131">"‏התכונות להגנת המכשיר לא יפעלו בלי ה-PIN."</string>
+    <string name="unlock_disable_frp_warning_content_pin_fingerprint" msgid="875669051899437197">"‏התכונות להגנת המכשיר לא יפעלו בלי ה-PIN.<xliff:g id="EMPTY_LINE">
+
+</xliff:g>גם טביעות האצבעות ששמרת יוסרו מהמכשיר הזה ולא תוכל לבטל את נעילת הטלפון, לאשר רכישות או להיכנס לאפליקציות בעזרתן.\""</string>
+    <string name="unlock_disable_frp_warning_content_password" msgid="5420612686852555537">"התכונות להגנת המכשיר לא יפעלו בלי הסיסמה."</string>
+    <string name="unlock_disable_frp_warning_content_password_fingerprint" msgid="2228159168587170445">"התכונות להגנת המכשיר לא יפעלו בלי הסיסמה.<xliff:g id="EMPTY_LINE">
+
+</xliff:g>גם טביעות האצבעות ששמרת יוסרו מהמכשיר הזה ולא תוכל לבטל את נעילת הטלפון, לאשר רכישות או להיכנס לאפליקציות בעזרתן.\""</string>
+    <string name="unlock_disable_frp_warning_content_unknown" msgid="1550718040483548220">"התכונות להגנת המכשיר לא יפעלו בלי נעילת המסך."</string>
+    <string name="unlock_disable_frp_warning_content_unknown_fingerprint" msgid="6363091330281670692">"התכונות להגנת המכשיר לא יפעלו בלי נעילת המסך.<xliff:g id="EMPTY_LINE">
+
+</xliff:g>גם טביעות האצבעות ששמרת יוסרו מהמכשיר הזה ולא תוכל לבטל את נעילת הטלפון, לאשר רכישות או להיכנס לאפליקציות בעזרתן.\""</string>
+    <string name="unlock_disable_frp_warning_ok" msgid="7075138677177748705">"כן, הסר"</string>
     <string name="unlock_change_lock_pattern_title" msgid="2044092014872741130">"שנה את קו ביטול הנעילה"</string>
     <string name="unlock_change_lock_pin_title" msgid="806629901095938484">"‏שנה PIN של ביטול נעילה"</string>
     <string name="unlock_change_lock_password_title" msgid="5606298470358768865">"שנה סיסמת ביטול נעילה"</string>
@@ -488,9 +513,8 @@
     <string name="bluetooth_settings" msgid="1810521656168174329">"Bluetooth"</string>
     <string name="bluetooth_settings_title" msgid="1908745291161353016">"Bluetooth"</string>
     <string name="bluetooth_settings_summary" msgid="2091062709530570462">"נהל חיבורים, הגדר שם מכשיר ויכולת גילוי"</string>
-    <string name="bluetooth_pairing_request" msgid="6385750334766370310">"‏בקשה להתאמת Bluetooth"</string>
-    <string name="bluetooth_enter_pin_msg" msgid="4954085254142996877">"מכשיר"</string>
-    <string name="bluetooth_pairing_key_msg" msgid="333005542843637754">"קוד התאמה"</string>
+    <string name="bluetooth_pairing_request" msgid="2605098826364694673">"האם להתאים עם <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="418124944140102021">"‏קוד התאמת Bluetooth"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="6813273136442138444">"‏הקלד את קוד ההתאמה ולאחר מכן לחץ על Return או Enter"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="7222713483058171357">"‏PIN מכיל אותיות או סמלים"</string>
     <string name="bluetooth_pin_values_hint" msgid="3815897557875873646">"בדרך כלל 0000 או 1234"</string>
@@ -500,7 +524,7 @@
     <string name="bluetooth_confirm_passkey_msg" msgid="3708312912841950052">"‏כדי להתאים עם:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;&lt;br&gt;ודא שהמכשיר מציג סיסמה זו:&lt;br&gt;&lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="1615930853859551491">"‏מאת:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;&lt;br&gt;לבצע התאמה עם מכשיר זה?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="2796550001376088433">"‏כדי להתאים עם:<xliff:g id="BOLD1_0">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="DEVICE_NAME">%1$s</xliff:g><xliff:g id="END_BOLD1">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g>הקלד בו:<xliff:g id="BOLD2_1">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="PASSKEY">%2$s</xliff:g><xliff:g id="END_BOLD2">&lt;/b&gt;</xliff:g>, ולאחר מכן הקש על Return או Enter."</string>
-    <string name="bluetooth_pairing_shares_phonebook" msgid="1655930908614072491">"אפשר גישה אל אנשי הקשר ואל היסטוריית השיחות לאחר החיבור."</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2277931851483023208">"התר ל-<xliff:g id="DEVICE_NAME">%1$s</xliff:g> לגשת אל אנשי הקשר ואל היסטוריית השיחות"</string>
     <string name="bluetooth_error_title" msgid="6850384073923533096"></string>
     <string name="bluetooth_connecting_error_message" msgid="1397388344342081090">"לא הייתה אפשרות להתחבר אל <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_preference_scan_title" msgid="2277464653118896016">"סרוק אחר מכשירים"</string>
@@ -588,6 +612,7 @@
     <string name="wifi_starting" msgid="6732377932749942954">"‏מפעיל את ה-Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="8952524572499500804">"‏מכבה את ה-Wi-Fi..."</string>
     <string name="wifi_error" msgid="3207971103917128179">"שגיאה"</string>
+    <string name="wifi_sap_no_channel_error" msgid="3108445199311817111">"‏רצועת התדרים של ‎5 GHz אינה זמינה במדינה זו"</string>
     <string name="wifi_in_airplane_mode" msgid="8652520421778203796">"במצב טיסה"</string>
     <string name="wifi_notify_open_networks" msgid="3755768188029653293">"התראת רשת"</string>
     <string name="wifi_notify_open_networks_summary" msgid="3716818008370391253">"הצג הודעה כאשר יש רשת ציבורית זמינה"</string>
@@ -803,6 +828,10 @@
     <string name="account_settings" msgid="6403589284618783461">"חשבונות"</string>
     <string name="category_personal" msgid="1299663247844969448">"אישי"</string>
     <string name="category_work" msgid="8699184680584175622">"עבודה"</string>
+    <string name="accessibility_category_work" msgid="4339262969083355720">"חשבונות פרופיל עבודה - <xliff:g id="MANAGED_BY">%s</xliff:g>"</string>
+    <string name="accessibility_category_personal" msgid="1263518850905945594">"חשבונות פרופיל אישי"</string>
+    <string name="accessibility_work_account_title" msgid="1231830766637939527">"חשבון עבודה - <xliff:g id="MANAGED_BY">%s</xliff:g>"</string>
+    <string name="accessibility_personal_account_title" msgid="2169071663029067826">"חשבון אישי - <xliff:g id="MANAGED_BY">%s</xliff:g>"</string>
     <string name="search_settings" msgid="1910951467596035063">"חיפוש"</string>
     <string name="search_settings_summary" msgid="9205656546570654169">"ניהול הגדרות והיסטוריה של חיפוש"</string>
     <string name="display_settings" msgid="7965901687241669598">"תצוגה"</string>
@@ -884,6 +913,7 @@
     <string name="system_update_settings_list_item_title" msgid="3342887311059985961">"עדכוני מערכת"</string>
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
     <string name="firmware_version" msgid="4801135784886859972">"‏גרסת Android"</string>
+    <string name="security_patch" msgid="8438384045870296634">"‏רמה תיקון האבטחה ב-Android"</string>
     <string name="model_number" msgid="3765737700545384794">"מספר דגם"</string>
     <string name="fcc_equipment_id" msgid="149114368246356737">"זיהוי ציוד"</string>
     <string name="baseband_version" msgid="1848990160763524801">"גרסת פס בסיס"</string>
@@ -1117,17 +1147,6 @@
     <string name="master_clear_not_available" msgid="1000370707967468909">"איפוס להגדרות היצרן אינו זמין עבור המשתמש הזה"</string>
     <string name="master_clear_progress_title" msgid="5194793778701994634">"מוחק"</string>
     <string name="master_clear_progress_text" msgid="6559096229480527510">"אנא המתן..."</string>
-    <string name="media_format_title" product="nosdcard" msgid="3999653431422767156">"‏מחק אחסון USB"</string>
-    <string name="media_format_title" product="default" msgid="4427528440306787972">"‏מחק כרטיס SD"</string>
-    <string name="media_format_summary" product="nosdcard" msgid="776603298628082065">"‏מוחק את כל הנתונים באמצעי אחסון מסוג USB"</string>
-    <string name="media_format_summary" product="default" msgid="3805714639375830120">"‏מוחק את כל הנתונים בכרטיס SD"</string>
-    <string name="media_format_desc" product="nosdcard" msgid="4557243156946319034">"‏למחוק את כל אחסון ה-USB? פעולה זו תגרום לאובדן "<b>"כל"</b>" הנתונים המאוחסנים!"</string>
-    <string name="media_format_desc" product="default" msgid="8764037252319942415">"‏למחוק את כרטיס ה-SD? תאבד את "<b>"כל"</b>" הנתונים שבכרטיס!"</string>
-    <string name="media_format_button_text" product="nosdcard" msgid="6293669371185352810">"‏מחק אחסון USB"</string>
-    <string name="media_format_button_text" product="default" msgid="6721544380069373626">"‏מחק כרטיס SD"</string>
-    <string name="media_format_final_desc" product="nosdcard" msgid="941597815448108794">"‏למחוק את אחסון ה-USB, כולל כל הקבצים שמאוחסנים בו? לא ניתן לבטל פעולה זו!"</string>
-    <string name="media_format_final_desc" product="default" msgid="7220996042092437566">"‏למחוק את כרטיס ה-SD ואת כל הקבצים המאוחסנים בו? לא ניתן לבטל פעולה זו!"</string>
-    <string name="media_format_final_button_text" msgid="4881713344315923175">"מחק הכל"</string>
     <string name="call_settings_title" msgid="5188713413939232801">"הגדרות שיחה"</string>
     <string name="call_settings_summary" msgid="7291195704801002886">"הגדרת דואר קולי, העברת שיחות, שיחה ממתינה, זיהוי מתקשר"</string>
     <string name="tether_settings_title_usb" msgid="6688416425801386511">"‏שיתוף אינטרנט דרך USB"</string>
@@ -1213,6 +1232,7 @@
     <string name="about_settings_summary" msgid="3371517697156165959">"הצג מידע משפטי, סטטוס, גרסת תוכנה"</string>
     <string name="legal_information" msgid="5769301644270604095">"מידע משפטי"</string>
     <string name="contributors_title" msgid="5917703088825286504">"תורמים"</string>
+    <string name="manual" msgid="3025943393642974445">"ידני"</string>
     <string name="regulatory_information" msgid="5695464367088752150">"מידע על תקנות"</string>
     <string name="copyright_title" msgid="865906688917260647">"זכויות יוצרים"</string>
     <string name="license_title" msgid="1990487604356037871">"רישיון"</string>
@@ -1220,6 +1240,8 @@
     <string name="webview_license_title" msgid="2813507464175738967">"‏רישיון WebView במערכת"</string>
     <string name="wallpaper_attributions" msgid="3645880512943433928">"טפטים"</string>
     <string name="wallpaper_attributions_values" msgid="2996183537914690469">"‏ספקים של צילומי לוויין:\n‎©2014 CNES / Astrium‏, DigitalGlobe‏, Bluesky"</string>
+    <string name="settings_manual_activity_title" msgid="8133150693616006051">"ידני"</string>
+    <string name="settings_manual_activity_unavailable" msgid="4752403782883814898">"יש בעיה בטעינת המדריך."</string>
     <string name="settings_license_activity_title" msgid="7553683406244228650">"רשיונות קוד פתוח"</string>
     <string name="settings_license_activity_unavailable" msgid="4210539215951487627">"יש בעיה בטעינת הרישיון."</string>
     <string name="settings_license_activity_loading" msgid="3337535809093591740">"טוען..."</string>
@@ -1514,9 +1536,9 @@
     <string name="vpn_settings_not_available" msgid="956841430176985598">"‏הגדרות VPN אינן זמינות עבור המשתמש הזה."</string>
     <string name="tethering_settings_not_available" msgid="6765770438438291012">"הגדרות עבור שיתוף של חיבור אינטרנט אינן זמינות עבור המשתמש הזה"</string>
     <string name="apn_settings_not_available" msgid="7873729032165324000">"‏הגדרות עבור שם נקודת גישה (APN) אינן זמינות עבור המשתמש הזה"</string>
-    <string name="enable_adb" msgid="7982306934419797485">"‏ניקוי באגים ב-USB"</string>
-    <string name="enable_adb_summary" msgid="4881186971746056635">"‏מצב תיקון באגים כאשר USB מחובר"</string>
-    <string name="clear_adb_keys" msgid="4038889221503122743">"‏ביטול הרשאות לניקוי באגים ב-USB"</string>
+    <string name="enable_adb" msgid="7982306934419797485">"‏ניפוי באגים ב-USB"</string>
+    <string name="enable_adb_summary" msgid="4881186971746056635">"‏מצב ניפוי באגים כאשר USB מחובר"</string>
+    <string name="clear_adb_keys" msgid="4038889221503122743">"‏ביטול הרשאות לניפוי ב-USB"</string>
     <string name="bugreport_in_power" msgid="7923901846375587241">"קיצור של דוח באגים"</string>
     <string name="bugreport_in_power_summary" msgid="1778455732762984579">"כדי ליצור דוח באגים, הצג לחצן בתפריט לניהול צריכת החשמל"</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"השאר פועל"</string>
@@ -1553,9 +1575,9 @@
     <string name="debug_view_attributes" msgid="6485448367803310384">"אפשר בדיקת תכונת תצוגה"</string>
     <string name="legacy_dhcp_client_summary" msgid="163383566317652040">"‏השתמש בלקוח DHCP של Lollipop במקום לקוח DHCP החדש של Android."</string>
     <string name="mobile_data_always_on_summary" msgid="8149773901431697910">"‏השאר את הנתונים לנייד פעילים תמיד, גם כש-Wi‑Fi פעיל (למעבר מהיר בין רשתות)."</string>
-    <string name="adb_warning_title" msgid="6234463310896563253">"‏לאפשר ניקוי באגים של USB?"</string>
-    <string name="adb_warning_message" msgid="7316799925425402244">"‏ניקוי באגים באמצעות USB מיועד למטרות פיתוח בלבד. השתמש בו להעתקת נתונים בין המחשב והמכשיר שלך, להתקנת אפליקציות במכשיר ללא התראה ולקריאת נתוני יומן."</string>
-    <string name="adb_keys_warning_message" msgid="5659849457135841625">"‏האם לבטל את הגישה לניקוי באגים ב-USB מכל המחשבים שהענקת להם בעבר הרשאה?"</string>
+    <string name="adb_warning_title" msgid="6234463310896563253">"‏לאפשר ניפוי באגים של USB?"</string>
+    <string name="adb_warning_message" msgid="7316799925425402244">"‏ניפוי באגים באמצעות USB מיועד למטרות פיתוח בלבד. השתמש בו להעתקת נתונים בין המחשב והמכשיר שלך, להתקנת אפליקציות במכשיר ללא התראה ולקריאת נתוני יומן."</string>
+    <string name="adb_keys_warning_message" msgid="5659849457135841625">"‏האם לבטל את הגישה לניפוי ב-USB מכל המחשבים שהענקת להם בעבר הרשאה?"</string>
     <string name="dev_settings_warning_title" msgid="7244607768088540165">"האם להתיר הגדרות פיתוח?"</string>
     <string name="dev_settings_warning_message" msgid="2298337781139097964">"הגדרות אלה מיועדות לשימוש בפיתוח בלבד. הן עלולות לגרום למכשיר או לאפליקציות המותקנות בו לקרוס או לפעול באופן לא תקין."</string>
     <string name="verify_apps_over_usb_title" msgid="4177086489869041953">"‏אמת אפליקציות באמצעות USB"</string>
@@ -2083,10 +2105,10 @@
     <string name="select_all" msgid="1562774643280376715">"בחר הכל"</string>
     <string name="hdcp_checking_title" msgid="8605478913544273282">"‏בדיקת HDCP"</string>
     <string name="hdcp_checking_dialog_title" msgid="5141305530923283">"‏הגדר אופן בדיקת HDCP"</string>
-    <string name="debug_debugging_category" msgid="6781250159513471316">"ניקוי באגים"</string>
-    <string name="debug_app" msgid="8349591734751384446">"בחר אפליקציה לניקוי באגים"</string>
-    <string name="debug_app_not_set" msgid="718752499586403499">"לא הוגדרה אפליקציה לניקוי באגים"</string>
-    <string name="debug_app_set" msgid="2063077997870280017">"אפליקציה לניקוי באגים: <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="debug_debugging_category" msgid="6781250159513471316">"ניפוי באגים"</string>
+    <string name="debug_app" msgid="8349591734751384446">"בחר אפליקציה לניפוי"</string>
+    <string name="debug_app_not_set" msgid="718752499586403499">"לא הוגדרה אפליקציה לניפוי"</string>
+    <string name="debug_app_set" msgid="2063077997870280017">"אפליקציה לניפוי: <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
     <string name="select_application" msgid="5156029161289091703">"בחר אפליקציה"</string>
     <string name="no_application" msgid="2813387563129153880">"אף אחת"</string>
     <string name="wait_for_debugger" msgid="1202370874528893091">"המתן למנקה באגים"</string>
@@ -2108,7 +2130,7 @@
     <string name="show_hw_screen_updates_summary" msgid="1115593565980196197">"‏הבזק תצוגות בתוך חלונות בעת ציור באמצעות ה-GPU"</string>
     <string name="show_hw_layers_updates" msgid="5645728765605699821">"הצג עדכוני שכבות חומרה"</string>
     <string name="show_hw_layers_updates_summary" msgid="5296917233236661465">"הצג הבהוב ירוק לשכבות חומרה כשהן מתעדכנות"</string>
-    <string name="debug_hw_overdraw" msgid="2968692419951565417">"‏חריגה בניקוי באגים ב-GPU"</string>
+    <string name="debug_hw_overdraw" msgid="2968692419951565417">"‏חריגה בניפוי באגים ב-GPU"</string>
     <string name="disable_overlays" msgid="2074488440505934665">"‏השבת שכבות על של HW"</string>
     <string name="disable_overlays_summary" msgid="3578941133710758592">"‏השתמש תמיד ב-GPU להרכבת מסך"</string>
     <string name="simulate_color_space" msgid="6745847141353345872">"צור הדמיה של מרחב צבעים"</string>
@@ -2125,7 +2147,7 @@
     <string name="force_hw_ui_summary" msgid="5535991166074861515">"‏אכוף שימוש ב-GPU לשרטוט דו-מימדי"</string>
     <string name="force_msaa" msgid="7920323238677284387">"‏אלץ הפעלת 4x MSAA"</string>
     <string name="force_msaa_summary" msgid="9123553203895817537">"‏הפעל 4x MSAA ביישומי OpenGL ES 2.0"</string>
-    <string name="show_non_rect_clip" msgid="505954950474595172">"נקה באגים בפעולות באזור שאינו מלבני"</string>
+    <string name="show_non_rect_clip" msgid="505954950474595172">"ניפוי באגים בפעולות באזור שאינו מלבני"</string>
     <string name="track_frame_time" msgid="6146354853663863443">"‏עיבוד פרופיל ב-GPU"</string>
     <string name="window_animation_scale_title" msgid="6162587588166114700">"קנה מידה לאנימציה של חלון"</string>
     <string name="transition_animation_scale_title" msgid="387527540523595875">"קנה מידה לאנימציית מעבר"</string>
@@ -2362,18 +2384,16 @@
     <string name="global_font_change_title" msgid="1887126466191012035">"שנה גודל גופן"</string>
     <string name="nfc_payment_settings_title" msgid="1807298287380821613">"הקש ושלם"</string>
     <string name="nfc_payment_how_it_works" msgid="3028822263837896720">"איך זה עובד"</string>
-    <string name="nfc_payment_no_apps" msgid="3453656795093776889">"השתמש ב\'הקש ושלם\' כדי לבצע רכישות בחנויות"</string>
+    <string name="nfc_payment_no_apps" msgid="5477904979148086424">"שלם עם הטלפון בחנויות"</string>
     <string name="nfc_payment_default" msgid="8648420259219150395">"ברירת המחדל לתשלום"</string>
     <string name="nfc_payment_default_not_set" msgid="7485060884228447765">"לא מוגדרת"</string>
     <string name="nfc_payment_app_and_desc" msgid="7942415346564794258">"<xliff:g id="APP">%1$s</xliff:g> - <xliff:g id="DESCRIPTION">%2$s</xliff:g>"</string>
-    <string name="nfc_payment_open_app" msgid="5550268485421927976">"אם האפליקציה הפתוחה תומכת ב\'הקש ושלם\'"</string>
-    <string name="nfc_payment_favor_open" msgid="7513784422533299982">"השתמש באפליקציה הזו במקום ב-<xliff:g id="APP">%1$s</xliff:g>"</string>
-    <string name="nfc_payment_favor_open_default_unknown" msgid="1179489206233351756">"השתמש באפליקציה הזו במקום בברירת המחדל"</string>
-    <string name="nfc_payment_favor_default" msgid="8238320071435721803">"המשך להשתמש ב-<xliff:g id="APP">%1$s</xliff:g>"</string>
-    <string name="nfc_payment_favor_default_default_unknown" msgid="7029467023485683077">"המשך להשתמש בברירת המחדל"</string>
+    <string name="nfc_payment_use_default" msgid="3234730182120288495">"השתמש בברירת המחדל"</string>
+    <string name="nfc_payment_favor_default" msgid="5743781166099608372">"תמיד"</string>
+    <string name="nfc_payment_favor_open" msgid="1923314062109977944">"מלבד כשאפליקציית תשלום אחרת פועלת"</string>
     <string name="nfc_payment_pay_with" msgid="7524904024378144072">"במסוף \'הקש ושלם\', שלם באמצעות:"</string>
     <string name="nfc_how_it_works_title" msgid="1984068457698797207">"תשלום במסוף"</string>
-    <string name="nfc_how_it_works_content" msgid="5820288675316257177">"לאחר הגדרה של אפליקציית \'הקש ושלם\', וכשהטלפון פועל, הקש עם הטלפון במסוף שעליו מופיע הלוגו של \'הקש ושלם\' כדי לבצע רכישה."</string>
+    <string name="nfc_how_it_works_content" msgid="4749007806393224934">"הגדר אפליקציית תשלום. לאחר מכן עליך רק להצמיד את גב הטלפון למסוף שעליו מופיע סמל התשלום ללא מגע."</string>
     <string name="nfc_how_it_works_got_it" msgid="259653300203217402">"הבנתי"</string>
     <string name="nfc_more_title" msgid="815910943655133280">"עוד..."</string>
     <string name="nfc_payment_set_default_label" msgid="7315817259485674542">"האם להגדיר בתור ההעדפה שלך?"</string>
@@ -2509,6 +2529,7 @@
     <string name="keywords_app_permissions" msgid="8677901415217188314">"אבטחה של הרשאות לאפליקציות"</string>
     <string name="keywords_default_apps" msgid="3581727483175522599">"ברירת מחדל לאפליקציות"</string>
     <string name="keywords_ignore_optimizations" msgid="946516741848647905">"התעלמות אופטימיזציות שינה אפליקציה המתנה"</string>
+    <string name="keywords_color_mode" msgid="4670570451841540200">"‏דינמי RGB ‏sRGB צבע טבעי רגיל"</string>
     <string name="keywords_lockscreen" msgid="4806191868723291541">"‏החלקה סיסמה קו ביטול נעילה מספר PIN"</string>
     <string name="setup_wifi_nfc_tag" msgid="9028353016222911016">"‏הגדר תג NFC של Wi-Fi"</string>
     <string name="write_tag" msgid="8571858602896222537">"כתוב"</string>
@@ -2540,6 +2561,7 @@
     <string name="lock_screen_notifications_summary_hide" msgid="7891552853357258782">"להסתיר תוכן רגיש"</string>
     <string name="lock_screen_notifications_summary_disable" msgid="859628910427886715">"אל תציג הודעות כלל"</string>
     <string name="lock_screen_notifications_interstitial_message" msgid="6164532459432182244">"איך להציג הודעות כשהמכשיר נעול?"</string>
+    <string name="lock_screen_notifications_interstitial_title" msgid="1416589393106326972">"הודעות"</string>
     <string name="app_notifications_title" msgid="5810577805218003760">"הודעות אפליקציה"</string>
     <string name="other_sound_settings" msgid="3151004537006844718">"צלילים אחרים"</string>
     <string name="dial_pad_tones_title" msgid="1999293510400911558">"צלילים של לוח חיוג"</string>
@@ -2668,11 +2690,14 @@
     <string name="display_auto_rotate_stay_in_landscape" msgid="3804752830204062162">"הישאר בתצוגה לרוחב"</string>
     <string name="display_auto_rotate_stay_in_current" msgid="317932372686498096">"הישאר בכיוון המסך הנוכחי"</string>
     <string name="imei_information_title" msgid="8499085421609752290">"‏פרטי IMEI"</string>
-    <string name="encryption_interstitial_header" msgid="5790264941172726485">"הצפנה"</string>
+    <string name="encryption_interstitial_header" msgid="468015813904595613">"הפעלה מאובטחת"</string>
     <string name="encryption_continue_button" msgid="1121880322636992402">"המשך"</string>
     <string name="encryption_interstitial_message_pin" msgid="7164072567822375682">"‏באפשרותך לחזק את ההגנה על מכשיר זה על-ידי דרישת מספר ה-PIN שלך לפני הפעלתו. עד שהמכשיר יופעל, הוא לא לא יוכל לקבל שיחות, הודעות או התראות. \n\nהדבר יסייע להגן על נתונים במכשירים שאבדו או נגנבו."</string>
     <string name="encryption_interstitial_message_pattern" msgid="6747091924626566031">"באפשרותך לחזק את ההגנה על מכשיר זה על-ידי דרישת תבנית ביטול הנעילה שלך לפני הפעלתו. עד שהמכשיר יופעל, הוא לא לא יוכל לקבל שיחות, הודעות או התראות. \n\nהדבר יסייע להגן על נתונים במכשירים שאבדו או נגנבו."</string>
     <string name="encryption_interstitial_message_password" msgid="3462225324186045679">"באפשרותך לחזק את ההגנה על מכשיר זה על-ידי דרישת הסיסמה שלך לפני הפעלתו. עד שהמכשיר יופעל, הוא לא יוכל לקבל שיחות, הודעות או התראות. \n\nהדבר יסייע להגן על נתונים במכשירים שאבדו או נגנבו."</string>
+    <string name="encryption_interstitial_message_pin_for_fingerprint" msgid="3775537118799831558">"‏בנוסף לשימוש בטביעת האצבע שלך כדי לבטל את נעילת המכשיר, כאמצעי הגנה נוסף אתה יכול לדרוש את הזנת ה-PIN שלך לפני הפעלת המכשיר. כל עוד המכשיר אינו מופעל, הוא אינו יכול לקבל שיחות, הודעות או תזכורות, כולל התראות.\n\nאפשרות זו עוזרת להגן על נתונים במכשירים שאבדו או נגנבו."</string>
+    <string name="encryption_interstitial_message_pattern_for_fingerprint" msgid="1105290967535237237">"בנוסף לשימוש בטביעת האצבע שלך כדי לבטל את נעילת המכשיר, כאמצעי הגנה נוסף אתה יכול לדרוש את הזנת קו ביטול הנעילה שלך לפני הפעלת המכשיר. כל עוד המכשיר אינו מופעל, הוא אינו יכול לקבל שיחות, הודעות או תזכורות, כולל התראות.\n\nאפשרות זו עוזרת להגן על נתונים במכשירים שאבדו או נגנבו."</string>
+    <string name="encryption_interstitial_message_password_for_fingerprint" msgid="3512482682507378424">"בנוסף לשימוש בטביעת האצבע שלך כדי לבטל את נעילת המכשיר, כאמצעי הגנה נוסף אתה יכול לדרוש את הזנת הסיסמה שלך לפני הפעלת המכשיר. כל עוד המכשיר אינו מופעל, הוא אינו יכול לקבל שיחות, הודעות או תזכורות, כולל התראות.\n\nאפשרות זו עוזרת להגן על נתונים במכשירים שאבדו או נגנבו."</string>
     <string name="encrypt_require_pin" msgid="2063945047845243752">"כדי להפעיל את המכשיר נדרש קוד אימות"</string>
     <string name="encrypt_require_pattern" msgid="6898479411004015810">"כדי להפעיל את המכשיר נדרש איור"</string>
     <string name="encrypt_require_password" msgid="8770628366276570518">"כדי להפעיל את המכשיר נדרשת סיסמה"</string>
@@ -2703,6 +2728,8 @@
     <string name="app_data_usage" msgid="7942375313697452803">"שימוש בנתונים באפליקציות"</string>
     <string name="data_summary_format" msgid="6213211533341068366">"<xliff:g id="SIZE">%1$s</xliff:g> בשימוש מאז <xliff:g id="DATE">%2$s</xliff:g>"</string>
     <string name="storage_used" msgid="7128074132917008743">"שטח אחסון מנוצל"</string>
+    <string name="change" msgid="6657848623929839991">"שינוי"</string>
+    <string name="change_storage" msgid="600475265207060436">"שינוי אחסון"</string>
     <string name="notifications_label" msgid="2872668710589600731">"הודעות"</string>
     <string name="notifications_enabled" msgid="4386196629684749507">"רגיל"</string>
     <string name="notifications_disabled" msgid="4326096527874762629">"חסום"</string>
@@ -2762,14 +2789,17 @@
       <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> אפליקציות יכולות לפתוח את הקישורים הנתמכים שלהן</item>
       <item quantity="one">אפליקציה אחת יכולה לפתוח את הקישורים הנתמכים שלה</item>
     </plurals>
+    <string name="app_link_open_always" msgid="2474058700623948148">"פתח באפליקציה זו"</string>
+    <string name="app_link_open_ask" msgid="7800878430190575991">"שאל בכל פעם"</string>
+    <string name="app_link_open_never" msgid="3407647600352398543">"אל תפתח באפליקציה זו"</string>
     <string name="fingerprint_not_recognized" msgid="1739529686957438119">"לא זוהתה"</string>
     <string name="default_apps_title" msgid="1854974637597514435">"ברירת מחדל של אפליקציות"</string>
     <string name="assist_and_voice_input_title" msgid="1733165754793221197">"קלט אסיסטנט וקלט קולי"</string>
     <string name="default_assist_title" msgid="8868488975409247921">"אפליקציית אסיסטנט"</string>
     <string name="default_assist_none" msgid="3709083569608735487">"ללא"</string>
-    <string name="choose_assist_title" msgid="554234448228740980">"בחירת אסיסטנט"</string>
+    <string name="choose_assist_title" msgid="2373353478479305516">"בחר אפליקציית אסיסטנט"</string>
     <string name="assistant_security_warning_title" msgid="8673079231955467177">"האם להפוך את <xliff:g id="ASSISTANT_APP_NAME">%s</xliff:g> לאסיסטנט שלך?"</string>
-    <string name="assistant_security_warning" msgid="4881965750615394002">"<xliff:g id="ASSISTANT_APP_NAME">%s</xliff:g> יוכל לקרוא את המידע לגבי אפליקציות במערכת שלך, כולל מידע הגלוי במסך או מידע הנגיש בתוך האפליקציות."</string>
+    <string name="assistant_security_warning" msgid="8498726261327239136">"האסיסטנט יוכל לקרוא מידע על אפליקציות שבהן נעשה שימוש במערכת שלך, כולל מידע המופיע במסך או שניתן לגשת אליו באפליקציות."</string>
     <string name="assistant_security_warning_agree" msgid="7710290206928033908">"קבל"</string>
     <string name="assistant_security_warning_disagree" msgid="877419950830205913">"אל תקבל"</string>
     <string name="choose_voice_input_title" msgid="975471367067718019">"בחירת קלט קולי"</string>
@@ -2793,36 +2823,45 @@
     <string name="memory_avg_desc" msgid="1551240906596518412">"<xliff:g id="MEMORY">%1$s</xliff:g> בממוצע"</string>
     <string name="memory_use_running_format" msgid="4172488041800743760">"<xliff:g id="MEMORY">%1$s</xliff:g> / <xliff:g id="RUNNING">%2$s</xliff:g>"</string>
     <string name="process_format" msgid="77905604092541454">"<xliff:g id="APP_NAME">%1$s</xliff:g> (<xliff:g id="COUNT">%2$d</xliff:g>)"</string>
-    <string name="high_power_apps" msgid="2116416853043103135">"ללא אופטימיזציות"</string>
-    <string name="high_power_filter_on" msgid="3862942127137594196">"מורשות"</string>
-    <string name="high_power_on" msgid="148473814103292724">"בלי קשר לאופטימיזציות של סוללה"</string>
-    <string name="high_power_off" msgid="221092098425904010">"לא מורשות"</string>
-    <string name="high_power_desc" msgid="8412735192889327770">"אל תחיל אופטימיזציות של סוללה. הסוללה עשויה להתרוקן מהר יותר."</string>
-    <plurals name="high_power_count" formatted="false" msgid="4343190376439806186">
-      <item quantity="two"><xliff:g id="COUNT">%d</xliff:g> אפליקציות מורשות להתעלם מאופטימיזציות הסוללה</item>
-      <item quantity="many"><xliff:g id="COUNT">%d</xliff:g> אפליקציות מורשות להתעלם מאופטימיזציות הסוללה</item>
-      <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> אפליקציות מורשות להתעלם מאופטימיזציות הסוללה</item>
-      <item quantity="one">אפליקציה אחת מורשית להתעלם מאופטימיזציות הסוללה</item>
+    <string name="high_power_apps" msgid="3459065925679828230">"אופטימיזציה של סוללה"</string>
+    <string name="high_power_filter_on" msgid="3222265297576680099">"לא בוצעה אופטימיזציה"</string>
+    <string name="high_power_on" msgid="3382367497549906927">"מתעלמת מהאופטימיזציה של הסוללה"</string>
+    <string name="high_power_off" msgid="3393904131961263278">"מבצעת אופטימיזציה לשימוש בסוללה"</string>
+    <string name="high_power_system" msgid="7362862974428225301">"אופטימיזציה של סוללה אינה זמינה"</string>
+    <string name="high_power_desc" msgid="6283926163708585760">"אל תפעיל אופטימיזציה של הסוללה. הסוללה עשויה להתרוקן מהר יותר."</string>
+    <plurals name="high_power_count" formatted="false" msgid="2464701722383894640">
+      <item quantity="two">ל-<xliff:g id="COUNT">%d</xliff:g> אפליקציות מותר להתעלם מהאופטימיזציה של הסוללה</item>
+      <item quantity="many">ל-<xliff:g id="COUNT">%d</xliff:g> אפליקציות מותר להתעלם מהאופטימיזציה של הסוללה</item>
+      <item quantity="other">ל-<xliff:g id="COUNT">%d</xliff:g> אפליקציות מותר להתעלם מהאופטימיזציה של הסוללה</item>
+      <item quantity="one">לאפליקציה אחת מותר להתעלם מהאופטימיזציה של הסוללה</item>
     </plurals>
+    <string name="high_power_prompt_title" msgid="4257734526819699048">"האם להתעלם מאופטימיזציות של הסוללה?"</string>
+    <string name="high_power_prompt_body" msgid="4072587909486730876">"האם להתיר לאפליקציה <xliff:g id="APP_NAME">%1$s</xliff:g> להישאר מחוברת ברקע? מצב זה עשוי להגביר את צריכת סוללה."</string>
     <string name="battery_summary" msgid="101415762036784289">"שימוש ב-<xliff:g id="PERCENTAGE">%1$d</xliff:g>%% מאז הטעינה המלאה האחרונה"</string>
     <string name="no_battery_summary" msgid="3528036835462846814">"לא נעשה שימוש בסוללה מאז הטעינה המלאה האחרונה"</string>
     <string name="app_notification_preferences" msgid="1599319335092722613">"הגדרות אפליקציה"</string>
     <string name="system_ui_settings" msgid="579824306467081123">"‏הצג את SystemUI Tuner"</string>
     <string name="additional_permissions" msgid="6463784193877056080">"הרשאות נוספות"</string>
     <string name="additional_permissions_more" msgid="3538612272673191451">"עוד <xliff:g id="COUNT">%1$d</xliff:g>"</string>
-    <string name="usb_use_charging_only" msgid="2625934955897625321">"טעינה בלבד"</string>
-    <string name="usb_use_file_transfers" msgid="479119385461326763">"‏העברת קבצים (MTP)"</string>
-    <string name="usb_use_photo_transfers" msgid="7794775645350330454">"‏העברת תמונות (PTP)"</string>
+    <string name="usb_use_charging_only" msgid="167707234832117768">"טעינה"</string>
+    <string name="usb_use_charging_only_desc" msgid="3066256793008540627">"רק לטעינת המכשיר"</string>
+    <string name="usb_use_power_only" msgid="6304554004177083963">"מקור חשמל"</string>
+    <string name="usb_use_power_only_desc" msgid="708134382305728112">"הטען את המכשיר האחר המחובר"</string>
+    <string name="usb_use_file_transfers" msgid="6978904665877785548">"העברות קבצים"</string>
+    <string name="usb_use_file_transfers_desc" msgid="1663579896876922124">"‏העבר קבצים אל Windows או Mac ‏(MTP)"</string>
+    <string name="usb_use_photo_transfers" msgid="8276445551694259039">"‏העברת תמונות (PTP)"</string>
+    <string name="usb_use_photo_transfers_desc" msgid="2963034811151325996">"‏העברת תמונות או קבצים אם MTP אינו נתמך (PTP)"</string>
     <string name="usb_use_MIDI" msgid="5116404702692483166">"MIDI"</string>
+    <string name="usb_use_MIDI_desc" msgid="6895383550910152384">"‏השתמש במכשיר לקלט MIDI"</string>
     <string name="usb_use" msgid="3372728031108932425">"‏השתמש ב-USB בשביל"</string>
     <string name="inactive_apps_title" msgid="1317817863508274533">"אפליקציות לא פעילות"</string>
     <string name="inactive_app_inactive_summary" msgid="6768756967594202411">"לא פעילה. גע כדי להחליף."</string>
     <string name="inactive_app_active_summary" msgid="4512911571954375968">"פעילה. גע כדי להחליף."</string>
-    <string name="assist_access_context_title" msgid="2047105711005856521">"השתמש בהקשר הנוכחי"</string>
-    <string name="assist_access_context_summary" msgid="7573538643562533886">"התר לאפליקציית האסיסטנט לגשת אל תוכן ומטא נתונים מהאפליקציה שבה אתה משתמש"</string>
-    <string name="assist_access_screenshot_title" msgid="7994303398517230267">"שימוש בצילומי מסך"</string>
-    <string name="assist_access_screenshot_summary" msgid="8774637450198111406">"התר לאפליקציית האסיסטנט לנתח תמונות של האפליקציה שבה אתה משתמש"</string>
-    <string name="assist_footer" msgid="2283187001990543739">"אפליקציות סיוע עוזרות לך לזהות מידע שימושי ולפעול לפיו בלי לבקש אישור. אפליקציות מסוימות תומכות בשירותי מפעיל אפליקציות ובקלט קולי כדי לספק סיוע משולב."</string>
+    <string name="assist_access_context_title" msgid="2269032346698890257">"שימוש בטקסט המופיע במסך"</string>
+    <string name="assist_access_context_summary" msgid="1991421283142279560">"התר לאפליקציית האסיסטנט לגשת אל תוכן במסך, כמו טקסט"</string>
+    <string name="assist_access_screenshot_title" msgid="4034721336291215819">"שימוש בצילום מסך"</string>
+    <string name="assist_access_screenshot_summary" msgid="6761636689013259901">"התר לאפליקציית האסיסטנט לגשת אל צילום של המסך"</string>
+    <string name="assist_footer" msgid="1982791172085896864">"אפליקציות אסיסטנט יכולות לעזור לך בהתבסס על מידע המופיע במסך שאתה מציג. כדי לספק סיוע משולב, אפליקציות מסוימות תומכות בשירותי מפעיל אפליקציות ובקלט קולי."</string>
     <string name="average_memory_use" msgid="829566450150198512">"שימוש ממוצע בזיכרון"</string>
     <string name="maximum_memory_use" msgid="7493720799710132496">"שימוש מקסימלי בזיכרון"</string>
     <string name="memory_usage" msgid="1781358557214390033">"שימוש בזיכרון"</string>
@@ -2848,12 +2887,53 @@
     <string name="no_data_usage" msgid="9131454024293628063">"לא נעשה שימוש בנתונים"</string>
     <string name="zen_access_warning_dialog_title" msgid="1198189958031157142">"האם להתיר ל-<xliff:g id="APP">%1$s</xliff:g> לגשת אל \'נא לא להפריע\'?"</string>
     <string name="zen_access_warning_dialog_summary" msgid="4015885767653010873">"האפליקציה תוכל להפעיל או לכבות את \'נא לא להפריע\' ולבצע שינויים בהגדרות קשורות."</string>
-    <string name="ignore_optimizations_on" msgid="2417358456267927315">"התר"</string>
-    <string name="ignore_optimizations_off" msgid="9069942099715006633">"אל תאפשר"</string>
+    <string name="ignore_optimizations_on" msgid="6915689518016285116">"אל תבצע אופטימיזציה"</string>
+    <string name="ignore_optimizations_off" msgid="6153196256410296835">"בצע אופטימיזציה"</string>
     <string name="ignore_optimizations_on_desc" msgid="2321398930330555815">"הסוללה עשויה להתרוקן מהר יותר"</string>
     <string name="ignore_optimizations_off_desc" msgid="5255731062045426544">"מומלץ להארכת חיי הסוללה"</string>
     <string name="ignore_optimizations_title" msgid="2829637961185027768">"האם להתיר ל-<xliff:g id="APP">%s</xliff:g> להתעלם מאופטימיזציה של הסוללה?"</string>
     <string name="app_list_preference_none" msgid="108006867520327904">"ללא"</string>
     <string name="work_profile_usage_access_warning" msgid="8870622842216566692">"כיבוי גישת השימוש בשביל האפליקציה הזו לא מונע ממנהל המערכת לעקוב אחר השימוש בנתונים בשביל אפליקציות בפרופיל העבודה שלך."</string>
     <string name="accessibility_lock_screen_progress" msgid="2408292742980383166">"נעשה שימוש ב-<xliff:g id="COUNT_0">%1$d</xliff:g> מתוך <xliff:g id="COUNT_1">%2$d</xliff:g> תווים"</string>
+    <string name="draw_overlay_title" msgid="4003905926278954971">"אפליקציות שיכולות להופיע מעל אפליקציות אחרות"</string>
+    <string name="draw_overlay" msgid="9078696044299199938">"הצגה מעל אפליקציות אחרות"</string>
+    <string name="system_alert_window_settings" msgid="1757821151143694951">"הצגה מעל אפליקציות אחרות"</string>
+    <string name="system_alert_window_apps_title" msgid="7005760279028569491">"אפליקציות"</string>
+    <string name="system_alert_window_access_title" msgid="8811695381437304132">"הצגה מעל אפליקציות אחרות"</string>
+    <string name="permit_draw_overlay" msgid="6606018549732046201">"התר הצגה מעל אפליקציות אחרות"</string>
+    <string name="app_overlay_permission_preference" msgid="8355410276571387439">"הרשאה להצגת האפליקציה למעלה"</string>
+    <string name="allow_overlay_description" msgid="7895191337585827691">"הרשאה זו מאפשרת הצגה של האפליקציה מעל אפליקציות אחרות שנמצאות בשימוש, ועשויה להפריע לשימוש שלך בממשק של אפליקציות אחרות או לשנות את מה שאתה חושב שאתה רואה באפליקציות אחרות."</string>
+    <string name="keywords_system_alert_window" msgid="8579673659566564926">"תיבת הדו שיח של חלון ההתראה מוצגת מעל אפליקציות אחרות"</string>
+    <string name="overlay_settings" msgid="222062091489691363">"הצגה מעל אפליקציות אחרות"</string>
+    <string name="system_alert_window_summary" msgid="4268867238063922290">"<xliff:g id="COUNT_0">%d</xliff:g> מתוך <xliff:g id="COUNT_1">%d</xliff:g> אפליקציות רשאיות להיות מוצגות מעל אפליקציות אחרות"</string>
+    <string name="filter_overlay_apps" msgid="6965969283342557573">"אפליקציות עם הרשאה"</string>
+    <string name="system_alert_window_on" msgid="2939489395109048888">"כן"</string>
+    <string name="system_alert_window_off" msgid="6189115687233061992">"לא"</string>
+    <string name="write_settings" msgid="4797457275727195681">"שינוי הגדרות המערכת"</string>
+    <string name="keywords_write_settings" msgid="6415597272561105138">"שינוי הגדרות המערכת באמצעות כתיבה"</string>
+    <string name="write_settings_summary" msgid="4302268998611412696">"<xliff:g id="COUNT_0">%d</xliff:g> מתוך <xliff:g id="COUNT_1">%d</xliff:g> אפליקציות מורשות לשנות את הגדרות המערכת"</string>
+    <string name="filter_write_settings_apps" msgid="2914615026197322551">"יכולות לשנות את הגדרות המערכת"</string>
+    <string name="write_settings_title" msgid="4232152481902542284">"יכולות לשנות את הגדרות המערכת"</string>
+    <string name="write_system_settings" msgid="3482913590601096763">"שינוי הגדרות המערכת"</string>
+    <string name="write_settings_preference" msgid="3407383041273067448">"הרשאת אפליקציה לשנות את הגדרות המערכת"</string>
+    <string name="permit_write_settings" msgid="6393779336656870080">"התר שינוי של הגדרות המערכת"</string>
+    <string name="write_settings_description" msgid="6868293938839954623">"ההרשאה הזו מתירה לאפליקציה לשנות את הגדרות המערכת."</string>
+    <string name="write_settings_on" msgid="8230580416068832239">"כן"</string>
+    <string name="write_settings_off" msgid="5156104383386336233">"לא"</string>
+    <string name="camera_gesture_title" msgid="1075838577642393011">"סיבוב כפול להפעלת המצלמה"</string>
+    <string name="camera_gesture_desc" msgid="1831390075255870960">"פתח את אפליקציית המצלמה על ידי סיבוב כפול של פרק כף היד"</string>
+    <string name="camera_double_tap_power_gesture_title" msgid="1651873760405034645">"לחץ על לחצן ההפעלה פעמיים כדי לפתוח את המצלמה"</string>
+    <string name="camera_double_tap_power_gesture_desc" msgid="7355664631775680376">"הפעל את המצלמה במהירות מבלי לבטל את נעילת הטלפון"</string>
+  <string-array name="color_mode_names">
+    <item msgid="2425514299220523812">"דינמי (ברירת מחדל)"</item>
+    <item msgid="8446070607501413455">"טבעי"</item>
+    <item msgid="6553408765810699025">"רגיל"</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item msgid="4979629397075120893">"צבעים משופרים"</item>
+    <item msgid="8280754435979370728">"צבעים טבעיים כפי שהם נראים לעין"</item>
+    <item msgid="5363960654009010371">"צבעים מותאמים באופן אופטימלי לתוכן דיגיטלי"</item>
+  </string-array>
+    <string name="picture_color_mode" msgid="4560755008730283695">"מצב צבע התמונה"</string>
+    <string name="picture_color_mode_desc" msgid="1141891467675548590">"‏שימוש ב-sRGB"</string>
 </resources>

@@ -101,9 +101,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
      */
     public static final String PREF_SHOW = "show";
 
-    private static final ComponentName SYSUI_TUNER = new ComponentName("com.android.systemui",
-            "com.android.systemui.tuner.TunerActivity");
-
     private static final String ENABLE_ADB = "enable_adb";
     private static final String CLEAR_ADB_KEYS = "clear_adb_keys";
     private static final String ENABLE_TERMINAL = "enable_terminal";
@@ -159,6 +156,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private static final String USB_CONFIGURATION_KEY = "select_usb_configuration";
     private static final String WIFI_LEGACY_DHCP_CLIENT_KEY = "legacy_dhcp_client";
     private static final String MOBILE_DATA_ALWAYS_ON = "mobile_data_always_on";
+    private static final String KEY_COLOR_MODE = "color_mode";
 
     private static final String INACTIVE_APPS_KEY = "inactive_apps";
 
@@ -256,6 +254,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private SwitchPreference mShowAllANRs;
 
+    private ColorModePreference mColorModePreference;
+
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
     private final ArrayList<SwitchPreference> mResetSwitchPrefs
@@ -269,8 +269,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private Dialog mAdbKeysDialog;
     private boolean mUnavailable;
-
-    private SwitchPreference mTunerUiPref;
 
     @Override
     protected int getMetricsCategory() {
@@ -290,7 +288,11 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mWifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 
         if (android.os.Process.myUserHandle().getIdentifier() != UserHandle.USER_OWNER
-                || mUm.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES)) {
+                || mUm.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES)
+                || Settings.Global.getInt(getActivity().getContentResolver(),
+                        Settings.Global.DEVICE_PROVISIONED, 0) == 0) {
+            // Block access to developer options if the user is not the owner, if user policy
+            // restricts it, or if the device has not been provisioned
             mUnavailable = true;
             setPreferenceScreen(new PreferenceScreen(getActivity(), null));
             return;
@@ -407,12 +409,17 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mAllPrefs.add(mShowAllANRs);
         mResetSwitchPrefs.add(mShowAllANRs);
 
-        mTunerUiPref = findAndInitSwitchPref(TUNER_UI_KEY);
-
         Preference hdcpChecking = findPreference(HDCP_CHECKING_KEY);
         if (hdcpChecking != null) {
             mAllPrefs.add(hdcpChecking);
             removePreferenceForProduction(hdcpChecking);
+        }
+
+        mColorModePreference = (ColorModePreference) findPreference(KEY_COLOR_MODE);
+        mColorModePreference.updateCurrentAndSupported();
+        if (mColorModePreference.getTransformsCount() < 2) {
+            removePreference(KEY_COLOR_MODE);
+            mColorModePreference = null;
         }
     }
 
@@ -519,6 +526,19 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             setPrefsEnabledState(mLastEnabledState);
         }
         mSwitchBar.show();
+
+        if (mColorModePreference != null) {
+            mColorModePreference.startListening();
+            mColorModePreference.updateCurrentAndSupported();
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (mColorModePreference != null) {
+            mColorModePreference.stopListening();
+        }
     }
 
     @Override
@@ -608,7 +628,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         updateMobileDataAlwaysOnOptions();
         updateSimulateColorSpace();
         updateUSBAudioOptions();
-        updateTweakUi();
     }
 
     private void resetDangerousOptions() {
@@ -1151,21 +1170,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             Settings.Secure.putInt(cr, Settings.Secure.ACCESSIBILITY_DISPLAY_DALTONIZER_ENABLED, 1);
             Settings.Secure.putInt(cr, Settings.Secure.ACCESSIBILITY_DISPLAY_DALTONIZER, newMode);
         }
-    }
-
-    private void updateTweakUi() {
-        updateSwitchPreference(mTunerUiPref, getActivity().getPackageManager()
-                .getComponentEnabledSetting(SYSUI_TUNER)
-                == PackageManager.COMPONENT_ENABLED_STATE_ENABLED);
-        mTunerUiPref.setOnPreferenceChangeListener(this);
-    }
-
-    private void writeTweakUi(Object newValue) {
-        Boolean enabled = (Boolean) newValue;
-        getActivity().getPackageManager().setComponentEnabledSetting(SYSUI_TUNER,
-                enabled ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
-                        : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-                        PackageManager.DONT_KILL_APP);
     }
 
     private void updateUSBAudioOptions() {
@@ -1765,9 +1769,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             return true;
         } else if (preference == mSimulateColorSpace) {
             writeSimulateColorSpace(newValue);
-            return true;
-        } else if (preference == mTunerUiPref) {
-            writeTweakUi(newValue);
             return true;
         }
         return false;

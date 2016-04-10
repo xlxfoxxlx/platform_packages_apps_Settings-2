@@ -33,6 +33,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.IPackageManager;
+import android.content.pm.IntentFilterVerificationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -69,7 +70,11 @@ import android.provider.ContactsContract.Profile;
 import android.provider.ContactsContract.RawContacts;
 import android.service.persistentdata.PersistentDataBlockManager;
 import android.telephony.TelephonyManager;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.TextUtils;
+import android.text.style.TtsSpan;
+import android.util.ArraySet;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
@@ -923,11 +928,13 @@ public final class Utils {
      * Returns a label for the user, in the form of "User: user name" or "Work profile".
      */
     public static String getUserLabel(Context context, UserInfo info) {
+        String name = info != null ? info.name : null;
         if (info.isManagedProfile()) {
             // We use predefined values for managed profiles
             return context.getString(R.string.managed_user_title);
+        } else if (info.isGuest()) {
+            name = context.getString(R.string.user_guest);
         }
-        String name = info != null ? info.name : null;
         if (name == null && info != null) {
             name = Integer.toString(info.id);
         } else if (info == null) {
@@ -1109,15 +1116,39 @@ public final class Utils {
         return prefActList.size() > 0;
     }
 
+    public static ArraySet<String> getHandledDomains(PackageManager pm, String packageName) {
+        List<IntentFilterVerificationInfo> iviList = pm.getIntentFilterVerifications(packageName);
+        List<IntentFilter> filters = pm.getAllIntentFilters(packageName);
+
+        ArraySet<String> result = new ArraySet<>();
+        if (iviList.size() > 0) {
+            for (IntentFilterVerificationInfo ivi : iviList) {
+                for (String host : ivi.getDomains()) {
+                    result.add(host);
+                }
+            }
+        }
+        if (filters != null && filters.size() > 0) {
+            for (IntentFilter filter : filters) {
+                if (filter.hasCategory(Intent.CATEGORY_BROWSABLE)
+                        && (filter.hasDataScheme(IntentFilter.SCHEME_HTTP) ||
+                                filter.hasDataScheme(IntentFilter.SCHEME_HTTPS))) {
+                    result.addAll(filter.getHostsList());
+                }
+            }
+        }
+        return result;
+    }
+
     public static CharSequence getLaunchByDeafaultSummary(ApplicationsState.AppEntry appEntry,
             IUsbManager usbManager, PackageManager pm, Context context) {
         String packageName = appEntry.info.packageName;
         boolean hasPreferred = hasPreferredActivities(pm, packageName)
                 || hasUsbDefaults(usbManager, packageName);
         int status = pm.getIntentVerificationStatus(packageName, UserHandle.myUserId());
+        // consider a visible current link-handling state to be any explicitly designated behavior
         boolean hasDomainURLsPreference =
-                (status == PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ALWAYS) ||
-                (status == PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_NEVER);
+                status != PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_UNDEFINED;
         return context.getString(hasPreferred || hasDomainURLsPreference
                 ? R.string.launch_defaults_some
                 : R.string.launch_defaults_none);
@@ -1190,4 +1221,29 @@ public final class Utils {
             return false;
         }
     }
+
+    /**
+     * Returns an accessible SpannableString.
+     * @param displayText the text to display
+     * @param accessibileText the text text-to-speech engines should read
+     */
+    public static SpannableString createAccessibleSequence(CharSequence displayText,
+            String accessibileText) {
+        SpannableString str = new SpannableString(displayText);
+        str.setSpan(new TtsSpan.TextBuilder(accessibileText).build(), 0,
+                displayText.length(),
+                Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        return str;
+    }
+
+    public static int getEffectiveUserId(Context context) {
+        UserManager um = UserManager.get(context);
+        if (um != null) {
+            return um.getCredentialOwnerProfile(UserHandle.myUserId());
+        } else {
+            Log.e(TAG, "Unable to acquire UserManager");
+            return UserHandle.myUserId();
+        }
+    }
 }
+

@@ -16,10 +16,14 @@
 
 package com.android.settings.fingerprint;
 
+import android.app.admin.DevicePolicyManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.view.View;
 
+import com.android.internal.logging.MetricsLogger;
+import com.android.settings.ChooseLockSettingsHelper;
 import com.android.settings.HelpUtils;
 import com.android.settings.R;
 
@@ -28,7 +32,6 @@ import com.android.settings.R;
  */
 public class FingerprintEnrollIntroduction extends FingerprintEnrollBase {
 
-    public static final String EXTRA_HAS_PASSWORD = "fp_existing_password";
     private boolean mHasPassword;
 
     @Override
@@ -38,27 +41,36 @@ public class FingerprintEnrollIntroduction extends FingerprintEnrollBase {
         setHeaderText(R.string.security_settings_fingerprint_enroll_introduction_title);
         findViewById(R.id.cancel_button).setOnClickListener(this);
         findViewById(R.id.learn_more_button).setOnClickListener(this);
-        mHasPassword = getIntent().getBooleanExtra(EXTRA_HAS_PASSWORD, false);
+        final int passwordQuality = new ChooseLockSettingsHelper(this).utils()
+                .getActivePasswordQuality(UserHandle.myUserId());
+        mHasPassword = passwordQuality != DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED;
     }
 
     @Override
     protected void onNextButtonClick() {
-        Intent intent = new Intent();
-        final String clazz;
+        Intent intent;
         if (!mHasPassword) {
             // No fingerprints registered, launch into enrollment wizard.
-            clazz = FingerprintEnrollOnboard.class.getName();
+            intent = getOnboardIntent();
         } else {
             // Lock thingy is already set up, launch directly into find sensor step from wizard.
-            clazz = FingerprintEnrollFindSensor.class.getName();
+            intent = getFindSensorIntent();
         }
-        intent.setClassName("com.android.settings", clazz);
         startActivityForResult(intent, 0);
+    }
+
+    protected Intent getOnboardIntent() {
+        return new Intent(this, FingerprintEnrollOnboard.class);
+    }
+
+    protected Intent getFindSensorIntent() {
+        return new Intent(this, FingerprintEnrollFindSensor.class);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_FINISHED) {
+            setResult(RESULT_OK);
             finish();
         } else {
             super.onActivityResult(requestCode, resultCode, data);
@@ -80,5 +92,10 @@ public class FingerprintEnrollIntroduction extends FingerprintEnrollBase {
         Intent helpIntent = HelpUtils.getHelpIntent(this,
                 getString(R.string.help_url_fingerprint), getClass().getName());
         startActivity(helpIntent);
+    }
+
+    @Override
+    protected int getMetricsCategory() {
+        return MetricsLogger.FINGERPRINT_ENROLL_INTRO;
     }
 }

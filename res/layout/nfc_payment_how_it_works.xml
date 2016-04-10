@@ -36,8 +36,8 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:text="@string/nfc_how_it_works_title"
-              android:paddingLeft="74dp"
-              android:paddingRight="74dp"
+              android:paddingLeft="16dp"
+              android:paddingRight="16dp"
               android:textColor="#FF263238"
               android:textSize="24sp" />
 
@@ -47,11 +47,11 @@
               android:layout_height="wrap_content"
               android:paddingTop="10dp"
               android:paddingBottom="18dp"
-              android:paddingLeft="74dp"
-              android:paddingRight="74dp"
+              android:paddingLeft="16dp"
+              android:paddingRight="16dp"
               android:text="@string/nfc_how_it_works_content"
               android:textColor="#FF263238"
-              android:textSize="20sp" />
+              android:textSize="16sp" />
         </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"

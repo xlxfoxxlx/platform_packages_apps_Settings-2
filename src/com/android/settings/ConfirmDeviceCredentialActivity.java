@@ -63,15 +63,7 @@ public class ConfirmDeviceCredentialActivity extends Activity {
                 details, false /* returnCredentials */, true /* isExternal */)) {
             Log.d(TAG, "No pattern, password or PIN set.");
             setResult(Activity.RESULT_OK);
-            finish();
         }
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        boolean credentialsConfirmed = (resultCode == Activity.RESULT_OK);
-        Log.d(TAG, "Device credentials confirmed: " + credentialsConfirmed);
-        setResult(credentialsConfirmed ? Activity.RESULT_OK : Activity.RESULT_CANCELED);
         finish();
     }
 }

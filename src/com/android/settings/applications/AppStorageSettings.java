@@ -18,15 +18,18 @@ package com.android.settings.applications;
 
 import android.app.ActivityManager;
 import android.app.AlertDialog;
+import android.app.AppGlobals;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.IPackageDataObserver;
+import android.content.pm.IPackageManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.os.RemoteException;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.preference.Preference;
@@ -38,7 +41,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.android.internal.logging.MetricsLogger;
-import com.android.settings.DropDownPreference;
 import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.settings.deviceinfo.StorageWizardMoveConfirm;
@@ -51,7 +53,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class AppStorageSettings extends AppInfoWithHeader
-        implements OnClickListener, Callbacks, DropDownPreference.Callback {
+        implements OnClickListener, Callbacks, DialogInterface.OnClickListener {
     private static final String TAG = AppStorageSettings.class.getSimpleName();
 
     //internal constants used in Handler
@@ -70,7 +72,9 @@ public class AppStorageSettings extends AppInfoWithHeader
     private static final int DLG_CLEAR_DATA = DLG_BASE + 1;
     private static final int DLG_CANNOT_CLEAR_DATA = DLG_BASE + 2;
 
-    private static final String KEY_MOVE_PREFERENCE = "app_location_setting";
+    private static final String KEY_STORAGE_USED = "storage_used";
+    private static final String KEY_CHANGE_STORAGE = "change_storage_button";
+    private static final String KEY_STORAGE_SPACE = "storage_space";
     private static final String KEY_STORAGE_CATEGORY = "storage_category";
 
     private static final String KEY_TOTAL_SIZE = "total_size";
@@ -94,7 +98,8 @@ public class AppStorageSettings extends AppInfoWithHeader
     private Button mClearDataButton;
     private Button mClearCacheButton;
 
-    private DropDownPreference mMoveDropDown;
+    private Preference mStorageUsed;
+    private Button mChangeStorageButton;
 
     private boolean mCanClearData = true;
     private boolean mHaveSizes = false;
@@ -112,6 +117,9 @@ public class AppStorageSettings extends AppInfoWithHeader
     // Resource strings
     private CharSequence mInvalidSizeStr;
     private CharSequence mComputingStr;
+
+    private VolumeInfo[] mCandidates;
+    private AlertDialog.Builder mDialogBuilder;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -146,8 +154,11 @@ public class AppStorageSettings extends AppInfoWithHeader
         mClearDataButton = (Button) ((LayoutPreference) findPreference(KEY_CLEAR_DATA))
                 .findViewById(R.id.button);
 
-        mMoveDropDown = (DropDownPreference) findPreference(KEY_MOVE_PREFERENCE);
-        mMoveDropDown.setCallback(this);
+        mStorageUsed = findPreference(KEY_STORAGE_USED);
+        mChangeStorageButton = (Button) ((LayoutPreference) findPreference(KEY_CHANGE_STORAGE))
+                .findViewById(R.id.button);
+        mChangeStorageButton.setText(R.string.change);
+        mChangeStorageButton.setOnClickListener(this);
 
         // Cache section
         mCacheSize = findPreference(KEY_CACHE_SIZE);
@@ -164,7 +175,7 @@ public class AppStorageSettings extends AppInfoWithHeader
                 mClearCacheObserver = new ClearCacheObserver();
             }
             mPm.deleteApplicationCacheFiles(mPackageName, mClearCacheObserver);
-        } else if(v == mClearDataButton) {
+        } else if (v == mClearDataButton) {
             if (mAppEntry.info.manageSpaceActivityName != null) {
                 if (!Utils.isMonkeyRunning()) {
                     Intent intent = new Intent(Intent.ACTION_DEFAULT);
@@ -175,15 +186,27 @@ public class AppStorageSettings extends AppInfoWithHeader
             } else {
                 showDialogInner(DLG_CLEAR_DATA, 0);
             }
+        } else if (v == mChangeStorageButton && mDialogBuilder != null && !isMoveInProgress()) {
+            mDialogBuilder.show();
+        }
+    }
+
+    private boolean isMoveInProgress() {
+        final IPackageManager pm = AppGlobals.getPackageManager();
+        try {
+            // TODO: define a cleaner API for this
+            return pm.isPackageFrozen(mPackageName);
+        } catch (RemoteException e) {
+            return false;
         }
     }
 
     @Override
-    public boolean onItemSelected(int pos, Object value) {
+    public void onClick(DialogInterface dialog, int which) {
         final Context context = getActivity();
 
         // If not current volume, kick off move wizard
-        final VolumeInfo targetVol = (VolumeInfo) value;
+        final VolumeInfo targetVol = mCandidates[which];
         final VolumeInfo currentVol = context.getPackageManager().getPackageCurrentVolume(
                 mAppEntry.info);
         if (!Objects.equals(targetVol, currentVol)) {
@@ -192,8 +215,7 @@ public class AppStorageSettings extends AppInfoWithHeader
             intent.putExtra(Intent.EXTRA_PACKAGE_NAME, mAppEntry.info.packageName);
             startActivity(intent);
         }
-
-        return true;
+        dialog.dismiss();
     }
 
     private String getSizeStr(long size) {
@@ -273,18 +295,23 @@ public class AppStorageSettings extends AppInfoWithHeader
     @Override
     protected boolean refreshUi() {
         retrieveAppEntry();
-        refreshButtons();
+        if (mAppEntry == null) {
+            return false;
+        }
         refreshSizeInfo();
 
         final VolumeInfo currentVol = getActivity().getPackageManager()
                 .getPackageCurrentVolume(mAppEntry.info);
-        mMoveDropDown.setSelectedValue(currentVol);
+        final StorageManager storage = getContext().getSystemService(StorageManager.class);
+        mStorageUsed.setSummary(storage.getBestVolumeDescription(currentVol));
+
+        refreshButtons();
 
         return true;
     }
 
     private void refreshButtons() {
-        initMoveDropDown();
+        initMoveDialog();
         initDataButtons();
     }
 
@@ -314,7 +341,7 @@ public class AppStorageSettings extends AppInfoWithHeader
         }
     }
 
-    private void initMoveDropDown() {
+    private void initMoveDialog() {
         final Context context = getActivity();
         final StorageManager storage = context.getSystemService(StorageManager.class);
 
@@ -323,14 +350,24 @@ public class AppStorageSettings extends AppInfoWithHeader
         if (candidates.size() > 1) {
             Collections.sort(candidates, VolumeInfo.getDescriptionComparator());
 
-            mMoveDropDown.clearItems();
-            for (VolumeInfo vol : candidates) {
-                final String volDescrip = storage.getBestVolumeDescription(vol);
-                mMoveDropDown.addItem(volDescrip, vol);
+            CharSequence[] labels = new CharSequence[candidates.size()];
+            int current = -1;
+            for (int i = 0; i < candidates.size(); i++) {
+                final String volDescrip = storage.getBestVolumeDescription(candidates.get(i));
+                if (Objects.equals(volDescrip, mStorageUsed.getSummary())) {
+                    current = i;
+                }
+                labels[i] = volDescrip;
             }
-            mMoveDropDown.setSelectable(!mAppControlRestricted);
+            mCandidates = candidates.toArray(new VolumeInfo[candidates.size()]);
+            mDialogBuilder = new AlertDialog.Builder(getContext())
+                    .setTitle(R.string.change_storage)
+                    .setSingleChoiceItems(labels, current, this)
+                    .setNegativeButton(R.string.cancel, null);
         } else {
-            removePreference(KEY_MOVE_PREFERENCE);
+            removePreference(KEY_STORAGE_USED);
+            removePreference(KEY_CHANGE_STORAGE);
+            removePreference(KEY_STORAGE_SPACE);
         }
     }
 

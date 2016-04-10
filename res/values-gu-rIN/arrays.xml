@@ -497,8 +497,8 @@
   </string-array>
   <string-array name="debug_hw_overdraw_entries">
     <item msgid="8190572633763871652">"બંધ"</item>
-    <item msgid="7688197031296835369">"ઓવરડ્રો ક્ષેત્રો દર્શાવો"</item>
-    <item msgid="2290859360633824369">"Deuteranomaly માટેના ક્ષેત્રો દર્શાવો"</item>
+    <item msgid="7688197031296835369">"ઓવરડ્રો ક્ષેત્રો બતાવો"</item>
+    <item msgid="2290859360633824369">"Deuteranomaly માટેના ક્ષેત્રો બતાવો"</item>
   </string-array>
   <string-array name="app_process_limit_entries">
     <item msgid="3401625457385943795">"માનક સીમા"</item>
@@ -567,8 +567,4 @@
     <item msgid="6131821495505931173">"લાલ"</item>
   </string-array>
     <!-- no translation found for usb_configuration_titles:0 (292902998500371970) -->
-    <!-- no translation found for usb_available_functions:0 (1052890583379911173) -->
-    <!-- no translation found for usb_available_functions:1 (5179287634369331675) -->
-    <!-- no translation found for usb_available_functions:2 (7367227752916579970) -->
-    <!-- no translation found for usb_available_functions:3 (3121694448025579443) -->
 </resources>

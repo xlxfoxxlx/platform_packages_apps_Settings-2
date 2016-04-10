@@ -593,7 +593,6 @@
 
     <!-- MVNO Info used in APN editor -->
     <string-array name="mvno_type_entries">
-        <!-- Do not translate. -->
         <item>None</item>
         <!-- Do not translate. -->
         <item>SPN</item>
@@ -1388,14 +1387,6 @@
         <item>2</item>
         <!-- Do not translate. -->
         <item>0</item>
-    </string-array>
-
-    <!-- These values must match up with the code in UsbModeChooserActivity.java. -->
-    <string-array name="usb_available_functions">
-        <item>@string/usb_use_charging_only</item>
-        <item>@string/usb_use_file_transfers</item>
-        <item>@string/usb_use_photo_transfers</item>
-        <item>@string/usb_use_MIDI</item>
     </string-array>
 
 </resources>

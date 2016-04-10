@@ -291,7 +291,7 @@
     <item msgid="1097324338692486211">"ضبط صدا"</item>
     <item msgid="5031552983987798163">"پخش صدا"</item>
     <item msgid="8374996688066472414">"خواندن کلیپ بورد"</item>
-    <item msgid="3045529469061083747">"اصلاح کلیپ‌بورد"</item>
+    <item msgid="3045529469061083747">"اصلاح بریده‌دان"</item>
     <item msgid="5124443975763747838">"دکمه‌های رسانه‌ای"</item>
     <item msgid="4547883971364273343">"فوکوس صدا"</item>
     <item msgid="2603878814882344450">"میزان کنترل"</item>
@@ -307,8 +307,8 @@
     <item msgid="3356591542543137332">"دریافت آمار استفاده"</item>
     <item msgid="3073734345226842233">"صدادار/بی‌صدا کردن میکروفن"</item>
     <item msgid="1148142988678569310">"فرستادن رسانه"</item>
-    <item msgid="9130014005474445273">"‏فعال‌سازی VPN"</item>
-    <item msgid="1165192162975045562">"نوشتن کاغذ دیواری"</item>
+    <item msgid="9130014005474445273">"‏فعال کردن VPN"</item>
+    <item msgid="1165192162975045562">"نوشتن کاغذدیواری"</item>
     <item msgid="7129487923652967258">"دستیار ساختار"</item>
     <item msgid="1069023208100114540">"دستیار عکس صفحه‌نمایش"</item>
   </string-array>
@@ -359,8 +359,8 @@
     <item msgid="3459320345690097795">"دریافت آمار استفاده"</item>
     <item msgid="1312534577834048535">"صدادار/بی‌صدا کردن میکروفن"</item>
     <item msgid="5906017727368097853">"فرستادن رسانه"</item>
-    <item msgid="2486614710846178542">"‏فعال‌سازی VPN"</item>
-    <item msgid="5586547561693629602">"نوشتن کاغذ دیواری"</item>
+    <item msgid="2486614710846178542">"‏فعال کردن VPN"</item>
+    <item msgid="5586547561693629602">"نوشتن کاغذدیواری"</item>
     <item msgid="32794179825485062">"دستیار ساختار"</item>
     <item msgid="7872852746938272552">"دستیار عکس‌ صفحه‌نمایش"</item>
   </string-array>
@@ -492,7 +492,7 @@
   </string-array>
   <string-array name="track_frame_time_entries">
     <item msgid="2193584639058893150">"خاموش"</item>
-    <item msgid="2751513398307949636">"بر روی صفحه نمایش بصورت نوار"</item>
+    <item msgid="2751513398307949636">"روی صفحه نمایش به‌صورت میله‌ای"</item>
     <item msgid="1851438178120770973">"‏در adb shell dumpsys gfxinfo"</item>
   </string-array>
   <string-array name="debug_hw_overdraw_entries">
@@ -567,8 +567,4 @@
     <item msgid="6131821495505931173">"قرمز"</item>
   </string-array>
     <!-- no translation found for usb_configuration_titles:0 (292902998500371970) -->
-    <!-- no translation found for usb_available_functions:0 (1052890583379911173) -->
-    <!-- no translation found for usb_available_functions:1 (5179287634369331675) -->
-    <!-- no translation found for usb_available_functions:2 (7367227752916579970) -->
-    <!-- no translation found for usb_available_functions:3 (3121694448025579443) -->
 </resources>

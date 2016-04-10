@@ -17,6 +17,7 @@
 package com.android.settings.fingerprint;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.fingerprint.Fingerprint;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ import android.preference.Preference;
 import android.view.View;
 import android.widget.Button;
 
+import com.android.internal.logging.MetricsLogger;
 import com.android.settings.R;
 import com.android.settings.fingerprint.FingerprintSettings.FingerprintPreference;
 
@@ -55,15 +57,23 @@ public class FingerprintEnrollFinish extends FingerprintEnrollBase {
 
     @Override
     protected void onNextButtonClick() {
+        setResult(RESULT_FINISHED);
         finish();
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.add_another_button) {
+            final Intent intent = getEnrollingIntent();
+            intent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+            startActivity(intent);
             finish();
-            startActivity(getEnrollingIntent());
         }
         super.onClick(v);
+    }
+
+    @Override
+    protected int getMetricsCategory() {
+        return MetricsLogger.FINGERPRINT_ENROLL_FINISH;
     }
 }

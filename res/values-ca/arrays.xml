@@ -211,7 +211,7 @@
   <string-array name="wifi_proxy_settings">
     <item msgid="4473276491748503377">"Cap"</item>
     <item msgid="8673874894887358090">"Manual"</item>
-    <item msgid="168893341855953140">"Conf. autom. serv. inter."</item>
+    <item msgid="168893341855953140">"Autoconfig. serv. inter."</item>
   </string-array>
   <string-array name="apn_auth_entries">
     <item msgid="3856896061242872146">"Cap"</item>
@@ -256,7 +256,7 @@
   <string-array name="app_ops_categories">
     <item msgid="6358963769537892925">"Ubicació"</item>
     <item msgid="255608127647030286">"Personal"</item>
-    <item msgid="4588829735729884491">"Missatgeria"</item>
+    <item msgid="4588829735729884491">"Missatges"</item>
     <item msgid="886742181977884584">"Multimèdia"</item>
     <item msgid="7924928667052300589">"Dispositiu"</item>
   </string-array>
@@ -305,7 +305,7 @@
     <item msgid="26109888160231211">"supervisa la ubicació"</item>
     <item msgid="5753382310468855812">"fes un seguiment de la precisió de la ubicació"</item>
     <item msgid="3356591542543137332">"obtenir estadístiques d\'ús"</item>
-    <item msgid="3073734345226842233">"silenciar el micròfon o activar-ne el so"</item>
+    <item msgid="3073734345226842233">"silencia/activa el micròfon"</item>
     <item msgid="1148142988678569310">"projectar fitxers multimèdia"</item>
     <item msgid="9130014005474445273">"activa la VPN"</item>
     <item msgid="1165192162975045562">"fons de pantalla d\'escriptura"</item>
@@ -357,7 +357,7 @@
     <item msgid="8584357129746649222">"Ubicació"</item>
     <item msgid="7669257279311110599">"Ubicació"</item>
     <item msgid="3459320345690097795">"Obtenir estadístiques d\'ús"</item>
-    <item msgid="1312534577834048535">"Silenciar el micròfon o activar-ne el so"</item>
+    <item msgid="1312534577834048535">"silencia/activa el micròfon"</item>
     <item msgid="5906017727368097853">"Projectar fitxers multimèdia"</item>
     <item msgid="2486614710846178542">"Activa la VPN"</item>
     <item msgid="5586547561693629602">"Fons de pantalla d\'escriptura"</item>
@@ -486,13 +486,13 @@
     <item msgid="1340692776955662664">"Pila de trucades a glGetError"</item>
   </string-array>
   <string-array name="show_non_rect_clip_entries">
-    <item msgid="993742912147090253">"Desactivada"</item>
+    <item msgid="993742912147090253">"Desactivat"</item>
     <item msgid="675719912558941285">"Dibuixa àrea retall no rectangular en blau"</item>
     <item msgid="1064373276095698656">"Ressalta ordres de dibuix provats en verd"</item>
   </string-array>
   <string-array name="track_frame_time_entries">
     <item msgid="2193584639058893150">"Desactivat"</item>
-    <item msgid="2751513398307949636">"A la pantalla com a barres"</item>
+    <item msgid="2751513398307949636">"En pantalla en forma de barres"</item>
     <item msgid="1851438178120770973">"A adb shell dumpsys gfxinfo"</item>
   </string-array>
   <string-array name="debug_hw_overdraw_entries">
@@ -567,8 +567,4 @@
     <item msgid="6131821495505931173">"Vermell"</item>
   </string-array>
     <!-- no translation found for usb_configuration_titles:0 (292902998500371970) -->
-    <!-- no translation found for usb_available_functions:0 (1052890583379911173) -->
-    <!-- no translation found for usb_available_functions:1 (5179287634369331675) -->
-    <!-- no translation found for usb_available_functions:2 (7367227752916579970) -->
-    <!-- no translation found for usb_available_functions:3 (3121694448025579443) -->
 </resources>

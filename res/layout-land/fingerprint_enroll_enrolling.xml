@@ -20,7 +20,7 @@
     android:id="@+id/setup_wizard_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/SetupWizardFingerprintStyle">
+    style="?attr/fingerprint_layout_theme">
 
     <LinearLayout
         style="@style/SuwContentFrame"
@@ -61,7 +61,10 @@
             android:layout_weight="1"
             android:layout_height="match_parent">
 
-            <include layout="@layout/fingerprint_enroll_enrolling_content"/>
+            <include layout="@layout/fingerprint_enroll_enrolling_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
 
             <TextView
                 style="@style/TextAppearance.FingerprintErrorText"

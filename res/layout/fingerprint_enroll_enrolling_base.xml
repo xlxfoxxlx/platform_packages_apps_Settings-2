@@ -20,7 +20,7 @@
     android:id="@+id/setup_wizard_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/SetupWizardFingerprintStyle">
+    style="?attr/fingerprint_layout_theme">
 
     <LinearLayout
         style="@style/SuwContentFrame"
@@ -57,8 +57,8 @@
         <include layout="@layout/fingerprint_enroll_enrolling_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/fingerprint_enrolling_content_margin_top"/>
 
         <TextView
             style="@style/TextAppearance.FingerprintErrorText"
@@ -67,6 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_gravity="center_horizontal"
+            android:accessibilityLiveRegion="polite"
             android:visibility="invisible"/>
 
     </LinearLayout>

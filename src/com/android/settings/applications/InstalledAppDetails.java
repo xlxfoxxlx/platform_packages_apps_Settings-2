@@ -379,6 +379,9 @@ public class InstalledAppDetails extends AppInfoBase
 
     @Override
     public void onPrepareOptionsMenu(Menu menu) {
+        if (mFinishing) {
+            return;
+        }
         boolean showIt = true;
         if (mUpdatedSysApp) {
             showIt = false;
@@ -701,6 +704,10 @@ public class InstalledAppDetails extends AppInfoBase
      * @see android.view.View.OnClickListener#onClick(android.view.View)
      */
     public void onClick(View v) {
+        if (mAppEntry == null) {
+            setIntentAndFinish(true, true);
+            return;
+        }
         String packageName = mAppEntry.info.packageName;
         if(v == mUninstallButton) {
             if ((mAppEntry.info.flags & ApplicationInfo.FLAG_SYSTEM) != 0) {
@@ -833,6 +840,9 @@ public class InstalledAppDetails extends AppInfoBase
 
         @Override
         protected ProcStatsPackageEntry doInBackground(Void... params) {
+            if (getActivity() == null) {
+                return null;
+            }
             if (mPackageInfo == null) {
                 return null;
             }
@@ -934,8 +944,7 @@ public class InstalledAppDetails extends AppInfoBase
 
         @Override
         public void onLoaderReset(Loader<ChartData> loader) {
-            mChartData = null;
-            mDataPreference.setSummary(getDataSummary());
+            // Leave last result.
         }
     };
 
@@ -956,7 +965,6 @@ public class InstalledAppDetails extends AppInfoBase
             mPermissionReceiver = null;
             final Resources res = getResources();
             CharSequence summary = null;
-            boolean enabled = false;
             if (counts != null) {
                 int totalCount = counts[1];
                 int additionalCounts = counts[2];
@@ -965,8 +973,6 @@ public class InstalledAppDetails extends AppInfoBase
                     summary = res.getString(
                             R.string.runtime_permissions_summary_no_permissions_requested);
                 } else {
-                    enabled = true;
-
                     final ArrayList<CharSequence> list = new ArrayList(Arrays.asList(groupLabels));
                     if (additionalCounts > 0) {
                         // N additional permissions.
@@ -983,7 +989,6 @@ public class InstalledAppDetails extends AppInfoBase
                 }
             }
             mPermissionsPreference.setSummary(summary);
-            mPermissionsPreference.setEnabled(enabled);
         }
     };
 }

@@ -32,6 +32,7 @@ public final class ChooseLockSettingsHelper {
     public static final String EXTRA_KEY_HAS_CHALLENGE = "has_challenge";
     public static final String EXTRA_KEY_CHALLENGE = "challenge";
     public static final String EXTRA_KEY_CHALLENGE_TOKEN = "hw_auth_token";
+    public static final String EXTRA_KEY_FOR_FINGERPRINT = "for_fingerprint";
 
 
     private LockPatternUtils mLockPatternUtils;
@@ -117,7 +118,10 @@ public final class ChooseLockSettingsHelper {
             boolean returnCredentials, boolean external, boolean hasChallenge,
             long challenge) {
         boolean launched = false;
-        switch (mLockPatternUtils.getKeyguardStoredPasswordQuality(UserHandle.myUserId())) {
+
+        int effectiveUserId = Utils.getEffectiveUserId(mActivity);
+
+        switch (mLockPatternUtils.getKeyguardStoredPasswordQuality(effectiveUserId)) {
             case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
                 launched = launchConfirmationActivity(request, title, header, description,
                         returnCredentials || hasChallenge
@@ -154,10 +158,19 @@ public final class ChooseLockSettingsHelper {
         intent.putExtra(ChooseLockSettingsHelper.EXTRA_KEY_HAS_CHALLENGE, hasChallenge);
         intent.putExtra(ChooseLockSettingsHelper.EXTRA_KEY_CHALLENGE, challenge);
         intent.setClassName(ConfirmDeviceCredentialBaseFragment.PACKAGE, activityClass.getName());
-        if (mFragment != null) {
-            mFragment.startActivityForResult(intent, request);
+        if (external) {
+            intent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+            if (mFragment != null) {
+                mFragment.startActivity(intent);
+            } else {
+                mActivity.startActivity(intent);
+            }
         } else {
-            mActivity.startActivityForResult(intent, request);
+            if (mFragment != null) {
+                mFragment.startActivityForResult(intent, request);
+            } else {
+                mActivity.startActivityForResult(intent, request);
+            }
         }
         return true;
     }

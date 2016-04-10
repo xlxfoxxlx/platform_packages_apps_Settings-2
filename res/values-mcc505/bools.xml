@@ -14,20 +14,7 @@
      limitations under the License.
 -->
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/usage_access">
-
-    <SwitchPreference
-        android:key="usage_switch"
-        android:title="@string/permit_usage_access" />
-
-    <Preference
-        android:key="app_usage_preference"
-        android:title="@string/app_usage_preference" />
-
-    <Preference
-        android:summary="@string/usage_access_description"
-        android:selectable="false" />
-
-</PreferenceScreen>
+<resources>
+    <!-- Whether none security option is hide or not  (country specific). -->
+    <bool name="config_hide_none_security_option">true</bool>
+</resources>
