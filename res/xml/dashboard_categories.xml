@@ -72,6 +72,21 @@
 
     </dashboard-category>
 
+    <!-- Tweaks -->
+    <dashboard-category
+            android:id="@+id/custom_section"
+            android:title="@string/custom_title" >
+
+        <!-- Custom settings -->
+        <dashboard-tile
+                android:id="@+id/custom_settings"
+                android:title="@string/custom_settings_title"
+                android:fragment="com.android.settings.custom.CustomSettings"
+                android:icon="@drawable/ic_advanced_settings"
+                />
+
+    </dashboard-category>
+
     <!-- DEVICE -->
     <dashboard-category
             android:id="@+id/device_section"
