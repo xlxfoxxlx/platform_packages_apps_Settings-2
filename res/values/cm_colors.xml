@@ -18,6 +18,20 @@ limitations under the License.
     <color name="floating_action_button_touch_tint">#80ffffff</color>
     <color name="theme_accent">#ff009688</color>
 
+    <!-- Hard coded background and text colors exposed for better theme support -->
+    <color name="background_color_darker_gray">@android:color/darker_gray</color>
+    <color name="background_color_gray">#ddd</color>
+    <color name="background_color_holo_blue_light">@android:color/holo_blue_light</color>
+    <color name="background_color_transparent">@android:color/transparent</color>
+    <color name="background_color_white">@android:color/white</color>
+    <color name="text_color_black">@android:color/black</color>
+    <color name="text_color_darker_gray">@android:color/darker_gray</color>
+    <color name="text_color_holo_blue_light">@android:color/holo_blue_light</color>
+    <color name="text_color_secondary_text_material_light">
+        @*android:color/secondary_text_material_light
+    </color>
+    <color name="text_color_translucent_white">#B3FFFFFF</color>
+    <color name="text_color_white">@android:color/white</color>
     <!-- Dashboard background color -->
     <color name="dashboard_category_background_color">@android:color/white</color>
     <!-- Switch Bar Text Color -->
