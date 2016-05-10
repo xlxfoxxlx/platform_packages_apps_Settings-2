@@ -262,7 +262,7 @@
                 android:icon="@drawable/ic_settings_superuser">
                 <intent
                     android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.koushikdutta.superuser"
+                    android:targetPackage="com.android.superuser"
                     android:targetClass="com.koushikdutta.superuser.MainActivity" />
         </dashboard-tile>
 
