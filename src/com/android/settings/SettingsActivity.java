@@ -82,7 +82,7 @@ import com.android.settings.applications.WriteSettingsDetails;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.custom.BatteryBarSettings;
 import com.android.settings.custom.nav.FlingSettings;
-import com.android.settings.custom.nav.NavbarSettings;
+import com.android.settings.aosip.navigation.NavbarSettings;
 import com.android.settings.custom.nav.SmartbarSettings;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;

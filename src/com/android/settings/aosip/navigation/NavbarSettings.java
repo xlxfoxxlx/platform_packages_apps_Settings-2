@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.custom.nav;
+package com.android.settings.aosip.navigation;
 
 import java.util.ArrayList;
 
@@ -128,6 +128,6 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsLogger.APPLICATION;
+        return MetricsLogger.OWLSNEST;
     }
 }
