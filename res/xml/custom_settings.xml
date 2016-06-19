@@ -34,4 +34,9 @@
             android:key="status_bar_settings"
             android:fragment="com.android.settings.custom.StatusBarSettings"
             android:title="@string/status_bar_title" />
+
+        <PreferenceScreen
+            android:key="blur_settings"
+            android:fragment="com.android.settings.custom.BlurSettings"
+            android:title="@string/blur_title" />
 </PreferenceScreen>

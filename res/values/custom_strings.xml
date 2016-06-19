@@ -22,6 +22,7 @@
     <string name="status_bar_battery_title">Battery</string>
     <string name="status_bar_clock_title">Clock and date style</string>
     <string name="status_bar_misc_title">Miscellaneous</string>
+    <string name="blur_title">Blur Settings</string>
 
     <!-- Expanded desktop -->
     <string name="expanded_desktop_category">Expanded Desktop</string>
@@ -280,5 +281,24 @@
     <string name="pulse_custom_div">Bar spacing</string>
     <string name="pulse_filled_block_size">Block size</string>
     <string name="pulse_empty_block_size">Block spacing</string>
+
+    <!-- Blur/transluency settings -->
+    <string name="blurred_status_bar_expanded_enabled_pref">Blur notification panel background</string>
+    <string name="blurred_status_bar_expanded_enabled_pref_summary">Expanded notification panel background blur</string>
+    <string name="blur_expstatus_cat">Notification Panel Background </string>
+    <string name="blurred_scale">Blur scale</string>
+    <string name="blurred_scale_summary">Quailty of blur image</string>
+    <string name="blurred_radius">Blur radius</string>
+    <string name="blurred_radius_summary">Amount of blur</string>
+    <string name="translucent_qs_cat">Quick Settings</string>
+    <string name="transluency_level_universal">Transluency level</string>
+    <string name="translucent_quick_settings_pref">Translucent quick settings panel</string>
+    <string name="translucent_quick_settings_pref_summary">Apply translucency to the quick settings panel </string>
+    <string name="translucent_header_cat">Status Bar Header</string>
+    <string name="translucent_header_pref">Translucent status bar header </string>
+    <string name="translucent_header_pref_summary">Apply translucency to the status bar header</string>
+    <string name="translucent_notifications_cat">Notifications</string>
+    <string name="translucent_notifications_pref">Translucent notifications</string>
+    <string name="translucent_notifications_pref_summary">Apply translucency to notifications</string>
 
 </resources>
