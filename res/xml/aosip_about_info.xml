@@ -57,10 +57,21 @@
         <Preference
             android:title="@string/aosip_about_mention1_title"
            	android:summary="@string/aosip_about_mention1_summary" />
-
         <Preference
             android:title="@string/aosip_about_mention2_title"
            	android:summary="@string/aosip_about_mention2_summary" />
+        <Preference
+            android:title="@string/aosip_about_mention3_title"
+           	android:summary="@string/aosip_about_mention3_summary" />
+        <Preference
+            android:title="@string/aosip_about_mention4_title"
+           	android:summary="@string/aosip_about_mention4_summary" />
+        <Preference
+            android:title="@string/aosip_about_mention5_title"
+           	android:summary="@string/aosip_about_mention5_summary" />
+        <Preference
+            android:title="@string/aosip_about_mention6_title"
+           	android:summary="@string/aosip_about_mention6_summary" />
        	
     </PreferenceCategory>
     
