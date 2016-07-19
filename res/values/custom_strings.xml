@@ -45,6 +45,10 @@
     <string name="aosip_about_mention6_title">Rinky McBally</string>
     <string name="aosip_about_mention6_summary">AOSiP Graphics</string>
 
+    <!-- Vendor version -->
+    <string name="vendor_version">Vendor version</string>
+    <string name="vendor_version_default">Unknown</string>
+
     <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
