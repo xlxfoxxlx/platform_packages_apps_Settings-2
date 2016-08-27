@@ -152,7 +152,6 @@ public class CarrierlabelCategory extends SettingsPreferenceFragment implements
             mColor.setNewPreviewColor(intColor);
             String hexColor = String.format("#%08x", (0xffffffff & intColor));
             mColor.setSummary(hexColor);
-            mColor.setDefaultColors(WHITE, HOLO_BLUE_LIGHT);
             mColor.setOnPreferenceChangeListener(this);
         } else {
             removePreference(PREF_CARRIER_LABEL_USE_CUSTOM);
