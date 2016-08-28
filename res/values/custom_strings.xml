@@ -30,23 +30,23 @@
     <string name="aosip_about_info">ROM</string>
     <string name="aosip_gplus_title">AOSiP G+</string>
     <string name="aosip_gplus_summary">Visit AOSiP G+ Community</string>
-    <string name="aosip_about_info_summary">AOSiP stands for Android Open Source illusion Project. We are an AOSP based custom ROM, twisted with the latest features from all over the Android development community. Quality and stability is our first priority as we are dedicated to bringing you the best Android has to offer.</string>
+    <string name="aosip_about_info_summary">AOSiP stands for Android Open Source illusion Project. We\'re an AOSP based custom ROM, twisted with the latest features from all over the Android development community. Quality and stability is our first priority as we\'re dedicated to bringing you the very best that Android has to offer.</string>
     <string name="aosip_about_devs">Developer</string>
-    <string name="aosip_about_dev_title">Josh Fox</string>
-    <string name="aosip_about_dev_summary">Otherwise known as XlxFoXxlX. N6/N6P/Flo maintainer.</string>
+    <string name="aosip_about_dev_title">Josh Fox(xlxfoxxlx)</string>
+    <string name="aosip_about_dev_summary">Lead dev and N6P maintainer.</string>
     <string name="aosip_about_mentions">Team Illusion</string>
-    <string name="aosip_about_mention1_title">Mike Williams</string>
-    <string name="aosip_about_mention1_summary">Former dev of AOSiP</string>
+    <string name="aosip_about_mention1_title">Mike Williams(sdroyds)</string>
+    <string name="aosip_about_mention1_summary">Founder of AOSiP</string>
     <string name="aosip_about_mention2_title">Sean Grondin</string>
     <string name="aosip_about_mention2_summary">AOSiP visionary, the man behind the owl logo/images.</string>
-    <string name="aosip_about_mention3_title">Paul Clark</string>
-    <string name="aosip_about_mention3_summary">Server whore/Graphics/helper bitch/kernel dev/N6-N6P Co-Maintainer</string>
+    <string name="aosip_about_mention3_title">Paul Clark(dabug123)</string>
+    <string name="aosip_about_mention3_summary">Servers R Us/Graphics/helper/Kronic kernel dev/N6-N6P Co-Maintainer</string>
     <string name="aosip_about_mention4_title">Akhil Narang</string>
-    <string name="aosip_about_mention4_summary">Local Rom whore/co-dev/N5X Maintainer</string>
-    <string name="aosip_about_mention5_title">Micheal DeLacy</string>
-    <string name="aosip_about_mention5_summary">N5 Maintainer</string>
-    <string name="aosip_about_mention6_title">Rinky McBally</string>
-    <string name="aosip_about_mention6_summary">AOSiP Graphics</string>
+    <string name="aosip_about_mention4_summary">Pizza lover/Caf-Dev/N5X Maintainer</string>
+    <string name="aosip_about_mention5_title">Alex Couderc(AlX31)</string>
+    <string name="aosip_about_mention5_summary">N5/N6 Maintainer and Local Drunk</string>
+    <string name="aosip_about_mention6_title">Sri Harsha(srisurya95)</string>
+    <string name="aosip_about_mention6_summary">Caf-Dev and GT-I9515 Maintainer</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
