@@ -20,59 +20,80 @@
     <PreferenceCategory
         android:key="category_aosip_about_info"
         android:title="@string/aosip_about_info">
-        
-        <Preference
-            android:summary="@string/aosip_about_info_summary" />
 
-        <PreferenceScreen
-            android:title="@string/aosip_gplus_title"
-	    android:summary="@string/aosip_gplus_summary">
-	    <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://plus.google.com/u/0/communities/111510412594093155165" />
-         </PreferenceScreen>
-           	
+    <Preference
+        android:summary="@string/aosip_about_info_summary" />
+
+    <PreferenceScreen
+        android:title="@string/aosip_gplus_title"
+        android:summary="@string/aosip_gplus_summary">
+     <intent
+        android:action="android.intent.action.VIEW"
+        android:data="https://plus.google.com/u/0/communities/111510412594093155165" />
+    </PreferenceScreen>
     </PreferenceCategory>
-    
-	<!-- Developers -->
+
+    <!-- Developers -->
     <PreferenceCategory
         android:key="category_aosip_about_devs"
         android:title="@string/aosip_about_devs">
 
-        <PreferenceScreen
-            android:title="@string/aosip_about_dev_title"
-	    android:summary="@string/aosip_about_dev_summary">
-	    <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://plus.google.com/u/0/+JoshFox87" />
-         </PreferenceScreen>
+    <PreferenceScreen
+        android:title="@string/aosip_about_dev_title"
+        android:summary="@string/aosip_about_dev_summary">
+     <intent
+        android:action="android.intent.action.VIEW"
+        android:data="https://plus.google.com/u/0/+JoshFox87" />
+    </PreferenceScreen>
 
     </PreferenceCategory>
 
-	<!-- Honorable mentions -->
+    <!-- Honorable mentions -->
     <PreferenceCategory
         android:key="category_aosip_about_mentions"
         android:title="@string/aosip_about_mentions">
-        
-        <Preference
-            android:title="@string/aosip_about_mention1_title"
-           	android:summary="@string/aosip_about_mention1_summary" />
-        <Preference
-            android:title="@string/aosip_about_mention2_title"
-           	android:summary="@string/aosip_about_mention2_summary" />
-        <Preference
-            android:title="@string/aosip_about_mention3_title"
-           	android:summary="@string/aosip_about_mention3_summary" />
-        <Preference
-            android:title="@string/aosip_about_mention4_title"
-           	android:summary="@string/aosip_about_mention4_summary" />
-        <Preference
-            android:title="@string/aosip_about_mention5_title"
-           	android:summary="@string/aosip_about_mention5_summary" />
-        <Preference
-            android:title="@string/aosip_about_mention6_title"
-           	android:summary="@string/aosip_about_mention6_summary" />
-       	
+
+    <PreferenceScreen
+        android:title="@string/aosip_about_mention1_title"
+        android:summary="@string/aosip_about_mention1_summary" >
+     <intent
+        android:action="android.intent.action.VIEW"
+        android:data="https://plus.google.com/103643867006610223293" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="@string/aosip_about_mention2_title"
+        android:summary="@string/aosip_about_mention2_summary" >
+    <intent
+        android:action="android.intent.action.VIEW"
+        android:data="https://plus.google.com/+SeanGrondin" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="@string/aosip_about_mention3_title"
+        android:summary="@string/aosip_about_mention3_summary" >
+    <intent
+        android:action="android.intent.action.VIEW"
+        android:data="https://plus.google.com/105488358948058293922" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="@string/aosip_about_mention4_title"
+        android:summary="@string/aosip_about_mention4_summary" >
+    <intent
+        android:action="android.intent.action.VIEW"
+        android:data="https://plus.google.com/+AkhilNarang" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="@string/aosip_about_mention5_title"
+        android:summary="@string/aosip_about_mention5_summary" >
+    <intent
+        android:action="android.intent.action.VIEW"
+        android:data="https://plus.google.com/106193964191654570269" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="@string/aosip_about_mention6_title"
+        android:summary="@string/aosip_about_mention6_summary" >
+     <intent
+        android:action="android.intent.action.VIEW"
+        android:data="https://plus.google.com/+SriHarsha-srisurya95" />
+    </PreferenceScreen>
     </PreferenceCategory>
-    
 </PreferenceScreen>
