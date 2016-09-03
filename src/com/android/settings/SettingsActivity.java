@@ -132,6 +132,8 @@ import com.android.settingslib.drawer.SettingsDrawerActivity;
 import com.android.settingslib.drawer.Tile;
 
 import java.net.URISyntaxException;
+import com.aosip.owlsnest.OwlsNestSettings;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -353,6 +355,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             WifiInfo.class.getName(),
             MasterClear.class.getName(),
             NightDisplaySettings.class.getName(),
+            OwlsNestSettings.class.getName(),
     };
 
 
