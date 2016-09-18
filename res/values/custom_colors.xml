@@ -27,4 +27,6 @@ limitations under the License.
     <color name="expanded_button_color_close">#F44336</color>
     <color name="expanded_app_title_color">#000000</color>
 
+    <color name="dashboard_category_title_background">@color/card_background</color>
+    <color name="selectable_card_background">@color/card_background</color>
 </resources>
