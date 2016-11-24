@@ -61,6 +61,9 @@
     <!-- substratum dashboard tile title -->
     <string name="substratum_settings_title">Substratum</string>
 
+    <string name="substratum_settings_summary">Theme your device</string>
+    <string name="appops_settings_summary">Control Apps permissions</string>
+
     <!-- Heads up -->
     <string name="headsup_section_header">Heads up notifications</string>
     <string name="heads_up_notifications">Heads up</string>

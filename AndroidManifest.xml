@@ -979,8 +979,8 @@
                 android:value="com.android.settings.category.owlsnest" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.aosip.SubstratumLaunch" />
-            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
-                android:value="true" />
+            <meta-data android:name="com.android.settings.summary"
+                android:resource="@string/substratum_settings_summary" />
         </activity>
 
         <activity android:name="Settings$AppOpsSummaryActivity"
@@ -1006,8 +1006,8 @@
                 android:value="com.android.settings.category.owlsnest" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.applications.AppOpsSummary" />
-            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
-                android:value="true" />
+            <meta-data android:name="com.android.settings.summary"
+                android:resource="@string/appops_settings_summary" />
         </activity>
 
         <activity android:name="Settings$SuperSUActivity"
