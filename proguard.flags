@@ -24,6 +24,8 @@
 
 # OwlsNest
 -keep class com.aosip.owlsnest.**
+-keep class com.android.settings.aosip.**
+-keep class net.aosip.colorpicker.**
 
 # Keep click responders
 -keepclassmembers class com.android.settings.inputmethod.UserDictionaryAddWordActivity {
