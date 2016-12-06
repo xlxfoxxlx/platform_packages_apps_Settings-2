@@ -53,11 +53,11 @@ import android.os.ServiceManager;
 import android.os.StrictMode;
 import android.os.SystemProperties;
 import android.os.UserHandle;
-import android.service.persistentdata.PersistentDataBlockManager;
 import android.os.UserManager;
 import android.os.storage.IMountService;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import android.service.persistentdata.PersistentDataBlockManager;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
@@ -68,8 +68,9 @@ import android.support.v7.preference.PreferenceScreen;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.ThreadedRenderer;
 import android.view.IWindowManager;
+import android.view.LayoutInflater;
+import android.view.ThreadedRenderer;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
 import android.webkit.IWebViewUpdateService;
@@ -148,8 +149,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private static final String DISABLE_OVERLAYS_KEY = "disable_overlays";
     private static final String SIMULATE_COLOR_SPACE = "simulate_color_space";
     private static final String USB_AUDIO_KEY = "usb_audio";
-    private static final String SHOW_CPU_USAGE_KEY = "show_cpu_usage";
-    private static final String SHOW_CPU_INFO_KEY = "show_cpu_info";
     private static final String FORCE_HARDWARE_UI_KEY = "force_hw_ui";
     private static final String FORCE_MSAA_KEY = "force_msaa";
     private static final String TRACK_FRAME_TIME_KEY = "track_frame_time";
@@ -277,7 +276,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private SwitchPreference mShowTouches;
     private SwitchPreference mShowScreenUpdates;
     private SwitchPreference mDisableOverlays;
-    private SwitchPreference mShowCpuUsage;
     private SwitchPreference mForceHardwareUi;
     private SwitchPreference mForceMsaa;
     private SwitchPreference mShowHwScreenUpdates;
@@ -427,7 +425,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         mShowTouches = findAndInitSwitchPref(SHOW_TOUCHES_KEY);
         mShowScreenUpdates = findAndInitSwitchPref(SHOW_SCREEN_UPDATES_KEY);
         mDisableOverlays = findAndInitSwitchPref(DISABLE_OVERLAYS_KEY);
-        mShowCpuUsage = findAndInitSwitchPref(SHOW_CPU_USAGE_KEY);
         mForceHardwareUi = findAndInitSwitchPref(FORCE_HARDWARE_UI_KEY);
         mForceMsaa = findAndInitSwitchPref(FORCE_MSAA_KEY);
         mShowCpuInfo = findAndInitSwitchPref(SHOW_CPU_INFO_KEY);
@@ -691,10 +688,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
                 Settings.Global.STAY_ON_WHILE_PLUGGED_IN, 0) != 0);
         updateSwitchPreference(mBtHciSnoopLog, Settings.Secure.getInt(cr,
                 Settings.Secure.BLUETOOTH_HCI_LOG, 0) != 0);
-        if (mEnableOemUnlock != null) {
-            updateSwitchPreference(mEnableOemUnlock, Utils.isOemUnlockEnabled(getActivity()));
-            updateOemUnlockSettingDescription();
-        }
         updateSwitchPreference(mDebugViewAttributes, Settings.Global.getInt(cr,
                 Settings.Global.DEBUG_VIEW_ATTRIBUTES, 0) != 0);
         updateSwitchPreference(mForceAllowOnExternal, Settings.Global.getInt(cr,
@@ -707,8 +700,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         updatePointerLocationOptions();
         updateShowTouchesOptions();
         updateFlingerOptions();
-        updateCpuUsageOptions();
-        updateCpuInfoOptions();
         updateHardwareUiOptions();
         updateMsaaOptions();
         updateTrackFrameTimeOptions();
@@ -1059,6 +1050,8 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
 
     private void updateOemUnlockOptions() {
         if (mEnableOemUnlock != null) {
+            updateSwitchPreference(mEnableOemUnlock, Utils.isOemUnlockEnabled(getActivity()));
+            updateOemUnlockSettingDescription();
             // Showing mEnableOemUnlock preference as device has persistent data block.
             mEnableOemUnlock.setDisabledByAdmin(null);
             mEnableOemUnlock.setEnabled(enableOemUnlockPreference());
@@ -1695,43 +1688,35 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         updateLogpersistValues();
     }
 
-    private void updateCpuUsageOptions() {
-        updateSwitchPreference(mShowCpuUsage,
-                Settings.Global.getInt(getActivity().getContentResolver(),
-                        Settings.Global.SHOW_PROCESSES, 0) != 0);
-    }
+    private void updateUsbConfigurationValues() {
+        if (mUsbConfiguration != null) {
+            UsbManager manager = (UsbManager) getSystemService(Context.USB_SERVICE);
 
-    private void writeCpuUsageOptions() {
-        boolean value = mShowCpuUsage.isChecked();
-        Settings.Global.putInt(getActivity().getContentResolver(),
-                Settings.Global.SHOW_PROCESSES, value ? 1 : 0);
-        Intent service = (new Intent())
-                .setClassName("com.android.systemui", "com.android.systemui.LoadAverageService");
-        if (value) {
-            getActivity().startService(service);
-        } else {
-            getActivity().stopService(service);
+            String[] values = getResources().getStringArray(R.array.usb_configuration_values);
+            String[] titles = getResources().getStringArray(R.array.usb_configuration_titles);
+            int index = 0;
+            for (int i = 0; i < titles.length; i++) {
+                if (manager.isFunctionEnabled(values[i])) {
+                    index = i;
+                    break;
+                }
+            }
+            mUsbConfiguration.setValue(values[index]);
+            mUsbConfiguration.setSummary(titles[index]);
+            mUsbConfiguration.setOnPreferenceChangeListener(this);
         }
     }
 
-    private void updateCpuInfoOptions() {
-        updateSwitchPreference(mShowCpuInfo, Settings.Global.getInt(getActivity().getContentResolver(),
-                Settings.Global.SHOW_CPU, 0) != 0);
-    }
-
-    private void writeCpuInfoOptions() {
-        boolean value = mShowCpuInfo.isChecked();
-        Settings.Global.putInt(getActivity().getContentResolver(),
-                Settings.Global.SHOW_CPU, value ? 1 : 0);
-        Intent service = (new Intent())
-                .setClassName("com.android.systemui", "com.android.systemui.CPUInfoService");
-        if (value) {
-            getActivity().startService(service);
+    private void writeUsbConfigurationOption(Object newValue) {
+        UsbManager manager = (UsbManager)getActivity().getSystemService(Context.USB_SERVICE);
+        String function = newValue.toString();
+        manager.setCurrentFunction(function);
+        if (function.equals("none")) {
+            manager.setUsbDataUnlocked(false);
         } else {
-            getActivity().stopService(service);
+            manager.setUsbDataUnlocked(true);
         }
     }
-
 
     private void writeImmediatelyDestroyActivitiesOptions() {
         try {
@@ -2041,10 +2026,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             writeShowUpdatesOption();
         } else if (preference == mDisableOverlays) {
             writeDisableOverlaysOption();
-        } else if (preference == mShowCpuUsage) {
-            writeCpuUsageOptions();
-        } else if (preference == mShowCpuInfo) {
-            writeCpuInfoOptions();
         } else if (preference == mImmediatelyDestroyActivities) {
             writeImmediatelyDestroyActivitiesOptions();
         } else if (preference == mShowAllANRs) {
